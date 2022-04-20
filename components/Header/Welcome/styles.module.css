@@ -1,0 +1,24 @@
+.welcome h1{
+    text-align: right;
+    display: block;
+    font-family: iran-yekan;
+    font-weight: 700;
+    color: #3b4057;
+}
+
+.welcome p {
+    color: #676767;
+    font:15px font-normal;
+    text-align: right;
+    width: 100%;
+}
+.welcome span{
+    color: #2b3de2;
+}
+
+.welcome button {
+    float: right;
+    font:14px iran-yekan;
+    background: rgb(43, 61, 226);
+}
+
