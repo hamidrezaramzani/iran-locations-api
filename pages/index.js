@@ -31,7 +31,7 @@ export default function Home({ domain }) {
           rel="preload"
           href="/fonts/ttf/iranyekanwebmediumfanum.ttf"
           as="font"
-          crossOrigin
+          crossOrigin="true"
           type="font/ttf"
         />
 
@@ -39,7 +39,7 @@ export default function Home({ domain }) {
           rel="preload"
           href="/fonts/ttf/iranyekanwebblackfanum.ttf"
           as="font"
-          crossOrigin
+          crossOrigin="true"
           type="font/ttf"
         />
         <link rel="icon" href="/logo.png" />
