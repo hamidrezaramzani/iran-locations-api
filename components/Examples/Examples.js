@@ -17,13 +17,6 @@ const Examples = () => {
             .then(json => console.log(json));`,
             url: "http://apifelan.com/v1/?city=تهران",
             syntax: "javascript"
-        },
-        {
-            value: 1,
-            title: "curl",
-            code: `http://apifelan.com/v1/?city=تهران`,
-            url: "http://apifelan.com/v1/?city=تهران",
-            syntax: "bash"
         }
     ]
     const handleChangeTab = (e, newValue) => {

@@ -1,5 +1,5 @@
 /* eslint-disable react/display-name */
-import { Button, Grid, IconButton, Snackbar, Typography } from '@mui/material'
+import { Alert, Button, Grid, IconButton, Snackbar, Typography } from '@mui/material'
 import { Box } from '@mui/system';
 import React, { useState } from 'react'
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
@@ -22,7 +22,8 @@ GuideItem.Description = ({ children }) => {
     return <Typography component="p" fontSize="14px" textAlign="center" color="#777" fontFamily="iran-yekan" paddingY="10px">{children}</Typography>
 }
 
-GuideItem.Url = ({ children }) => {
+GuideItem.Url = ({ children, domain }) => {
+
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [open, setOpen] = useState(false);
@@ -34,6 +35,15 @@ GuideItem.Url = ({ children }) => {
     const handleClose = () => {
         setOpen(false);
     }
+
+    return <Alert severity="info" sx={{ direction: "ltr", fontFamily: "Roboto Mono", position: "relative" }}>
+
+        {domain}{children}
+
+        <Button sx={{ position: "absolute", right: "0", top: "0" }} onClick={handleCopyUrl}>
+            <ContentCopyIcon />
+        </Button>
+    </Alert>
     return <Box width="100%" padding="10px" marginTop="10px" textAlign="left" borderRadius="10px" position="relative" bgcolor="#e2e7ff">
         <Snackbar
             open={open}
@@ -44,12 +54,10 @@ GuideItem.Url = ({ children }) => {
         />
 
         <Typography fontSize="13px" fontFamily="Roboto Mono" sx={{ direction: "ltr" }}>
-            {children}
+            {domain}{children}
         </Typography>
 
-        <Button sx={{ position: "absolute", right: "0", top: "0" }} onClick={handleCopyUrl}>
-            <ContentCopyIcon />
-        </Button>
+
     </Box>
 }
 
