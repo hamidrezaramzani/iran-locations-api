@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
 html,
 body {
   padding: 0;
   margin: 0;
+  direction: rtl;
 }
 
 a {
@@ -18,6 +20,8 @@ a {
   src: url(../public/fonts/font.ttf) format("truetype");
 }
 
-.font {
-  font-family: iran-yekan;
+
+@font-face {
+  font-family: "iran-yekan-bold";
+  src: url(../public/fonts/font-bold.ttf) format("truetype");
 }
