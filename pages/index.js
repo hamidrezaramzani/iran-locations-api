@@ -8,10 +8,11 @@ import Header from '../components/Header/Header';
 import Welcome from '../components/Header/Welcome/Welcome';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import styles from "../styles/Home.module.css";
+import Footer from "../components/Footer/Footer";
 export default function Home({ domain }) {
 
-  const {state} = useContext(ThemeContext);
-  const theme =useMemo(
+  const { state } = useContext(ThemeContext);
+  const theme = useMemo(
     () =>
       createTheme({
         palette: {
@@ -34,6 +35,7 @@ export default function Home({ domain }) {
       </Grid>
       <Examples />
       <Guide domain={domain} />
+      <Footer />
     </ThemeProvider>
   )
 }

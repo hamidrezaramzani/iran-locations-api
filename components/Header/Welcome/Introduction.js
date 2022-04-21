@@ -4,7 +4,7 @@ import TypeAnimation from "react-type-animation";
 import styles from "./styles.module.css"
 const Introduction = () => {
     return (
-        <Grid xs="12" md="6" lg="6" flexDirection="column" justifyContent="center" display="flex" item className={styles.welcome}>
+        <Grid xs="12" md="6" lg="6" flexDirection="column" justifyContent="center" display="flex" paddingX="10px" item className={styles.welcome}>
             <div>
                 <Typography component="h1" fontFamily="iran-yekan-bold" color="#3b4057" fontSize="35px"> به راحتی
                     <TypeAnimation
@@ -12,7 +12,6 @@ const Introduction = () => {
                         sequence={[' استان ', 3000, ' شهر ', 2000]}
                         wrapper="span"
                         repeat={Infinity}
-                        custm
                     />
 
                     های ایران را پیدا کنید
