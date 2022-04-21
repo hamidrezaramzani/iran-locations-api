@@ -43,8 +43,8 @@ const Examples = () => {
 
     return (
         <Container>
-            <Grid xs="12" container paddingY="100px" alignItems="center">
-                <Grid xs="12" md="6" paddingX="20px">
+            <Grid xs={12} container paddingY="100px" alignItems="center">
+                <Grid xs={12} md={6} paddingX="20px">
                     <Typography component="h2" fontSize="18px" fontFamily="iran-yekan">
                         دسترسی راحت و آسان
                     </Typography>
@@ -52,10 +52,10 @@ const Examples = () => {
                         با ابزار های متفاوت و متنوع میتوانید به راحتی از این ای پی آی استفاده کنید. کافی است از آدرس هایی که در قسمت راهنما وجود دارد استفاده کنید
                     </Typography>
                 </Grid>
-                <Grid xs="12" md="6">
+                <Grid xs={12} md={6}>
 
                     <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                        <Tabs value={value} onChange={handleChangeTab} sx={{ direction: "ltr" }} aria-label="basic tabs example">
+                        <Tabs value={value} onChange={handleChangeTab} sx={{ direction: "ltr" }} >
                             {DATA.map(item => (
                                 <Tab label={item.title} {...a11yProps(item.value)} key={item.value} />
                             ))}

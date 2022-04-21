@@ -16,12 +16,14 @@ a {
 }
 
 @font-face {
-  font-family: iran-yekan;
-  src: url(../public/fonts/font.ttf) format("truetype");
+  font-family: "iran-yekan";
+  src: url(../public/fonts/ttf/IRANYekanWebMedium.ttf) format("truetype") , 
+  url(../public/fonts/eot/IRANYekanWebMedium.eot) format("embedded-opentype");
 }
 
 
 @font-face {
   font-family: "iran-yekan-bold";
-  src: url(../public/fonts/font-bold.ttf) format("truetype");
+  src: url(../public/fonts/ttf/IRANYekanWebBlack.ttf) format("truetype") , 
+  url(../public/fonts/eot/IRANYekanWebBlack.eot) format("embedded-opentype");
 }
