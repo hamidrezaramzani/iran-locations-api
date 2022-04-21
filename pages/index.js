@@ -33,7 +33,7 @@ export default function Home({ domain }) {
         <Header />
         <Welcome />
       </Grid>
-      <Examples />
+      <Examples  domain={domain} />
       <Guide domain={domain} />
       <Footer />
     </ThemeProvider>

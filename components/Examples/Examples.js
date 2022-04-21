@@ -12,10 +12,9 @@ const Examples = () => {
         {
             value: 0,
             title: "JavaScript",
-            code: `fetch('http://apifelan.com/v1/?city=تهران')
+            code: `fetch('https://iran-locations-api.vercel.app/api/v1/?cities?city=تهران')
             .then(response => response.json())
             .then(json => console.log(json));`,
-            url: "http://apifelan.com/v1/?city=تهران",
             syntax: "javascript"
         }
     ]
@@ -33,8 +32,8 @@ const Examples = () => {
 
     const renderTab = () => {
         const item = DATA.find(item => item.value === value);
-        return <Box>
-            <SyntaxHighlighter language={item.syntax} style={materialDark} customStyle={{ direction: "ltr" }}>
+        return <Box> 
+            <SyntaxHighlighter showLineNumbers language={item.syntax} style={materialDark} customStyle={{ direction: "ltr" }}>
                 {item.code}
             </SyntaxHighlighter>
 
