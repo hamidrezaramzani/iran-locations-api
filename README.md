@@ -51,8 +51,7 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
+![Screen Shot](https://s6.uupload.ir/files/iran-location-api-screenshot_4i6u.png)
 a api website for find province and cities in iran
 
 <p align="right">(<a href="#top">back to top</a>)</p>
