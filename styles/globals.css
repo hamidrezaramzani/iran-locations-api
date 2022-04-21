@@ -21,6 +21,7 @@ a {
     url(../public/fonts/eot/iranyekanwebmediumfanum.eot?#iefixt)
       format("embedded-opentype"),
     url(../public/fonts/woff/iranyekanwebmediumfanum.woff) format("woff");
+    font-display: swap;
 }
 
 @font-face {
@@ -29,4 +30,5 @@ a {
     url(../public/fonts/eot/iranyekanwebblackfanum.eot?#iefix)
       format("embedded-opentype"),
     url(../public/fonts/woff/iranyekanwebblackfanum.woff) format("woff");
+    font-display: swap;
 }

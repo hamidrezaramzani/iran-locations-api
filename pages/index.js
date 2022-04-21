@@ -27,13 +27,26 @@ export default function Home({ domain }) {
       <Head>
         <title>شهر و استان های ایران</title>
         <meta name="description" content="مستندات ای پی آی شهر و استان های ایران " />
+        <link
+          rel="preload"
+          href="/fonts/ttf/iranyekanwebmediumfanum.ttf"
+          as="font"
+          crossOrigin=""
+        />
+
+        <link
+          rel="preload"
+          href="/fonts/eot/iranyekanwebmediumfanum.eot"
+          as="font"
+          crossOrigin=""
+        />
         <link rel="icon" href="/logo.png" />
       </Head>
       <Grid width="100%" display="flex" justifyContent="center" container height="100vh" className={state === "light" ? styles.darkWelcome : styles.lightWelcome}>
         <Header />
         <Welcome />
       </Grid>
-      <Examples  domain={domain} />
+      <Examples domain={domain} />
       <Guide domain={domain} />
       <Footer />
     </ThemeProvider>
