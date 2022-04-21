@@ -17,18 +17,12 @@ a {
 
 @font-face {
   font-family: "iran-yekan";
-  src: url(../public/fonts/ttf/iranyekanwebmediumfanum.ttf) format("truetype"),
-    url(../public/fonts/eot/iranyekanwebmediumfanum.eot?#iefixt)
-      format("embedded-opentype"),
-    url(../public/fonts/woff/iranyekanwebmediumfanum.woff) format("woff");
-    font-display: swap;
+  src: url(../public/fonts/ttf/iranyekanwebmediumfanum.ttf) format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "iran-yekan-bold";
-  src: url(../public/fonts/ttf/iranyekanwebblackfanum.ttf) format("truetype"),
-    url(../public/fonts/eot/iranyekanwebblackfanum.eot?#iefix)
-      format("embedded-opentype"),
-    url(../public/fonts/woff/iranyekanwebblackfanum.woff) format("woff");
-    font-display: swap;
+  src: url(../public/fonts/ttf/iranyekanwebblackfanum.ttf) format("truetype");
+  font-display: swap;
 }

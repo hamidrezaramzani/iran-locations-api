@@ -31,14 +31,16 @@ export default function Home({ domain }) {
           rel="preload"
           href="/fonts/ttf/iranyekanwebmediumfanum.ttf"
           as="font"
-          crossOrigin=""
+          crossOrigin
+          type="font/ttf"
         />
 
         <link
           rel="preload"
-          href="/fonts/eot/iranyekanwebmediumfanum.eot"
+          href="/fonts/ttf/iranyekanwebblackfanum.ttf"
           as="font"
-          crossOrigin=""
+          crossOrigin
+          type="font/ttf"
         />
         <link rel="icon" href="/logo.png" />
       </Head>
