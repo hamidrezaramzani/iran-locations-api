@@ -1,14 +1,11 @@
 import { Box, Button, Container, Grid, Tab, Tabs, Typography } from '@mui/material'
 import React, { useState } from 'react'
-import dynamic from "next/dynamic";
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { materialDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-const ReactJson = dynamic(import('react-json-view'), { ssr: false });
+import RequestExampleItem from './RequestExampleItem'
+
 const Examples = () => {
 
-    const [value, setValue] = useState(0);
 
-    const DATA = [
+    const REQUEST_DATA = [
         {
             value: 0,
             title: "JavaScript",
@@ -16,54 +13,66 @@ const Examples = () => {
             .then(response => response.json())
             .then(json => console.log(json));`,
             syntax: "javascript"
+        },
+        {
+            value: 1,
+            title: "Php",
+            code: `$ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, "https://iran-locations-api.vercel.app/api/v1/?cities?city=تهران");
+            curl_setopt($ch, CURLOPT_POST, 1);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, POST DATA);
+            $result = curl_exec($ch);            
+            print_r($result);
+            curl_close($ch);`,
+            syntax: "php"
         }
     ]
-    const handleChangeTab = (e, newValue) => {
-        setValue(newValue);
-    }
+
+    const RESPONSE_DATA = [
+        {
+            value: 0,
+            title: "json",
+            code: `
+            [
+                {
+                  "name": "تهران",
+                  "latitude"	"35.410"
+                  "longitude"	"51.240"
+                },
+                ...
+              ]
+            `,
+            syntax: "json"
+        },
+    ]
 
 
-    function a11yProps(index) {
-        return {
-            id: `tab-${index}`,
-            'aria-controls': `tabpanel-${index}`,
-        };
-    }
-
-    const renderTab = () => {
-        const item = DATA.find(item => item.value === value);
-        return <Box> 
-            <SyntaxHighlighter showLineNumbers language={item.syntax} style={materialDark} customStyle={{ direction: "ltr" }}>
-                {item.code}
-            </SyntaxHighlighter>
-
-        </Box>
-    }
+    const ERROR_DATA = [
+        {
+            value: 0,
+            title: "json",
+            code: `{ message: "invalid request - please send  a valid city name with 'city' param"}
+            `,
+            syntax: "json"
+        },
+    ]
 
     return (
-        <Container>
-            <Grid xs={12} container paddingY="100px" alignItems="center">
-                <Grid xs={12} md={6} paddingX="20px">
-                    <Typography component="h2" fontSize="18px" fontFamily="iran-yekan">
-                        دسترسی راحت و آسان
-                    </Typography>
-                    <Typography component="p" fontSize="13px" color="#666"> 
-                        با ابزار های متفاوت و متنوع میتوانید به راحتی از این ای پی آی استفاده کنید. کافی است از آدرس هایی که در قسمت راهنما وجود دارد استفاده کنید
-                    </Typography>
-                </Grid>
-                <Grid xs={12} md={6}>
+        <Container paddingY="50px">
+            <RequestExampleItem>
+                <RequestExampleItem.Description title="نمونه ارسال درخواست" description="شما میتوانید با ابزار های متفاوت و به راحتی از وب سرویس ما استفاده کنید" />
+                <RequestExampleItem.Code data={REQUEST_DATA} />
+            </RequestExampleItem>
 
-                    <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                        <Tabs value={value} onChange={handleChangeTab} sx={{ direction: "ltr" }} >
-                            {DATA.map(item => (
-                                <Tab label={item.title} {...a11yProps(item.value)} key={item.value} />
-                            ))}
-                        </Tabs>
-                    </Box>
-                    {renderTab()}
-                </Grid>
+            <RequestExampleItem>
+                <RequestExampleItem.Description title="نمونه جواب دریافت شده" description="نمونه جوابی که در صورت درست بودن درخواست دریافت میکنید" />
+                <RequestExampleItem.Code data={RESPONSE_DATA} />
+            </RequestExampleItem>
 
-            </Grid>
+            <RequestExampleItem>
+                <RequestExampleItem.Description title="نمونه خطای دریافتی" description="درصورت درست نبودن پارامتر ورودی همچین خطایی دریافت میکنید" />
+                <RequestExampleItem.Code data={ERROR_DATA} />
+            </RequestExampleItem>
         </Container>
     )
 }

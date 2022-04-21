@@ -5,7 +5,7 @@ const Introduction = () => {
     return (
         <Grid xs={12} md={6} flexDirection="column" justifyContent="center" display="flex" paddingX="10px" item className={styles.welcome}>
             <div>
-                <Typography component="h1" fontFamily="iran-yekan-bold" color="#3b4057" fontSize="35px"> وب سرویس
+                <Typography component="h1" fontFamily="iran-yekan-bold" fontSize="35px"> وب سرویس
                     <span> شهر و استان </span>
                     های ایران
                 </Typography>
