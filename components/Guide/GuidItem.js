@@ -28,7 +28,7 @@ GuideItem.Url = ({ children, domain }) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [open, setOpen] = useState(false);
     const handleCopyUrl = () => {
-        navigator.clipboard.writeText(children);
+        navigator.clipboard.writeText(domain + children);
         setOpen(true);
     }
 
@@ -38,27 +38,17 @@ GuideItem.Url = ({ children, domain }) => {
 
     return <Alert severity="info" sx={{ direction: "ltr", fontFamily: "Roboto Mono", position: "relative" }}>
 
+        <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+            <Alert onClose={handleClose} severity="success" sx={{ width: '100%', fontFamily: "iran-yekan" }}>
+                کپی شد
+            </Alert>
+        </Snackbar>
         {domain}{children}
 
         <Button sx={{ position: "absolute", right: "0", top: "0" }} onClick={handleCopyUrl}>
             <ContentCopyIcon />
         </Button>
     </Alert>
-    return <Box width="100%" padding="10px" marginTop="10px" textAlign="left" borderRadius="10px" position="relative" bgcolor="#e2e7ff">
-        <Snackbar
-            open={open}
-            autoHideDuration={2000}
-            onClose={handleClose}
-            message="کپی شد"
-            sx={{ fontFamily: "iran-yekan" }}
-        />
-
-        <Typography fontSize="13px" fontFamily="Roboto Mono" sx={{ direction: "ltr" }}>
-            {domain}{children}
-        </Typography>
-
-
-    </Box>
 }
 
 export default GuideItem
