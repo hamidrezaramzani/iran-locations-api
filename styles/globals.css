@@ -18,7 +18,7 @@ a {
 @font-face {
   font-family: "iran-yekan";
   src: url(../public/fonts/ttf/iranyekanwebmediumfanum.ttf) format("truetype"),
-    url(../public/fonts/eot/iranyekanwebmediumfanum.eo?#iefixt)
+    url(../public/fonts/eot/iranyekanwebmediumfanum.eot?#iefixt)
       format("embedded-opentype"),
     url(../public/fonts/woff/iranyekanwebmediumfanum.woff) format("woff");
 }
