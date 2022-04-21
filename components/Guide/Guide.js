@@ -13,15 +13,6 @@ const Guide = () => {
           <GuideItem.Url>http://ali.com/api/v1/allStates</GuideItem.Url>
         </GuideItem>
 
-
-
-        <GuideItem>
-          <GuideItem.Title>تمامی شهر های ایران</GuideItem.Title>
-          <GuideItem.Description>با استفاده از دستور زیر میتوانید به تمامی شهر های ایران به صورت یکجا دسترسی داشته باشید</GuideItem.Description>
-          <GuideItem.Url>http://ali.com/api/v1/allCities</GuideItem.Url>
-        </GuideItem>
-
-
         <GuideItem>
           <GuideItem.Title>شهر های یک استان</GuideItem.Title>
           <GuideItem.Description>شما میتوانید شهر های ایران را با وارد کردن نام استان به عنوان ورودی دریافت کنید</GuideItem.Description>
