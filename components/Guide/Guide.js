@@ -10,7 +10,7 @@ const Guide = ({ domain }) => {
         <GuideItem>
           <GuideItem.Title>تمامی استان های ایران</GuideItem.Title>
           <GuideItem.Description>با استفاده از دستور زیر میتوانید به تمامی استان های ایران به صورت یکجا دسترسی داشته باشید</GuideItem.Description>
-          <GuideItem.Url domain={domain}>/api/v1/allStates</GuideItem.Url>
+          <GuideItem.Url domain={domain}>/api/v1/states</GuideItem.Url>
         </GuideItem>
 
         <GuideItem>
@@ -25,6 +25,21 @@ const Guide = ({ domain }) => {
 
 
           <GuideItem.Url domain={domain}>/api/v1/cities?state={"{state}"}</GuideItem.Url>
+        </GuideItem>
+
+
+        <GuideItem>
+          <GuideItem.Title>دریافت استان با آیدی</GuideItem.Title>
+          <GuideItem.Description>هر استانی آیدی منحصر به فرد خود را دارد و با استفاده از آیدی آن به عنوان ورودی میتوانید به اون استان دسترسی داشته باشید</GuideItem.Description>
+
+          <GuideItem.Inputs>
+            <GuideItem.InputItem>{"{id}"}</GuideItem.InputItem>
+            <GuideItem.InputItem>آیدی استان</GuideItem.InputItem>
+            <GuideItem.InputItem>بله</GuideItem.InputItem>
+          </GuideItem.Inputs>
+
+
+          <GuideItem.Url domain={domain}>/api/v1/states?id={"{id}"}</GuideItem.Url>
         </GuideItem>
       </Container>
     </Grid>
