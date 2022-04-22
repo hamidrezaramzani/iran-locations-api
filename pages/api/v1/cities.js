@@ -1,5 +1,15 @@
+
 const data = require("../../../public/iran_cities_with_coordinates.json");
-export default function handler(req, res) {
+const NextCors = require("nextjs-cors");
+
+export default async function handler(req, res) {
+
+    await NextCors(req, res, {
+        methods: ['GET'],
+        origin: "*",
+        optionsSuccessStatus: 200
+    });
+
     const { state } = req.query;
     const stateItem = data.find(item => item.name === state);
     if (!state || !stateItem)
