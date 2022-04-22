@@ -1,5 +1,5 @@
 /* eslint-disable react/display-name */
-import { Alert, Button, Grid, IconButton, Snackbar, Typography } from '@mui/material'
+import { Alert, Button, Grid, Table, TableBody, TableHead, Snackbar, TableContainer, Typography, TableRow, TableCell, Paper } from '@mui/material'
 import { Box } from '@mui/system';
 import React, { useState } from 'react'
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
@@ -20,6 +20,32 @@ GuideItem.Title = ({ children }) => {
 
 GuideItem.Description = ({ children }) => {
     return <Typography component="p" fontSize="14px" textAlign="center" color="#777" fontFamily="iran-yekan" paddingY="10px">{children}</Typography>
+}
+
+
+GuideItem.Inputs = ({ children }) => {
+    return <TableContainer component={Paper} sx={{ margin: "50px 0", textAlign: "center", fontFamily: "iran-yekan" }} >
+        <Table sx={{
+            minWidth: 250, direction: "ltr",
+        }} aria-label="simple table">
+            <TableHead>
+                <TableRow>
+                    <TableCell align='center' sx={{ fontFamily: "iran-yekan" }}>نام</TableCell>
+                    <TableCell align='center' sx={{ fontFamily: "iran-yekan" }}>توضیحات</TableCell>
+                    <TableCell align='center' sx={{ fontFamily: "iran-yekan" }}>ضروری</TableCell>
+                </TableRow>
+            </TableHead>
+            <TableBody>
+                <TableRow>
+                    {children}
+                </TableRow>
+            </TableBody>
+        </Table>
+    </TableContainer >
+}
+
+GuideItem.InputItem = ({ children }) => {
+    return <TableCell sx={{ fontFamily: "iran-yekan" }} align='center'>{children}</TableCell>;
 }
 
 GuideItem.Url = ({ children, domain }) => {

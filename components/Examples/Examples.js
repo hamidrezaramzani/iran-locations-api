@@ -8,7 +8,7 @@ const Examples = () => {
         {
             value: 0,
             title: "JavaScript",
-            code: `fetch('https://iran-locations-api.vercel.app/api/v1/cities?city=تهران')
+            code: `fetch('https://iran-locations-api.vercel.app/api/v1/cities?state=تهران')
             .then(response => response.json())
             .then(json => console.log(json));`,
             syntax: "javascript"
@@ -17,7 +17,7 @@ const Examples = () => {
             value: 1,
             title: "Php",
             code: `$ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, "https://iran-locations-api.vercel.app/api/v1/cities?city=تهران");
+            curl_setopt($ch, CURLOPT_URL, "https://iran-locations-api.vercel.app/api/v1/cities?state=تهران");
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_POSTFIELDS, POST DATA);
             $result = curl_exec($ch);            

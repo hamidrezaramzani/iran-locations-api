@@ -1,9 +1,11 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable react/display-name */
+import { ThemeContext } from '../../context/ThemeProvider';
 import { Grid, Tab, Tabs, Typography } from '@mui/material'
 import { Box } from '@mui/system'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { vscDarkPlus, materialLight } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 
 
@@ -29,14 +31,15 @@ RequestExampleItem.Description = ({ title, description }) => (
 
 
 
-RequestExampleItem.Code = ({data}) => {
+RequestExampleItem.Code = ({ data }) => {
+
+
     const handleChangeTab = (e, newValue) => {
         setValue(newValue);
     }
 
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = useState(0);
-
+    const { state } = useContext(ThemeContext);
 
     function a11yProps(index) {
         return {
@@ -48,7 +51,7 @@ RequestExampleItem.Code = ({data}) => {
     const renderTab = () => {
         const item = data.find(item => item.value === value);
         return <Box>
-            <SyntaxHighlighter wrapLongLines language={item.syntax} style={vscDarkPlus} customStyle={{ direction: "ltr" }}>
+            <SyntaxHighlighter wrapLongLines language={item.syntax} style={state === "dark" ? vscDarkPlus : materialLight} customStyle={{ direction: "ltr" }}>
                 {item.code}
             </SyntaxHighlighter>
 

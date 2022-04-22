@@ -3,7 +3,7 @@ import React from 'react'
 import GuideItem from './GuidItem'
 import Item from './GuidItem'
 
-const Guide = ({domain}) => {
+const Guide = ({ domain }) => {
   return (
     <Grid width="100%" paddingY="50px" id="guide">
       <Container>
@@ -16,7 +16,15 @@ const Guide = ({domain}) => {
         <GuideItem>
           <GuideItem.Title>شهر های یک استان</GuideItem.Title>
           <GuideItem.Description>شما میتوانید شهر های ایران را با وارد کردن نام استان به عنوان ورودی دریافت کنید</GuideItem.Description>
-          <GuideItem.Url domain={domain}>/api/v1/cities?state=تهران</GuideItem.Url>
+
+          <GuideItem.Inputs>
+            <GuideItem.InputItem>{"{state}"}</GuideItem.InputItem>
+            <GuideItem.InputItem>نام استانی که شهر های آن را میخواهید</GuideItem.InputItem>
+            <GuideItem.InputItem>بله</GuideItem.InputItem>
+          </GuideItem.Inputs>
+
+
+          <GuideItem.Url domain={domain}>/api/v1/cities?state={"{state}"}</GuideItem.Url>
         </GuideItem>
       </Container>
     </Grid>
