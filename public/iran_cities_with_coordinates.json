@@ -1,6 +1,9 @@
 [
   {
     "name": "آذربايجان شرقی",
+    "center": "تبریز",
+    "latitude": "38.50",
+    "longitude": "46.180",
     "cities": [
       {
         "name": "تبريز",
@@ -121,6 +124,9 @@
   },
   {
     "name": "آذربايجان غربی",
+    "center": "ارومیه",
+    "latitude": "37.320",
+    "longitude": "45.40",
     "cities": [
       {
         "name": "اروميه",
@@ -201,6 +207,9 @@
   },
   {
     "name": "اردبيل",
+    "center": "اردبیل",
+    "latitude": "38.140",
+    "longitude": "48.170",
     "cities": [
       {
         "name": "اردبيل",
@@ -241,6 +250,9 @@
   },
   {
     "name": "اصفهان",
+    "center": "اصفهان",
+    "latitude": "32.390",
+    "longitude": "51.400",
     "cities": [
       {
         "name": "اصفهان",
@@ -366,6 +378,9 @@
   },
   {
     "name": "ايلام",
+    "center": "ايلام",
+    "latitude": "33.380",
+    "longitude": "46.250",
     "cities": [
       {
         "name": "ايلام",
@@ -406,6 +421,9 @@
   },
   {
     "name": "بوشهر",
+    "center": "بوشهر",
+    "latitude": "28.590",
+    "longitude": "50.500",
     "cities": [
       {
         "name": "بوشهر",
@@ -461,6 +479,9 @@
   },
   {
     "name": "تهران",
+    "center": "تهران",
+    "latitude": "35.410",
+    "longitude": "51.240",
     "cities": [
       {
         "name": "تهران",
@@ -571,6 +592,9 @@
   },
   {
     "name": "چهارمحال بختیاری",
+    "center": "شهركرد",
+    "latitude": "32.190",
+    "longitude": "50.510",
     "cities": [
       {
         "name": "شهركرد",
@@ -606,6 +630,9 @@
   },
   {
     "name": "خراسان جنوبی",
+    "center": "بيرجند",
+    "latitude": "32.5216",
+    "longitude": "59.1315",
     "cities": [
       {
         "name": "قائن",
@@ -631,11 +658,19 @@
         "name": "سربيشه",
         "latitude": "32.3432",
         "longitude": "59.4755"
+      },
+      {
+        "name": "طبس",
+        "latitude": "33.6033",
+        "longitude": "56.9324"
       }
     ]
   },
   {
     "name": "خراسان رضوی",
+    "center": "مشهد",
+    "latitude": "36.170",
+    "longitude": "59.350",
     "cities": [
       {
         "name": "مشهد",
@@ -721,6 +756,9 @@
   },
   {
     "name": "خراسان شمالی",
+    "center": "بجنورد",
+    "latitude": "37.2835",
+    "longitude": "57.1954",
     "cities": [
       {
         "name": "بجنورد",
@@ -751,6 +789,9 @@
   },
   {
     "name": "خوزستان",
+    "center": "اهواز",
+    "latitude": "31.190",
+    "longitude": "48.410",
     "cities": [
       {
         "name": "اهواز",
@@ -876,6 +917,9 @@
   },
   {
     "name": "زنجان",
+    "center": "زنجان",
+    "latitude": "36.400",
+    "longitude": "48.290",
     "cities": [
       {
         "name": "زنجان",
@@ -916,6 +960,9 @@
   },
   {
     "name": "سمنان",
+    "center": "سمنان",
+    "latitude": "35.340",
+    "longitude": "53.230",
     "cities": [
       {
         "name": "سمنان",
@@ -951,6 +998,9 @@
   },
   {
     "name": "سيستان و بلوچستان",
+    "center": "زاهدان",
+    "latitude": "29.320",
+    "longitude": "60.540",
     "cities": [
       {
         "name": "زاهدان",
@@ -996,6 +1046,9 @@
   },
   {
     "name": "فارس",
+    "center": "شيراز",
+    "latitude": "29.360",
+    "longitude": "52.310",
     "cities": [
       {
         "name": "شيراز",
@@ -1131,6 +1184,9 @@
   },
   {
     "name": "قزوين",
+    "center": "قزوين",
+    "latitude": "36.167",
+    "longitude": "50.010",
     "cities": [
       {
         "name": "قزوين",
@@ -1156,6 +1212,9 @@
   },
   {
     "name": "قم",
+    "center": "قم",
+    "latitude": "34.380",
+    "longitude": "50.530",
     "cities": [
       {
         "name": "قم",
@@ -1190,8 +1249,16 @@
     ]
   },
   {
-    "name": "کرج",
+    "name": "البرز",
+    "center": "کرج",
+    "latitude": "35.8400",
+    "longitude": "50.9391",
     "cities": [
+      {
+        "name": "کرج",
+        "latitude": "35.8400",
+        "longitude": "50.9391"
+      },
       {
         "name": "طالقان",
         "latitude": "36.100",
@@ -1226,6 +1293,9 @@
   },
   {
     "name": "كردستان",
+    "center": "سنندج",
+    "latitude": "35.180",
+    "longitude": "47.10",
     "cities": [
       {
         "name": "سنندج",
@@ -1271,6 +1341,9 @@
   },
   {
     "name": "كرمان",
+    "center": "كرمان",
+    "latitude": "30.160",
+    "longitude": "57.40",
     "cities": [
       {
         "name": "كرمان",
@@ -1336,6 +1409,9 @@
   },
   {
     "name": "كرمانشاه",
+    "center": "كرمانشاه",
+    "latitude": "34.180",
+    "longitude": "47.30",
     "cities": [
       {
         "name": "كرمانشاه",
@@ -1386,6 +1462,9 @@
   },
   {
     "name": "كهكيلويه و بويراحمد",
+    "center": "ياسوج",
+    "latitude": "30.390",
+    "longitude": "51.350",
     "cities": [
       {
         "name": "ياسوج",
@@ -1416,6 +1495,9 @@
   },
   {
     "name": "گلستان",
+    "center": "گرگان",
+    "latitude": "36.500",
+    "longitude": "54.250",
     "cities": [
       {
         "name": "گرگان",
@@ -1461,6 +1543,9 @@
   },
   {
     "name": "گيلان",
+    "center": "رشت",
+    "latitude": "37.160",
+    "longitude": "49.350",
     "cities": [
       {
         "name": "رشت",
@@ -1536,6 +1621,9 @@
   },
   {
     "name": "لرستان",
+    "center": "خرم آباد",
+    "latitude": "33.290",
+    "longitude": "48.210",
     "cities": [
       {
         "name": "خرم آباد",
@@ -1591,6 +1679,9 @@
   },
   {
     "name": "مازندران",
+    "center": "ساري",
+    "latitude": "36.330",
+    "longitude": "53.30",
     "cities": [
       {
         "name": "ساري",
@@ -1671,9 +1762,12 @@
   },
   {
     "name": "مرکزی",
+    "center": "اراک",
+    "latitude": "34.50",
+    "longitude": "49.410",
     "cities": [
       {
-        "name": "اراك",
+        "name": "اراک",
         "latitude": "34.50",
         "longitude": "49.410"
       },
@@ -1716,6 +1810,9 @@
   },
   {
     "name": "هرمزگان",
+    "center": "بندرعباس",
+    "latitude": "56.266",
+    "longitude": "27.18",
     "cities": [
       {
         "name": "بندرعباس",
@@ -1776,6 +1873,9 @@
   },
   {
     "name": "همدان",
+    "center": "همدان",
+    "latitude": "34.470",
+    "longitude": "48.300",
     "cities": [
       {
         "name": "همدان",
@@ -1811,6 +1911,9 @@
   },
   {
     "name": "يزد",
+    "center": "يزد",
+    "latitude": "31.530",
+    "longitude": "54.210",
     "cities": [
       {
         "name": "يزد",
