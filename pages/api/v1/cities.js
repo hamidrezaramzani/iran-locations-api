@@ -1,6 +1,6 @@
 
 const data = require("../../../public/iran_cities_with_coordinates.json");
-const NextCors = require("nextjs-cors");
+import NextCors from "nextjs-cors";
 
 export default async function handler(req, res) {
 
