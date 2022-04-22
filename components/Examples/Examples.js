@@ -24,6 +24,16 @@ const Examples = () => {
             print_r($result);
             curl_close($ch);`,
             syntax: "php"
+        },
+        {
+            value: 2,
+            title: "python",
+            code: `import requests
+            
+            response = requests.get("https://iran-locations-api.vercel.app/api/v1/cities?state=تهران")
+            data = response.json()
+            `,
+            syntax: "python"
         }
     ]
 
