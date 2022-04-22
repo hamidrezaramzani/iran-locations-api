@@ -50,9 +50,9 @@
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
+a api website for find province and cities in iran
 
 ![Screen Shot](https://s6.uupload.ir/files/iran-location-api-screenshot_4i6u.png)
-a api website for find province and cities in iran
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -62,11 +62,11 @@ a api website for find province and cities in iran
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-u## Contact
+## Contact
 
-Hamidreza Ramzani - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Hamidreza Ramzani - [Twitter](https://twitter.com/iamhamidreza_) <br />
 Data Repository 
-Project Link: [https://github.com/hamidrezaramzani/iran-locations-api](https://github.com/hamidrezaramzani/iran-locations-api)
+Project Link: [Github](https://github.com/hamidrezaramzani/iran-locations-api)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -86,5 +86,4 @@ Project Link: [https://github.com/hamidrezaramzani/iran-locations-api](https://g
 [license-shield]: https://img.shields.io/github/license/hamidrezaramzani/iran-locations-api.svg?style=for-the-badge
 [license-url]: https://github.com/hamidrezaramzani/iran-locations-api/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: images/screenshot.png
+[linkedin-url]: https://linkedin.com/in/hamidrezaramzani
