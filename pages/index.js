@@ -5,7 +5,7 @@ import { useContext, useMemo } from 'react';
 import Examples from '../components/Examples/Examples';
 import Guide from '../components/Guide/Guide';
 import Header from '../components/Header/Header';
-import Welcome from '../components/Header/Welcome/Welcome';
+import Introduction from '../components/Header/Introduction/Introduction';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import styles from "../styles/Home.module.css";
 import Footer from "../components/Footer/Footer";
@@ -25,8 +25,13 @@ export default function Home({ domain }) {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Head>
-        <title>شهر و استان های ایران</title>
-        <meta name="description" content="مستندات ای پی آی شهر و استان های ایران " />
+        <title>وب سرویس شهر و استان های ایران</title>
+        <meta name="description" content="وب سرویس شهر و استان های ایران. با این سرویس میتوانید به اطلاعات شهر و استان های ایران دسترسی پیدا کنید" />
+        <meta name="keywords" content="وب سرویس, شهر, ایران, api" />
+        <meta name="robots" content="index, follow" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="author" content="Hamidreza Ramzani" />
+
         <link
           rel="preload"
           href="/fonts/ttf/iranyekanwebmediumfanum.ttf"
@@ -46,7 +51,7 @@ export default function Home({ domain }) {
       </Head>
       <Grid width="100%" display="flex" justifyContent="center" container height="100vh" className={state === "light" ? styles.darkWelcome : styles.lightWelcome}>
         <Header />
-        <Welcome />
+        <Introduction />
       </Grid>
       <Examples domain={domain} />
       <Guide domain={domain} />

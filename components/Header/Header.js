@@ -25,7 +25,7 @@ const Header = () => {
               >
                 <img src="/logo.png" width="70px" />
               </Typography>
-              <Box sx={{ flexGrow: 1, fontSize: "14px", gap: "25px", display: "flex" }}>
+              <Box sx={{ flexGrow: 1, fontSize: "14px", gap: "15px", display: "flex" }}>
                 <Link href="/#guide">راهنما</Link>
                 <Link href="https://github.com/hamidrezaramzani/iran-locations-api">گیت هاب</Link>
                 <Link href="https://github.com/hamidrezaramzani/hamidrezaramzani">درباره من</Link>
