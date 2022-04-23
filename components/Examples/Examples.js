@@ -34,6 +34,15 @@ const Examples = () => {
             data = response.json()
             `,
             syntax: "python"
+        },
+        {
+            value: 3,
+            title: "Java",
+            code: `HttpClient httpClient = HttpClient.newBuilder().build();
+            URI uri = URI.create("https://iran-locations-api.vercel.app/api/v1/cities?state=تهران");
+            HttpRequest httpRequest = HttpRequest.newBuilder().GET().uri(uri).build();
+            HttpResponse<String> httpResponse = httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString());`,
+            syntax: "java"
         }
     ]
 
