@@ -10,7 +10,7 @@ export default async function handler(req, res) {
     const stateItem = data.find(item => item.name === state);
     if (!state || !stateItem)
         return res.status(400).json({
-            message: "send  a valid state name with `state` param"
+            message: "Send a valid state name with `state` parameter"
         })
 
     res.status(200).json(stateItem.cities);

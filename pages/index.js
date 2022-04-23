@@ -25,8 +25,8 @@ export default function Home({ domain }) {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Head>
-        <title>وب سرویس شهر و استان های ایران</title>
-        <meta name="description" content="وب سرویس شهر و استان های ایران. با این سرویس میتوانید به اطلاعات شهر و استان های ایران دسترسی پیدا کنید" />
+        <title>وب‌سرویس شهر و استان‌های ایران</title>
+        <meta name="description" content=".وب‌سرویس شهر و استان‌های ایران. با این سرویس می‌توانید به اطلاعات شهر و استان‌های ایران دسترسی پیدا کنید" />
         <meta name="keywords" content="وب سرویس, شهر, ایران, api" />
         <meta name="robots" content="index, follow" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
