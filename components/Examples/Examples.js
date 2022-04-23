@@ -34,6 +34,15 @@ const Examples = () => {
             data = response.json()
             `,
             syntax: "python"
+        },
+        {
+            value: 3,
+            title: "Java",
+            code: `HttpClient httpClient = HttpClient.newBuilder().build();
+            URI uri = URI.create("https://iran-locations-api.vercel.app/api/v1/cities?state=تهران");
+            HttpRequest httpRequest = HttpRequest.newBuilder().GET().uri(uri).build();
+            HttpResponse<String> httpResponse = httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString());`,
+            syntax: "java"
         }
     ]
 
@@ -69,17 +78,17 @@ const Examples = () => {
     return (
         <Container sx={{ paddingTop: "50px" }}>
             <RequestExampleItem>
-                <RequestExampleItem.Description title="نمونه ارسال درخواست" description="شما میتوانید با ابزار های متفاوت و به راحتی از وب سرویس ما استفاده کنید" />
+                <RequestExampleItem.Description title="نمونه ارسال درخواست" description=".شما می‌توانید با ابزار‌های متفاوت و به‌راحتی از وب‌سرویس ما استفاده کنید" />
                 <RequestExampleItem.Code data={REQUEST_DATA} />
             </RequestExampleItem>
 
             <RequestExampleItem>
-                <RequestExampleItem.Description title="نمونه جواب دریافت شده" description="نمونه جوابی که در صورت درست بودن درخواست دریافت میکنید" />
+                <RequestExampleItem.Description title="نمونه جواب دریافت شده" description=".نمونه‌جوابی که در صورت درست بودن درخواست دریافت می‌کنید" />
                 <RequestExampleItem.Code data={RESPONSE_DATA} />
             </RequestExampleItem>
 
             <RequestExampleItem>
-                <RequestExampleItem.Description title="نمونه خطای دریافتی" description="درصورت درست نبودن پارامتر ورودی همچین خطایی دریافت میکنید" />
+                <RequestExampleItem.Description title="نمونه خطای دریافتی" description=".در صورت درست نبودن پارامتر ورودی خطای فوق را دریافت می‌کنید" />
                 <RequestExampleItem.Code data={ERROR_DATA} />
             </RequestExampleItem>
         </Container>

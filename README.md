@@ -30,10 +30,10 @@
     <img src="./public/logo.png" alt="Logo" width="100" >
   </a>
 
-<h3 align="center">Iran Province and Cities Api</h3>
+<h3 align="center">Iran province and cities API</h3>
 
   <p align="center">
-    a api website for find provinces and cities in iran
+    An API for find provinces and cities in Iran
     <br />
     <a href="https://github.com/hamidrezaramzani/iran-locations-api"><strong>Explore the docs »</strong></a>
     <br />
@@ -50,7 +50,7 @@
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
-a api website for find province and cities in iran
+An API for find provinces and cities in Iran
 
 ![Screen Shot](https://s6.uupload.ir/files/iran-location-api-screenshot_4i6u.png)
 

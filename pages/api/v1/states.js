@@ -9,13 +9,13 @@ export default async function handler(req, res) {
     if (id) {
         if (isNaN(id)) {
             return res.status(400).json({
-                message: "send a valid id number with `id` param"
+                message: "Send a valid id number with `id` parameter"
             });
         }
         const state = data.find(item => item.id == id);
         if (!state)
             return res.status(404).json({
-                message: "no state found"
+                message: "No state found"
             });
 
         return res.status(200).json(_.omit(state,"cities"));
