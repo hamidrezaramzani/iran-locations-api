@@ -23,7 +23,7 @@ const Header = () => {
                 component="div"
                 sx={{ flexGrow: 1 }}
               >
-                <img src="/logo.png" width="70px" />
+                <img src="/logo.png" width="70px" alt="website logo" />
               </Typography>
               <Box sx={{ flexGrow: 1, fontSize: "14px", gap: "15px", display: "flex" }}>
                 <Link href="/#guide">راهنما</Link>

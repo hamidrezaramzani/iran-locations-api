@@ -48,6 +48,21 @@ export default function Home({ domain }) {
           type="font/ttf"
         />
         <link rel="icon" href="/logo.png" />
+
+
+        <meta property="og:url" content="https://iran-locations-api.vercel.app/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="وب‌سرویس شهر و استان‌های ایران" />
+        <meta property="og:description" content=".وب‌سرویس شهر و استان‌های ایران. با این سرویس می‌توانید به اطلاعات شهر و استان‌های ایران دسترسی پیدا کنید" />
+        <meta property="og:image" content="" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="iran-locations-api.vercel.app" />
+        <meta property="twitter:url" content="https://iran-locations-api.vercel.app/" />
+        <meta name="twitter:title" content="وب‌سرویس شهر و استان‌های ایران" />
+        <meta name="twitter:description" content=".وب‌سرویس شهر و استان‌های ایران. با این سرویس می‌توانید به اطلاعات شهر و استان‌های ایران دسترسی پیدا کنید" />
+        <meta name="twitter:image" content="" />
+
       </Head>
       <Grid width="100%" display="flex" justifyContent="center" container height="100vh" className={state === "light" ? styles.darkWelcome : styles.lightWelcome}>
         <Header />
