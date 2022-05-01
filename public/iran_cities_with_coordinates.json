@@ -1191,12 +1191,12 @@
     "id": 20
   },
   {
-    "name": "كرمان",
-    "center": "كرمان",
+    "name": "کرمان",
+    "center": "کرمان",
     "latitude": "30.160",
     "longitude": "57.40",
     "cities": [
-      { "name": "كرمان", "latitude": "30.160", "longitude": "57.40", "id": 1 },
+      { "name": "کرمان", "latitude": "30.160", "longitude": "57.40", "id": 1 },
       { "name": "راور", "latitude": "31.150", "longitude": "56.510", "id": 2 },
       { "name": "انار", "latitude": "30.550", "longitude": "55.150", "id": 3 },
       {
