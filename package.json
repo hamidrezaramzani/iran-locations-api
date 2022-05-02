@@ -21,6 +21,7 @@
     "react-dom": "18.0.0",
     "react-json-view": "^1.21.3",
     "react-syntax-highlighter": "^15.5.0",
+    "react-tweet-embed": "^2.0.0",
     "react-type-animation": "^1.1.2"
   },
   "devDependencies": {

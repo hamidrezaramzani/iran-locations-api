@@ -29,9 +29,8 @@ const Examples = () => {
             value: 2,
             title: "python",
             code: `import requests
-            
-            response = requests.get("https://iran-locations-api.vercel.app/api/v1/cities?state=تهران")
-            data = response.json()
+response = requests.get("https://iran-locations-api.vercel.app/api/v1/cities?state=تهران")
+data = response.json()
             `,
             syntax: "python"
         },
@@ -39,9 +38,9 @@ const Examples = () => {
             value: 3,
             title: "Java",
             code: `HttpClient httpClient = HttpClient.newBuilder().build();
-            URI uri = URI.create("https://iran-locations-api.vercel.app/api/v1/cities?state=تهران");
-            HttpRequest httpRequest = HttpRequest.newBuilder().GET().uri(uri).build();
-            HttpResponse<String> httpResponse = httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString());`,
+URI uri = URI.create("https://iran-locations-api.vercel.app/api/v1/cities?state=تهران");
+HttpRequest httpRequest = HttpRequest.newBuilder().GET().uri(uri).build();
+HttpResponse<String> httpResponse = httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString());`,
             syntax: "java"
         }
     ]

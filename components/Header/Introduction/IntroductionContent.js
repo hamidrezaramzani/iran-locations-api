@@ -19,8 +19,8 @@ const Introduction = () => {
     return (
         <Grid xs={12} md={6} flexDirection="column" justifyContent="center" display="flex" paddingX="10px" item className={styles.welcome}>
             <div>
-                <Typography component="h1" fontFamily="iran-yekan-bold" fontSize="35px"> وب سرویس
-                    <span>‌شهر و استان </span>
+                <Typography component="h1" fontFamily="iran-yekan-bold" fontSize="35px">  وب سرویس
+                    <span> ‌شهر و استان  </span>
                     های ایران
                 </Typography>
                 <Typography
@@ -30,7 +30,7 @@ const Introduction = () => {
                     fontSize="14px"
                     fontFamily="iran-yekan"
                 >
-                    با استفاده از سرویس API ما به‌راحتی میتوانید به اطلاعات تمامی استان‌ها و تمامی شهر‌ها در شرایط مختلف دست یابید. استفاده از این سرویس کامل رایگان است.
+                    با استفاده از سرویس API ما به ‌راحتی میتوانید به اطلاعات تمامی استان‌ ها و تمامی شهر‌ها در شرایط مختلف دست یابید. استفاده از این سرویس کامل رایگان است.
                 </Typography>
 
                 <Button variant="contained" color="info" className={classes.button}>
