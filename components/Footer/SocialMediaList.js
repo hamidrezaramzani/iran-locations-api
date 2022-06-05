@@ -6,7 +6,7 @@ import TelegramIcon from '@mui/icons-material/Telegram';
 import GitHubIcon from '@mui/icons-material/GitHub';
 const SocialMediaList = () => {
     return (
-        <Grid display="flex" justifyContent="center" gap="10px">
+        <Grid display="flex" flexDirection="column" alignItems="center" justifyContent="center" gap="10px">
             <ButtonGroup variant="text" color="inherit" sx={{ direction: "ltr" }}>
                 <Button>
                     <Link href="https://twitter.com/iamhamidreza_">
@@ -24,6 +24,9 @@ const SocialMediaList = () => {
                     </Link>
                 </Button>
             </ButtonGroup>
+            <a href="https://daramet.com/iamhamidreza">
+                <img src="/donation.png" width="160px" />
+            </a>
         </Grid>
     )
 }
