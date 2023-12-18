@@ -9,6 +9,7 @@ import Introduction from "../components/Header/Introduction/Introduction";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import styles from "../styles/Home.module.css";
 import Footer from "../components/Footer/Footer";
+import Announce from "../components/Announce/Announce";
 export default function Home({ domain }) {
   const { state } = useContext(ThemeContext);
   const theme = useMemo(
@@ -82,7 +83,10 @@ export default function Home({ domain }) {
           content=".وب‌سرویس شهر و استان‌های ایران. با این سرویس می‌توانید به اطلاعات شهر و استان‌های ایران دسترسی پیدا کنید"
         />
         <meta name="twitter:image" content="" />
+
+        <meta httpEquiv="content-language" content="fa" />
       </Head>
+      <Announce />
       <Grid
         width="100%"
         display="flex"
