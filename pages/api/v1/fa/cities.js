@@ -1,6 +1,6 @@
-import { cors } from "../../../middlewares/cors";
+import { cors } from "../../../../middlewares/cors";
 
-const data = require("../../../public/iran_cities_with_coordinates.json");
+const data = require("../../../../public/iran_cities_with_coordinates.json");
 
 export default async function handler(req, res) {
 
