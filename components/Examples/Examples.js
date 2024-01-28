@@ -8,7 +8,7 @@ const Examples = () => {
         {
             value: 0,
             title: "JavaScript",
-            code: `fetch('https://iran-locations-api.vercel.app/api/v1/cities?state=تهران')
+            code: `fetch('https://iran-locations-api.vercel.app/api/v1/fa/cities?state=تهران')
             .then(response => response.json())
             .then(json => console.log(json));`,
             syntax: "javascript"
@@ -17,7 +17,7 @@ const Examples = () => {
             value: 1,
             title: "Php",
             code: `$ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, "https://iran-locations-api.vercel.app/api/v1/cities?state=تهران");
+            curl_setopt($ch, CURLOPT_URL, "https://iran-locations-api.vercel.app/api/v1/fa/cities?state=تهران");
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_POSTFIELDS, POST DATA);
             $result = curl_exec($ch);            
@@ -29,7 +29,7 @@ const Examples = () => {
             value: 2,
             title: "python",
             code: `import requests
-response = requests.get("https://iran-locations-api.vercel.app/api/v1/cities?state=تهران")
+response = requests.get("https://iran-locations-api.vercel.app/api/v1/fa/cities?state=تهران")
 data = response.json()
             `,
             syntax: "python"
@@ -38,7 +38,7 @@ data = response.json()
             value: 3,
             title: "Java",
             code: `HttpClient httpClient = HttpClient.newBuilder().build();
-URI uri = URI.create("https://iran-locations-api.vercel.app/api/v1/cities?state=تهران");
+URI uri = URI.create("https://iran-locations-api.vercel.app/api/v1/fa/cities?state=تهران");
 HttpRequest httpRequest = HttpRequest.newBuilder().GET().uri(uri).build();
 HttpResponse<String> httpResponse = httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString());`,
             syntax: "java"
