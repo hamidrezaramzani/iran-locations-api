@@ -1,6 +1,6 @@
 
-const data = require("../../../public/iran_cities_with_coordinates.json");
-const { cors } = require("../../../middlewares/cors");
+const data = require("../../../../public/iran_cities_with_coordinates.json");
+const { cors } = require("../../../../middlewares/cors");
 const _ = require("lodash");
 export default async function handler(req, res) {
 
