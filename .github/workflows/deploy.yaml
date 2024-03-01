@@ -17,4 +17,4 @@ jobs:
           LIARA_TOKEN: ${{ secrets.LIARA_API_TOKEN }}
         run: |
           npm i -g @liara/cli@5
-          liara deploy --app="APP_NAME" --port=3000 --api-token="$LIARA_TOKEN" --no-app-logs
+          liara deploy --app="iran-locations-api" --port=3000 --api-token="$LIARA_TOKEN" --no-app-logs
