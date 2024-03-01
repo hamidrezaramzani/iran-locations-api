@@ -46,13 +46,13 @@
   </p>
 </div>
 
-
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
+
 An API for find provinces and cities in Iran
 
-![Screen Shot](https://s6.uupload.ir/files/iran-location-api-screenshot_4i6u.png)
+![Screen Shot](./screenshot.png)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -65,12 +65,10 @@ An API for find provinces and cities in Iran
 ## Contact
 
 Hamidreza Ramzani - [Twitter](https://twitter.com/iamhamidreza_) <br />
-Data Repository 
+Data Repository
 Project Link: [Github](https://github.com/hamidrezaramzani/iran-locations-api)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
