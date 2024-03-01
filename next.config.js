@@ -2,7 +2,7 @@
 const isProd = process.env.NODE_ENV === "production";
 const nextConfig = {
   reactStrictMode: true,
-  assetPrefix: isProd ? "https://iran-locations-api.liara.run/" : "",
+  assetPrefix: isProd ? process.env.WEBSITE_URL : "",
 };
 
 module.exports = nextConfig;
