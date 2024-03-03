@@ -17,12 +17,12 @@ a {
 
 @font-face {
   font-family: "iran-yekan";
-  src: url(../public/fonts/ttf/iranyekanwebmediumfanum.ttf) format("truetype");
+  src: url(/fonts/ttf/iranyekanwebmediumfanum.ttf) format("truetype");
   font-display: swap;
 }
 
 @font-face {
   font-family: "iran-yekan-bold";
-  src: url(../public/fonts/ttf/iranyekanwebblackfanum.ttf) format("truetype");
+  src: url(/fonts/ttf/iranyekanwebblackfanum.ttf) format("truetype");
   font-display: swap;
 }
