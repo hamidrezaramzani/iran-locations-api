@@ -25,10 +25,10 @@ export default function Home({ domain }) {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Head>
-        <title>وب‌سرویس شهر و استان‌های ایران</title>
+        <title>وب سرویس شهر و استان‌های ایران</title>
         <meta
           name="description"
-          content=".وب‌سرویس شهر و استان‌های ایران. با این سرویس می‌توانید به اطلاعات شهر و استان‌های ایران دسترسی پیدا کنید"
+          content=".وب سرویس شهر و استان‌های ایران. با این سرویس می‌توانید به اطلاعات شهر و استان‌های ایران دسترسی پیدا کنید"
         />
         <meta name="keywords" content="وب سرویس, شهر, ایران, api" />
         <meta name="robots" content="index, follow" />
@@ -43,7 +43,6 @@ export default function Home({ domain }) {
           rel="preload"
           href="/fonts/ttf/iranyekanwebmediumfanum.ttf"
           as="font"
-          crossOrigin="true"
           type="font/ttf"
         />
 
@@ -51,20 +50,16 @@ export default function Home({ domain }) {
           rel="preload"
           href="/fonts/ttf/iranyekanwebblackfanum.ttf"
           as="font"
-          crossOrigin="true"
           type="font/ttf"
         />
         <link rel="icon" href="/logo.png" />
 
-        <meta
-          property="og:url"
-          content="https://iran-locations-api.vercel.app/"
-        />
+        <meta property="og:url" content="https://iran-locations-api.ir/" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="وب‌سرویس شهر و استان‌های ایران" />
+        <meta property="og:title" content="وب سرویس شهر و استان‌های ایران" />
         <meta
           property="og:description"
-          content=".وب‌سرویس شهر و استان‌های ایران. با این سرویس می‌توانید به اطلاعات شهر و استان‌های ایران دسترسی پیدا کنید"
+          content=".وب سرویس شهر و استان‌های ایران. با این سرویس می‌توانید به اطلاعات شهر و استان‌های ایران دسترسی پیدا کنید"
         />
         <meta property="og:image" content="" />
 
@@ -73,14 +68,11 @@ export default function Home({ domain }) {
           property="twitter:domain"
           content="iran-locations-api.vercel.app"
         />
-        <meta
-          property="twitter:url"
-          content="https://iran-locations-api.vercel.app/"
-        />
-        <meta name="twitter:title" content="وب‌سرویس شهر و استان‌های ایران" />
+        <meta property="twitter:url" content="https://iran-locations-api.ir/" />
+        <meta name="twitter:title" content="وب سرویس شهر و استان‌های ایران" />
         <meta
           name="twitter:description"
-          content=".وب‌سرویس شهر و استان‌های ایران. با این سرویس می‌توانید به اطلاعات شهر و استان‌های ایران دسترسی پیدا کنید"
+          content=".وب سرویس شهر و استان‌های ایران. با این سرویس می‌توانید به اطلاعات شهر و استان‌های ایران دسترسی پیدا کنید"
         />
         <meta name="twitter:image" content="" />
 
