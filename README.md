@@ -38,7 +38,7 @@
     <a href="https://github.com/hamidrezaramzani/iran-locations-api"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://iran-locations-api.vercel.app/">View Demo</a>
+    <a href="https://iran-locations-api.ir/">View Demo</a>
     ·
     <a href="https://github.com/hamidrezaramzani/iran-locations-api/issues">Report Bug</a>
     ·

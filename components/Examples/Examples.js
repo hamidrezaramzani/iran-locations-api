@@ -1,55 +1,53 @@
-import { Container } from '@mui/material'
-import RequestExampleItem from './RequestExampleItem'
+import { Container } from "@mui/material";
+import RequestExampleItem from "./RequestExampleItem";
 
 const Examples = () => {
-
-
-    const REQUEST_DATA = [
-        {
-            value: 0,
-            title: "JavaScript",
-            code: `fetch('https://iran-locations-api.vercel.app/api/v1/fa/cities?state=تهران')
+  const REQUEST_DATA = [
+    {
+      value: 0,
+      title: "JavaScript",
+      code: `fetch('https://iran-locations-api.ir/api/v1/fa/cities?state=تهران')
             .then(response => response.json())
             .then(json => console.log(json));`,
-            syntax: "javascript"
-        },
-        {
-            value: 1,
-            title: "Php",
-            code: `$ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, "https://iran-locations-api.vercel.app/api/v1/fa/cities?state=تهران");
+      syntax: "javascript",
+    },
+    {
+      value: 1,
+      title: "Php",
+      code: `$ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, "https://iran-locations-api.ir/api/v1/fa/cities?state=تهران");
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_POSTFIELDS, POST DATA);
             $result = curl_exec($ch);            
             print_r($result);
             curl_close($ch);`,
-            syntax: "php"
-        },
-        {
-            value: 2,
-            title: "python",
-            code: `import requests
-response = requests.get("https://iran-locations-api.vercel.app/api/v1/fa/cities?state=تهران")
+      syntax: "php",
+    },
+    {
+      value: 2,
+      title: "python",
+      code: `import requests
+response = requests.get("https://iran-locations-api.ir/api/v1/fa/cities?state=تهران")
 data = response.json()
             `,
-            syntax: "python"
-        },
-        {
-            value: 3,
-            title: "Java",
-            code: `HttpClient httpClient = HttpClient.newBuilder().build();
-URI uri = URI.create("https://iran-locations-api.vercel.app/api/v1/fa/cities?state=تهران");
+      syntax: "python",
+    },
+    {
+      value: 3,
+      title: "Java",
+      code: `HttpClient httpClient = HttpClient.newBuilder().build();
+URI uri = URI.create("https://iran-locations-api.ir/api/v1/fa/cities?state=تهران");
 HttpRequest httpRequest = HttpRequest.newBuilder().GET().uri(uri).build();
 HttpResponse<String> httpResponse = httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString());`,
-            syntax: "java"
-        }
-    ]
+      syntax: "java",
+    },
+  ];
 
-    const RESPONSE_DATA = [
-        {
-            value: 0,
-            title: "json",
-            code: `
+  const RESPONSE_DATA = [
+    {
+      value: 0,
+      title: "json",
+      code: `
 [
     {
       "name": "تهران",
@@ -59,39 +57,47 @@ HttpResponse<String> httpResponse = httpClient.send(httpRequest, HttpResponse.Bo
     ...
 ]
             `,
-            syntax: "json"
-        },
-    ]
+      syntax: "json",
+    },
+  ];
 
-
-    const ERROR_DATA = [
-        {
-            value: 0,
-            title: "json",
-            code: `{ message: "invalid request - please send  a valid city name with 'city' param"}
+  const ERROR_DATA = [
+    {
+      value: 0,
+      title: "json",
+      code: `{ message: "invalid request - please send  a valid city name with 'city' param"}
             `,
-            syntax: "json"
-        },
-    ]
+      syntax: "json",
+    },
+  ];
 
-    return (
-        <Container sx={{ paddingTop: "50px" }}>
-            <RequestExampleItem>
-                <RequestExampleItem.Description title="نمونه ارسال درخواست" description=".شما می‌توانید با ابزار‌های متفاوت و به‌راحتی از وب‌سرویس ما استفاده کنید" />
-                <RequestExampleItem.Code data={REQUEST_DATA} />
-            </RequestExampleItem>
+  return (
+    <Container sx={{ paddingTop: "50px" }}>
+      <RequestExampleItem>
+        <RequestExampleItem.Description
+          title="نمونه ارسال درخواست"
+          description=".شما می‌توانید با ابزار‌های متفاوت و به‌راحتی از وب‌سرویس ما استفاده کنید"
+        />
+        <RequestExampleItem.Code data={REQUEST_DATA} />
+      </RequestExampleItem>
 
-            <RequestExampleItem>
-                <RequestExampleItem.Description title="نمونه جواب دریافت شده" description=".نمونه‌جوابی که در صورت درست بودن درخواست دریافت می‌کنید" />
-                <RequestExampleItem.Code data={RESPONSE_DATA} />
-            </RequestExampleItem>
+      <RequestExampleItem>
+        <RequestExampleItem.Description
+          title="نمونه جواب دریافت شده"
+          description=".نمونه‌جوابی که در صورت درست بودن درخواست دریافت می‌کنید"
+        />
+        <RequestExampleItem.Code data={RESPONSE_DATA} />
+      </RequestExampleItem>
 
-            <RequestExampleItem>
-                <RequestExampleItem.Description title="نمونه خطای دریافتی" description=".در صورت درست نبودن پارامتر ورودی خطای فوق را دریافت می‌کنید" />
-                <RequestExampleItem.Code data={ERROR_DATA} />
-            </RequestExampleItem>
-        </Container>
-    )
-}
+      <RequestExampleItem>
+        <RequestExampleItem.Description
+          title="نمونه خطای دریافتی"
+          description=".در صورت درست نبودن پارامتر ورودی خطای فوق را دریافت می‌کنید"
+        />
+        <RequestExampleItem.Code data={ERROR_DATA} />
+      </RequestExampleItem>
+    </Container>
+  );
+};
 
-export default Examples
+export default Examples;

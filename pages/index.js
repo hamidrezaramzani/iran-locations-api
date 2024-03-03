@@ -66,7 +66,7 @@ export default function Home({ domain }) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:domain"
-          content="iran-locations-api.vercel.app"
+          content="https://iran-locations-api.ir"
         />
         <meta property="twitter:url" content="https://iran-locations-api.ir/" />
         <meta name="twitter:title" content="وب سرویس شهر و استان‌های ایران" />
