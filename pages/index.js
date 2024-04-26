@@ -33,12 +33,11 @@ export default function Home({ domain }) {
         <meta name="keywords" content="وب سرویس, شهر, ایران, api" />
         <meta name="robots" content="index, follow" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="author" content="Hamidreza Ramzani" />
         <meta
           name="google-site-verification"
-          content="e-lqYCfqL9Ln30jqpJrH0hrJtDm2ytuv1GFXuyuR_dI"
+          content="c-xDePdvlKty9pfIjRAoZf6vk718iZCl1U3oKqMOfmU"
         />
-
+        <meta name="author" content="Hamidreza Ramzani" />
         <link
           rel="preload"
           href="/fonts/ttf/iranyekanwebmediumfanum.ttf"
