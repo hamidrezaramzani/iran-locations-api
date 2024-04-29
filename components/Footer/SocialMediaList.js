@@ -33,7 +33,7 @@ const SocialMediaList = () => {
       </ButtonGroup>
       <a href="https://daramet.com/iamhamidreza">
         <Image
-          src="/donation.png"
+          src="/pizza-donation.png"
           alt="donation"
           width={160}
           height={30}
