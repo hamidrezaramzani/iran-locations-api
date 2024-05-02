@@ -640,7 +640,6 @@
         "longitude": "58.4157",
         "id": 5
       },
-      { "name": "طبس", "latitude": "33.370", "longitude": "56.540", "id": 6 },
       {
         "name": "تربت حيدريه",
         "latitude": "35.1627",
@@ -1659,7 +1658,6 @@
         "id": 4
       },
       { "name": "ميبد", "latitude": "32.140", "longitude": "54.10", "id": 5 },
-      { "name": "طبس", "latitude": "33.370", "longitude": "56.540", "id": 6 },
       { "name": "بافق", "latitude": "31.360", "longitude": "55.240", "id": 7 },
       {
         "name": "مهريز",
