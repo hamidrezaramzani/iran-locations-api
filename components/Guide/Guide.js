@@ -102,6 +102,7 @@ const Guide = ({ domain }) => {
               نام استانی که شهر‌های آن را می‌خواهید
             </GuideItem.InputItem>
             <GuideItem.InputItem>بله</GuideItem.InputItem>
+            <GuideItem.InputItem>Array</GuideItem.InputItem>
           </GuideItem.Inputs>
           <GuideItem.Url domain={domain}>
             /api/v1/fa/cities?state={"{state}"}
