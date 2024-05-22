@@ -65,7 +65,7 @@ HttpResponse<String> httpResponse = httpClient.send(httpRequest, HttpResponse.Bo
     {
       value: 0,
       title: "json",
-      code: `{ message: "invalid request - please send  a valid city name with 'city' param"}
+      code: `{ message: "Invalid id parameter, id most be number"}
             `,
       syntax: "json",
     },
@@ -76,7 +76,7 @@ HttpResponse<String> httpResponse = httpClient.send(httpRequest, HttpResponse.Bo
       <RequestExampleItem>
         <RequestExampleItem.Description
           title="نمونه ارسال درخواست"
-          description=".شما می‌توانید با ابزار‌های متفاوت و به‌راحتی از وب‌سرویس ما استفاده کنید"
+          description=".شما میتوانید با ابزار‌های متفاوت و به راحتی از وب‌سرویس ما استفاده کنید"
         />
         <RequestExampleItem.Code data={REQUEST_DATA} />
       </RequestExampleItem>
@@ -84,7 +84,7 @@ HttpResponse<String> httpResponse = httpClient.send(httpRequest, HttpResponse.Bo
       <RequestExampleItem>
         <RequestExampleItem.Description
           title="نمونه جواب دریافت شده"
-          description=".نمونه‌جوابی که در صورت درست بودن درخواست دریافت می‌کنید"
+          description=".نمونه جوابی که در صورت درست بودن درخواست دریافت می‌کنید"
         />
         <RequestExampleItem.Code data={RESPONSE_DATA} />
       </RequestExampleItem>
@@ -92,7 +92,7 @@ HttpResponse<String> httpResponse = httpClient.send(httpRequest, HttpResponse.Bo
       <RequestExampleItem>
         <RequestExampleItem.Description
           title="نمونه خطای دریافتی"
-          description=".در صورت درست نبودن پارامتر ورودی خطای فوق را دریافت می‌کنید"
+          description=".در صورت درست نبودن پارامتر آیدی ورودی خطای فوق را دریافت می‌کنید"
         />
         <RequestExampleItem.Code data={ERROR_DATA} />
       </RequestExampleItem>
