@@ -15,6 +15,7 @@
     "@mui/icons-material": "^5.6.2",
     "@mui/material": "^5.6.1",
     "@mui/styles": "^5.6.2",
+    "axios": "^1.7.2",
     "lodash": "^4.17.21",
     "next": "^14.2.3",
     "nextjs-cors": "^2.1.1",

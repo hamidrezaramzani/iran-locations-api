@@ -26,3 +26,11 @@ a {
   src: url(/fonts/ttf/iranyekanwebblackfanum.ttf) format("truetype");
   font-display: swap;
 }
+
+.iran-yekan {
+  font-family: "iran-yekan" !important;
+}
+
+.iran-yekan-bold {
+  font-family: "iran-yekan-bold" !important;
+}
