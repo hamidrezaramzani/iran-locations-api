@@ -22,16 +22,22 @@ export default function Home({ domain }) {
       }),
     [state]
   );
+
+  const META_TITLE =
+    "وب سرویس شهرها و استان‌های ایران | اطلاعات جامع شهری و استانی";
+  const META_DESCRIPTION =
+    "وب سرویس شهرها و استان‌های ایران: دسترسی به اطلاعات جامع و به‌روز درباره شهرها و استان‌های ایران. انواع داده ها بر اساس دسته بندی های متفاوت را میتوانید داشته باشید.";
+  const META_KEWORDS = "";
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Head>
-        <title>وب سرویس شهر و استان‌های ایران</title>
+        <title>{META_TITLE}</title>
+        <meta name="description" content={META_DESCRIPTION} />
         <meta
-          name="description"
-          content=".وب سرویس شهر و استان‌های ایران. با این سرویس می‌توانید به اطلاعات شهر و استان‌های ایران دسترسی پیدا کنید"
+          name="keywords"
+          content="وب سرویس, شهر, ایران, api, وب سرویس شهر و استان"
         />
-        <meta name="keywords" content="وب سرویس, شهر, ایران, api" />
         <meta name="robots" content="index, follow" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta
@@ -56,11 +62,8 @@ export default function Home({ domain }) {
 
         <meta property="og:url" content="https://iran-locations-api.ir/" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="وب سرویس شهر و استان‌های ایران" />
-        <meta
-          property="og:description"
-          content=".وب سرویس شهر و استان‌های ایران. با این سرویس می‌توانید به اطلاعات شهر و استان‌های ایران دسترسی پیدا کنید"
-        />
+        <meta property="og:title" content={META_TITLE} />
+        <meta property="og:description" content={META_DESCRIPTION} />
         <meta property="og:image" content="" />
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -69,12 +72,29 @@ export default function Home({ domain }) {
           content="https://iran-locations-api.ir"
         />
         <meta property="twitter:url" content="https://iran-locations-api.ir/" />
-        <meta name="twitter:title" content="وب سرویس شهر و استان‌های ایران" />
-        <meta
-          name="twitter:description"
-          content=".وب سرویس شهر و استان‌های ایران. با این سرویس می‌توانید به اطلاعات شهر و استان‌های ایران دسترسی پیدا کنید"
-        />
+        <meta name="twitter:title" content={META_TITLE} />
+        <meta name="twitter:description" content={META_DESCRIPTION} />
         <meta name="twitter:image" content="" />
+
+        <link
+          rel="apple-touch-icon"
+          href="/apple-touch-icon-iphone-60x60.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="60x60"
+          href="/apple-touch-icon-ipad-76x76.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="114x114"
+          href="/apple-touch-icon-iphone-retina-120x120.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="/apple-touch-icon-ipad-retina-152x152.png"
+        />
 
         <meta httpEquiv="content-language" content="fa" />
       </Head>

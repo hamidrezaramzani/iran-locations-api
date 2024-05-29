@@ -59,9 +59,6 @@ const Header = () => {
                 <Link href="https://github.com/hamidrezaramzani/hamidrezaramzani">
                   درباره من
                 </Link>
-                <Link href="https://t.me/iranlocationsapi">
-                  کانال اطلاع رسانی
-                </Link>
               </Box>
 
               <Box sx={{ flexGrow: 0 }}>
