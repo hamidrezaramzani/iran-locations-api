@@ -64,7 +64,7 @@ An API for find provinces and cities in Iran
 
 ## Contact
 
-Hamidreza Ramzani - [Twitter](https://twitter.com/iamhamidreza_) <br />
+Email: hamidrezaramzani80@gmail.com
 Data Repository
 Project Link: [Github](https://github.com/hamidrezaramzani/iran-locations-api)
 
