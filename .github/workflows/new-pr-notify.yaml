@@ -14,14 +14,18 @@ jobs:
           script: |
             const webhookUrl = process.env.PR_DISCORD_WEBHOOK_URL;
             const pr = context.payload.pull_request;
+            const repo = context.repo.repo;
+            const owner = context.repo.owner;
+
             const message = {
-              content: `New Pull Request Created!\n` +
-                       `**Title:** ${pr.title}\n` +
-                       `**PR Branch:** ${pr.head.ref}\n` +
-                       `**Base Branch:** ${pr.base.ref}\n` +
-                       `**Link:** ${pr.html_url}`
+              content: `**${pr.title}**\n` +
+                       `> :bust_in_silhouette: **User**: ${pr.user.login}\n` +
+                       `:herb: **Branch**: ${pr.head.ref}\n` +
+                       `:deciduous_tree: **Base Branch**: ${pr.base.ref}\n` +
+                       `:open_file_folder: **Repository**: ${owner}/${repo}\n` +
+                       `:link: **Pull Request Link**: ${pr.html_url}`
             };
-            console.log(message);
+
             await fetch(webhookUrl, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
