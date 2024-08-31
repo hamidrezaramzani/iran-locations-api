@@ -34,4 +34,4 @@ jobs:
               body: JSON.stringify(message)
             });
         env:
-          DISCORD_WEBHOOK_URL: ${{ secrets.PR_DISCORD_WEBHOOK_URL }}
+          PR_DISCORD_WEBHOOK_URL: ${{ secrets.PR_DISCORD_WEBHOOK_URL }}
