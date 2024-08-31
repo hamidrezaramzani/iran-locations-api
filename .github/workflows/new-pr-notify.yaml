@@ -12,7 +12,6 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
-            const fetch = require('node-fetch');
             const webhookUrl = process.env.PR_DISCORD_WEBHOOK_URL;
             const pr = context.payload.pull_request;
             const message = {
@@ -22,6 +21,7 @@ jobs:
                        `**Base Branch:** ${pr.base.ref}\n` +
                        `**Link:** ${pr.html_url}`
             };
+            console.log(message);
             await fetch(webhookUrl, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
