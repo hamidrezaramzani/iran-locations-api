@@ -17,6 +17,21 @@ jobs:
             const repo = context.repo.repo;
             const owner = context.repo.owner;
 
+              const branchRegex = [
+                /\/(PS-\d+)\//i,
+                /\/(ps-\d+)\//i,
+                /\/(Ps-\d+)\//i,
+                /\/(pS-\d+)\//i,
+              ];
+            
+              let match;
+              let branch;
+              branchRegex.forEach((regex) => {
+                match = pr.head.ref.match(regex);
+                branch = match && match[1];
+                if (branch) return;
+              });
+
             const message = {
               username: `${pr.user.login}`,
               avatar_url: `${pr.user.avatar_url}`,
