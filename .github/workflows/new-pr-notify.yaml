@@ -26,6 +26,8 @@ jobs:
                        `:link: **Pull Request Link**: ${pr.html_url}`
             };
 
+            console.log(message, webhookUrl);
+
             await fetch(webhookUrl, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
