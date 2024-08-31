@@ -1,0 +1,31 @@
+name: Notify Discord on PR
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send notification to Discord
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fetch = require('node-fetch');
+            const webhookUrl = process.env.PR_DISCORD_WEBHOOK_URL;
+            const pr = context.payload.pull_request;
+            const message = {
+              content: `New Pull Request Created!\n` +
+                       `**Title:** ${pr.title}\n` +
+                       `**PR Branch:** ${pr.head.ref}\n` +
+                       `**Base Branch:** ${pr.base.ref}\n` +
+                       `**Link:** ${pr.html_url}`
+            };
+            await fetch(webhookUrl, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(message)
+            });
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.PR_DISCORD_WEBHOOK_URL }}
