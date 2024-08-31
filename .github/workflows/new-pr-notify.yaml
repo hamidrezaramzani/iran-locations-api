@@ -17,25 +17,27 @@ jobs:
             const repo = context.repo.repo;
             const owner = context.repo.owner;
 
-              const branchRegex = [
-                /\/(PS-\d+)\//i,
-                /\/(ps-\d+)\//i,
-                /\/(Ps-\d+)\//i,
-                /\/(pS-\d+)\//i,
-              ];
-            
-              let match;
-              let branch;
-              branchRegex.forEach((regex) => {
-                match = pr.head.ref.match(regex);
-                branch = match && match[1];
-                if (branch) return;
-              });
+            const branchRegex = [
+              /\/(PS-\d+)\//i,
+              /\/(ps-\d+)\//i,
+              /\/(Ps-\d+)\//i,
+              /\/(pS-\d+)\//i,
+            ];
+
+            let match;
+            let branch;
+            for (const regex of branchRegex) {
+              match = pr.head.ref.match(regex);
+              if (match) {
+                branch = match[1];
+                break;
+              }
+            }
 
             const message = {
-              username: `${pr.user.login}`,
-              avatar_url: `${pr.user.avatar_url}`,
-              content: `${branch ? branch.toUpperCase() : ""} +
+              username: pr.user.login,
+              avatar_url: pr.user.avatar_url,
+              content: `${branch ? branch.toUpperCase() + " " : ""}` +
                        `> :bust_in_silhouette: **User**: ${pr.user.login}\n` +
                        `:herb: **Branch**: ${pr.head.ref}\n` +
                        `:deciduous_tree: **Base Branch**: ${pr.base.ref}\n` +
