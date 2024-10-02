@@ -34,3 +34,14 @@ a {
 .iran-yekan-bold {
   font-family: "iran-yekan-bold" !important;
 }
+
+path:hover {
+  fill: #323232 !important;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .iran-map {
+    display: none !important;
+  }
+}

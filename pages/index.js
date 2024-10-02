@@ -9,7 +9,6 @@ import Introduction from "../components/Header/Introduction/Introduction";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import styles from "../styles/Home.module.css";
 import Footer from "../components/Footer/Footer";
-import Announce from "../components/Announce/Announce";
 import Donates from "../components/Donates/Donates";
 export default function Home({ domain }) {
   const { state } = useContext(ThemeContext);
@@ -98,7 +97,6 @@ export default function Home({ domain }) {
 
         <meta httpEquiv="content-language" content="fa" />
       </Head>
-      <Announce />
       <Grid
         width="100%"
         display="flex"
@@ -108,7 +106,7 @@ export default function Home({ domain }) {
         className={state === "light" ? styles.darkWelcome : styles.lightWelcome}
       >
         <Header />
-        <Introduction />
+        <Introduction domain={domain} />
       </Grid>
       <Examples domain={domain} />
       <Guide domain={domain} />
