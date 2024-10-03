@@ -1,87 +1,78 @@
-<div id="top"></div>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/hamidrezaramzani/iran-locations-api">
-    <img src="./public/logo.png" alt="Logo" width="100" >
-  </a>
-
-<h3 align="center">Iran province and cities API</h3>
-
-  <p align="center">
-    An API for find provinces and cities in Iran
-    <br />
-    <a href="https://github.com/hamidrezaramzani/iran-locations-api"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://iran-locations-api.ir/">View Demo</a>
-    ·
-    <a href="https://github.com/hamidrezaramzani/iran-locations-api/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/hamidrezaramzani/iran-locations-api/issues">Request Feature</a>
-  </p>
-</div>
-
-<!-- ABOUT THE PROJECT -->
-
-## About The Project
-
-An API for find provinces and cities in Iran
-
-![Screen Shot](./screenshot.png)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-### Built With
-
-- [Next.js](https://nextjs.org/)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-## Contact
-
-Hamidreza Ramzani - [Twitter](https://twitter.com/iamhamidreza_) <br />
-Data Repository
-Project Link: [Github](https://github.com/hamidrezaramzani/iran-locations-api)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-
-[contributors-shield]: https://img.shields.io/github/contributors/hamidrezaramzani/iran-locations-api.svg?style=for-the-badge
-[contributors-url]: https://github.com/hamidrezaramzani/iran-locations-api/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/hamidrezaramzani/iran-locations-api.svg?style=for-the-badge
-[forks-url]: https://github.com/hamidrezaramzani/iran-locations-api/network/members
-[stars-shield]: https://img.shields.io/github/stars/hamidrezaramzani/iran-locations-api.svg?style=for-the-badge
-[stars-url]: https://github.com/hamidrezaramzani/iran-locations-api/stargazers
-[issues-shield]: https://img.shields.io/github/issues/hamidrezaramzani/iran-locations-api.svg?style=for-the-badge
-[issues-url]: https://github.com/hamidrezaramzani/iran-locations-api/issues
-[license-shield]: https://img.shields.io/github/license/hamidrezaramzani/iran-locations-api.svg?style=for-the-badge
-[license-url]: https://github.com/hamidrezaramzani/iran-locations-api/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/hamidrezaramzani
+<h1>Iran Locations API</h1>
+<hr><p>An API for find provinces and cities in Iran</p><h2>General Information</h2>
+<hr><ul>
+<li>This repository provides a RESTful API that allows users to retrieve a list of provinces and their corresponding cities within Iran. The API serves a comprehensive and accurate dataset, making it easy to access this information for applications that require geographic data related to Iranian provinces and cities. The web API is built with modern web technologies to ensure efficient and scalable access.</li>
+</ul><ul>
+<li>Many applications and projects need reliable geographic information about Iran's provinces and cities for various purposes such as:</li>
+</ul>
+<ul>
+<li>User registration forms that require location-based input.
+Logistics and delivery services that need to validate and track locations.</li>
+<li>Administrative and governmental projects where geographical regions need to be organized.
+Currently, developers might struggle to find up-to-date and easily accessible APIs with Iran-specific geographical data. This API provides a simple solution by offering accurate and structured information in a standardized format.</li>
+</ul><ul>
+<li>The main goal of this project is to create a lightweight, accessible web API that can be integrated into any project requiring Iranian geographic data. By using this API, developers can:</li>
+</ul>
+<p>Simplify the process of managing geographic data.</p>
+<ul>
+<li>Reduce the need for manually maintaining or updating large datasets of provinces and cities.</li>
+<li>Facilitate the development of localized apps and services that need this specific data.</li>
+</ul><h2>Technologies Used</h2>
+<hr><ul>
+<li>HTML</li>
+</ul><ul>
+<li>CSS</li>
+</ul><ul>
+<li>JavaScript</li>
+</ul><ul>
+<li>React</li>
+</ul><ul>
+<li>NodeJS</li>
+</ul><ul>
+<li>Next.js</li>
+</ul><h2>Features</h2>
+<hr><ul>
+<li>Retrieve all provinces: Get a complete list of all provinces (states) in Iran.</li>
+</ul><ul>
+<li>Search by province name or ID: Easily find a specific province by providing either its name or unique identifier.</li>
+</ul><ul>
+<li>Get cities by province: Retrieve all cities within a province by simply searching with the province's name.</li>
+</ul><ul>
+<li>Multilingual support: Find provinces and cities in two languages, providing flexibility for both Persian and English applications.</li>
+</ul><h2>Screenshots</h2>
+<hr><p><img src="https://github.com/hamidrezaramzani/iran-locations-api/raw/main/screenshot.png" alt=""></p><h2>Project Status</h2>
+<hr><h4>Ongoing Work:</h4>
+<p>Performance optimization and load testing.
+Documentation improvements to enhance user experience.</p>
+<h4>Future Plans:</h4>
+<ul>
+<li>Expanding the dataset to include more geographical
+information, such as district-level data.</li>
+</ul>
+<h4>Contributions:</h4>
+<ul>
+<li>Contributions are welcome! Please check the issues section for ongoing tasks or suggestions for new features.</li>
+</ul><ul>
+<li>
+<p>I would like to thank:</p>
+<ul>
+<li>
+<p>The developers and contributors to this project for
+their valuable feedback and contributions.</p>
+</li>
+<li>
+<p>The open-source community, whose tools and resources
+helped make this API possible.</p>
+</li>
+<li>
+<p>Public data sources for providing accurate and up-to-
+date information on Iran's provinces and cities.</p>
+</li>
+<li>
+<p>The users and developers who offered suggestions and
+improvements during the development process.</p>
+</li>
+</ul>
+</li>
+</ul><h2>Contact</h2>
+<hr><p><span style="margin-right: 30px;"></span><a href="https://www.linkedin.com/in/hamidrezaramzani/"><img target="_blank" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" style="width: 10%;"></a><span style="margin-right: 30px;"></span><a href="https://github.com/hamidrezaramzani"><img target="_blank" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" style="width: 10%;"></a></p>
