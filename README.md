@@ -52,8 +52,11 @@ information, such as district-level data.</li>
 <h4>Contributions:</h4>
 <ul>
 <li>Contributions are welcome! Please check the issues section for ongoing tasks or suggestions for new features.</li>
-</ul><ul>
-<li>
+</ul>
+
+<h2>Acknowledgement</h2>
+<hr>
+<ul>
 <p>I would like to thank:</p>
 <ul>
 <li>
