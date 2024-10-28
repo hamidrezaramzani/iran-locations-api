@@ -1,21 +1,8 @@
-import { Box, Button, Grid, Typography } from "@mui/material";
-import { makeStyles } from "@mui/styles";
-import Link from "next/link";
 import React from "react";
+import { Box, Grid, Typography } from "@mui/material";
 import styles from "./styles.module.css";
 
-const useStyles = makeStyles(() => ({
-  button: {
-    background: "#2b3de2",
-    fontFamily: "iran-yekan",
-    "&:hover": {
-      background: "#1d2fd4",
-    },
-  },
-}));
 const Introduction = () => {
-  const classes = useStyles();
-
   return (
     <Grid
       xs={12}
@@ -55,17 +42,6 @@ const Introduction = () => {
           ها و تمامی شهر‌ها در شرایط مختلف دست یابید. استفاده از این سرویس کامل
           رایگان است.
         </Typography>
-
-        <Box display="flex" marginTop="20px" justifyContent="center">
-          <Button
-            variant="contained"
-            color="info"
-            width="50"
-            className={classes.button}
-          >
-            <Link href="/#guide">ادامه مطلب</Link>
-          </Button>
-        </Box>
       </Box>
     </Grid>
   );
