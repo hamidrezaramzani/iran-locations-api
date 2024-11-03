@@ -21,6 +21,7 @@ export const IranMap = ({ domain }) => {
   const [isAlertOpen, setAlertOpen] = useState(false);
   const [currentState, setCurrentState] = useState("");
   const [language, setLanguage] = useState("fa");
+
   const handleClick = (e) => {
     const state = e.target.getAttribute("aria-label");
 

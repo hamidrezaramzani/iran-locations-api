@@ -1,8 +1,11 @@
+"use client";
 import React from "react";
 import { Box, Grid, Typography } from "@mui/material";
 import styles from "./styles.module.css";
+import { Trans, useTranslation } from "next-i18next";
 
 const Introduction = () => {
+  const { t } = useTranslation();
   return (
     <Grid
       xs={12}
@@ -26,10 +29,12 @@ const Introduction = () => {
           fontFamily="iran-yekan-bold"
           fontSize="35px"
         >
-          {" "}
-          وب سرویس
-          <span> ‌شهر و استان </span>
-          های ایران
+          <Trans
+            i18nKey="introduction:content.title"
+            components={{
+              span: <span />,
+            }}
+          />
         </Typography>
         <Typography
           color="#686868"
@@ -38,9 +43,7 @@ const Introduction = () => {
           fontSize="14px"
           fontFamily="iran-yekan"
         >
-          با استفاده از سرویس API ما به ‌راحتی میتوانید به اطلاعات تمامی استان‌
-          ها و تمامی شهر‌ها در شرایط مختلف دست یابید. استفاده از این سرویس کامل
-          رایگان است.
+          {t("introduction:content.description")}
         </Typography>
       </Box>
     </Grid>
