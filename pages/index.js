@@ -10,7 +10,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import styles from "../styles/Home.module.css";
 import Footer from "../components/Footer/Footer";
 import Donates from "../components/Donates/Donates";
-export default function Home({ domain }) {
+export default function Home({ domain, starCount }) {
   const { state } = useContext(ThemeContext);
   const theme = useMemo(
     () =>
@@ -106,7 +106,7 @@ export default function Home({ domain }) {
         className={state === "light" ? styles.darkWelcome : styles.lightWelcome}
       >
         <Header />
-        <Introduction domain={domain} />
+        <Introduction starCount={starCount} domain={domain} />
       </Grid>
       <Examples domain={domain} />
       <Guide domain={domain} />
@@ -119,5 +119,17 @@ export default function Home({ domain }) {
 export async function getServerSideProps({ req }) {
   const domain = req.headers.host;
 
-  return { props: { domain } };
+  const owner = "hamidrezaramzani";
+  const repo = "iran-locations-api";
+  const res = await fetch(`https://api.github.com/repos/${owner}/${repo}`);
+  const data = await res.json();
+
+  const starCount = data.stargazers_count || 0;
+
+  return {
+    props: {
+      starCount,
+      domain,
+    },
+  };
 }

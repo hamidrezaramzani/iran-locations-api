@@ -1,8 +1,10 @@
 import React from "react";
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import styles from "./styles.module.css";
+import { Star } from "@mui/icons-material";
+import Link from "next/link";
 
-const Introduction = () => {
+const Introduction = ({ starCount }) => {
   return (
     <Grid
       xs={12}
@@ -20,6 +22,23 @@ const Introduction = () => {
         flexDirection="column"
         alignItems="center"
       >
+        <Button
+          LinkComponent={Link}
+          href="https://github.com/hamidrezaramzani/iran-locations-api/stargazers"
+          endIcon={<Star fontSize="15" color="warning" />}
+          target="blank"
+          variant="outlined"
+        >
+          <Typography
+            ml="10px"
+            mt="3px"
+            fontSize={15}
+            className="iran-yekan"
+            color="GrayText"
+          >
+            {starCount}
+          </Typography>
+        </Button>
         <Typography
           component="h1"
           textAlign="center"
