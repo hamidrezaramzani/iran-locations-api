@@ -31,7 +31,7 @@ const Header = () => {
       <Container>
         <AppBar
           position="static"
-          color="default"
+          color="transparent"
           sx={{ boxShadow: "none", borderRadius: "5px" }}
         >
           <Container maxWidth="xl">

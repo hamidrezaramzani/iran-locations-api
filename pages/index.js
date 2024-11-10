@@ -10,6 +10,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import styles from "../styles/Home.module.css";
 import Footer from "../components/Footer/Footer";
 import Donates from "../components/Donates/Donates";
+import { IranMap } from "../components/Header/IranMap/IranMap";
 export default function Home({ domain, starCount }) {
   const { state } = useContext(ThemeContext);
   const theme = useMemo(
@@ -103,11 +104,14 @@ export default function Home({ domain, starCount }) {
         justifyContent="center"
         container
         height="100vh"
-        className={state === "light" ? styles.darkWelcome : styles.lightWelcome}
+        className={`${
+          state === "light" ? styles.backgroundLight : styles.backgroundDark
+        } ${state === "light" ? styles.darkWelcome : styles.lightWelcome}`}
       >
         <Header />
         <Introduction starCount={starCount} domain={domain} />
       </Grid>
+      <IranMap domain={domain} />
       <Examples domain={domain} />
       <Guide domain={domain} />
       <Donates />

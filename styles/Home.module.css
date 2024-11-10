@@ -1,0 +1,32 @@
+.backgroundDark {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(18, 18, 18, 0) 40%,
+      rgba(18, 18, 18, 0.8) 90%
+    ),
+    url(../public/background-dark.jpg);
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 100%;
+  height: 100vh;
+}
+
+
+.backgroundLight {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 40%,
+      rgba(255, 255, 255, 0.8) 90%
+    ),
+    url(../public/background-light.jpg);
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 100%;
+  height: 100vh;
+}
