@@ -1,4 +1,5 @@
 const introduction = require("./public/locales/fa/introduction.json");
+const common = require("./public/locales/fa/common.json");
 
 /**
  * @type {import('next-i18next').UserConfig}
@@ -7,6 +8,7 @@ module.exports = {
   resources: {
     fa: {
       introduction,
+      common,
     },
   },
   // https://www.i18next.com/overview/configuration-options#logging
