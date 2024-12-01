@@ -1,16 +1,13 @@
 import { ThemeContext } from "../context/ThemeProvider";
-import { CssBaseline, Grid, Typography } from "@mui/material";
+import { CssBaseline, Grid } from "@mui/material";
 import Head from "next/head";
 import { useContext, useMemo } from "react";
-import Examples from "../components/Examples/Examples";
-import Guide from "../components/Guide/Guide";
 import Header from "../components/Header/Header";
 import Introduction from "../components/Header/Introduction/Introduction";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import styles from "../styles/Home.module.css";
 import Footer from "../components/Footer/Footer";
-import Donates from "../components/Donates/Donates";
-import { IranMap } from "../components/Header/IranMap/IranMap";
+import { QueryBuilder } from "../components/QueryBuilder/QueryBuilder";
 export default function Home({ domain, starCount }) {
   const { state } = useContext(ThemeContext);
   const theme = useMemo(
@@ -18,6 +15,12 @@ export default function Home({ domain, starCount }) {
       createTheme({
         palette: {
           mode: state,
+          background: {
+            default: state === "dark" ? "#000000" : "#ffffff",
+          },
+        },
+        typography: {
+          fontFamily: "iran-yekan",
         },
       }),
     [state]
@@ -111,10 +114,7 @@ export default function Home({ domain, starCount }) {
         <Header />
         <Introduction starCount={starCount} domain={domain} />
       </Grid>
-      <IranMap domain={domain} />
-      <Examples domain={domain} />
-      <Guide domain={domain} />
-      <Donates />
+      <QueryBuilder domain={domain} />
       <Footer />
     </ThemeProvider>
   );
