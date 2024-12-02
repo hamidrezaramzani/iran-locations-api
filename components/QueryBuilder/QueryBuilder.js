@@ -274,19 +274,19 @@ export const QueryBuilder = ({ domain }) => {
       display="flex"
       alignItems="center"
       flexDirection="column"
-      padding="80px"
+      padding={["0", "80px"]}
       fontFamily="iran-yekan"
       marginTop="-250px"
     >
       <Box
-        width={["90%", "50%"]}
-        sx={{
-          borderColor: "divider",
-          bgColor: "white",
-          zIndex: 999,
-        }}
+        width={["90%", "90%", "50%"]}
+        bgcolor={state === "dark" ? "black" : "white"}
+        borderRadius={4}
+        border={`1px solid ${state === "dark" ? "#050505" : "#efefef"}`}
+        padding="10px"
+        zIndex="999"
       >
-        <Tabs value={tab} onChange={(_, newTab) => setTab(newTab)}>
+        <Tabs value={tab} width="100%" onChange={(_, newTab) => setTab(newTab)}>
           <Tab label="استان" style={{ fontSize: 12 }} />
           <Tab label="شهر" style={{ fontSize: 12 }} />
         </Tabs>
@@ -295,29 +295,27 @@ export const QueryBuilder = ({ domain }) => {
         <GuideItem.Url domain={domain}>{currentEndpoint}</GuideItem.Url>
         <br />
 
-        <form>
-          <TableContainer elevation={0} component={Paper}>
-            <Table>
-              <TableHead>
-                <TableRow>
-                  <TableCell />
-                  <TableCell />
-                  <TableCell style={{ fontSize: 13 }} width="20%" align="right">
-                    عنوان
-                  </TableCell>
-                  <TableCell style={{ fontSize: 13 }} width="60%" align="right">
-                    توضیحات
-                  </TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {selectedRows.map((row, index) => (
-                  <Row key={index} row={row} />
-                ))}
-              </TableBody>
-            </Table>
-          </TableContainer>
-        </form>
+        <TableContainer elevation={0} component={Paper}>
+          <Table>
+            <TableHead>
+              <TableRow>
+                <TableCell />
+                <TableCell />
+                <TableCell style={{ fontSize: 13 }} width="20%" align="right">
+                  عنوان
+                </TableCell>
+                <TableCell style={{ fontSize: 13 }} width="60%" align="right">
+                  توضیحات
+                </TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody sx={{ overflowX: "scroll" }}>
+              {selectedRows.map((row, index) => (
+                <Row key={index} row={row} />
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
       </Box>
     </Box>
   );
