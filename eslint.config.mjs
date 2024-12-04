@@ -71,6 +71,7 @@ export default [...fixupConfigRules(compat.extends(
   },
 
   rules: {
+    'no-useless-return': 'error',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-key': 'error',
     '@next/next/no-img-element': 'error',
@@ -111,5 +112,6 @@ export default [...fixupConfigRules(compat.extends(
 
     indent: ['error', 2],
     'linebreak-style': ['error', 'unix'],
+
   },
 }];
