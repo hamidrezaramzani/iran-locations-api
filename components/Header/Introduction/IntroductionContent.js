@@ -1,11 +1,14 @@
-"use client";
-import React from "react";
+import React, { useContext } from "react";
 import { Box, Grid, Typography } from "@mui/material";
 import styles from "./styles.module.css";
-import { Trans, useTranslation } from "next-i18next";
+import { ThemeContext } from "../../../context/ThemeProvider";
+import { Trans } from "react-i18next";
 
 const Introduction = () => {
+  const { state } = useContext(ThemeContext);
   const { t } = useTranslation();
+
+
   return (
     <Grid
       xs={12}
@@ -37,11 +40,12 @@ const Introduction = () => {
           />
         </Typography>
         <Typography
-          color="#686868"
-          textAlign="right"
+          color={state === "light" ? "black" : "white"}
+          textAlign="center"
           paddingY="15px"
           fontSize="14px"
           fontFamily="iran-yekan"
+          width={["80%", "100"]}
         >
           {t("introduction:content.description")}
         </Typography>

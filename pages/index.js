@@ -1,22 +1,26 @@
 import { ThemeContext } from "../context/ThemeProvider";
-import { CssBaseline, Grid, Typography } from "@mui/material";
+import { CssBaseline, Grid } from "@mui/material";
 import Head from "next/head";
 import { useContext, useMemo } from "react";
-import Examples from "../components/Examples/Examples";
-import Guide from "../components/Guide/Guide";
 import Header from "../components/Header/Header";
 import Introduction from "../components/Header/Introduction/Introduction";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import styles from "../styles/Home.module.css";
 import Footer from "../components/Footer/Footer";
-import Donates from "../components/Donates/Donates";
-export default function Home({ domain }) {
+import { QueryBuilder } from "../components/QueryBuilder/QueryBuilder";
+export default function Home({ domain, starCount }) {
   const { state } = useContext(ThemeContext);
   const theme = useMemo(
     () =>
       createTheme({
         palette: {
           mode: state,
+          background: {
+            default: state === "dark" ? "#000000" : "#ffffff",
+          },
+        },
+        typography: {
+          fontFamily: "iran-yekan",
         },
       }),
     [state]
@@ -103,14 +107,14 @@ export default function Home({ domain }) {
         justifyContent="center"
         container
         height="100vh"
-        className={state === "light" ? styles.darkWelcome : styles.lightWelcome}
+        className={`${
+          state === "light" ? styles.backgroundLight : styles.backgroundDark
+        } ${state === "light" ? styles.darkWelcome : styles.lightWelcome}`}
       >
         <Header />
-        <Introduction domain={domain} />
+        <Introduction starCount={starCount} domain={domain} />
       </Grid>
-      <Examples domain={domain} />
-      <Guide domain={domain} />
-      <Donates />
+      <QueryBuilder domain={domain} />
       <Footer />
     </ThemeProvider>
   );
@@ -119,5 +123,17 @@ export default function Home({ domain }) {
 export async function getServerSideProps({ req }) {
   const domain = req.headers.host;
 
-  return { props: { domain } };
+  const owner = "hamidrezaramzani";
+  const repo = "iran-locations-api";
+  const res = await fetch(`https://api.github.com/repos/${owner}/${repo}`);
+  const data = await res.json();
+
+  const starCount = data.stargazers_count || 0;
+
+  return {
+    props: {
+      starCount,
+      domain,
+    },
+  };
 }

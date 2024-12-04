@@ -31,7 +31,7 @@ const Header = () => {
       <Container>
         <AppBar
           position="static"
-          color="default"
+          color="transparent"
           sx={{ boxShadow: "none", borderRadius: "5px" }}
         >
           <Container maxWidth="xl">
@@ -61,7 +61,7 @@ const Header = () => {
                 </Link>
               </Box>
 
-              <Box sx={{ flexGrow: 0 }}>
+              <Box sx={{ display: "flex", flexGrow: 0, alignItems: "center" }}>
                 <Button onClick={handleClickToggleTheme}>
                   {state === "dark" ? <DarkModeIcon /> : <LightModeIcon />}
                 </Button>

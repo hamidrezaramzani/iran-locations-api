@@ -13,6 +13,7 @@ import {
   RadioGroup,
   Snackbar,
   Tooltip,
+  Typography,
 } from "@mui/material";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -51,7 +52,14 @@ export const IranMap = ({ domain }) => {
   };
 
   return (
-    <Box className="iran-map">
+    <Box
+      className="iran-map"
+      width="100%"
+      display="flex"
+      alignItems="center"
+      flexDirection="column"
+      paddingTop="80px"
+    >
       <Snackbar
         open={isAlertOpen}
         autoHideDuration={2000}
@@ -121,6 +129,34 @@ export const IranMap = ({ domain }) => {
           </Button>
         </DialogActions>
       </Dialog>
+
+      <Box
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        width="100%"
+        marginBottom="80px"
+      >
+        <Typography
+          component="h3"
+          fontSize="18px"
+          textAlign="center"
+          paddingY="10px"
+          fontFamily="iran-yekan"
+        >
+          نقشه ایران
+        </Typography>
+        <Typography
+          component="p"
+          fontSize="14px"
+          textAlign="center"
+          color="#777"
+          fontFamily="iran-yekan"
+          paddingY="10px"
+        >
+          با استفاده از نقشه ایران میتونید کوئری های خودتون رو بسازید
+        </Typography>
+      </Box>
       <svg
         width="654.51147"
         height="593.71021"

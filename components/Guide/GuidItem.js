@@ -62,7 +62,7 @@ GuideItem.Inputs = ({ children }) => {
       <Table
         sx={{
           minWidth: 250,
-          direction: "ltr",
+          direction: "rtl",
         }}
         aria-label="simple table"
       >
