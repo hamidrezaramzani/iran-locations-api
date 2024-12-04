@@ -1,6 +1,5 @@
 {
-    "cSpell.words": [
-        "ایران",
-        "برای"
+    "i18n-ally.localesPaths": [
+        "public/locales"
     ]
 }

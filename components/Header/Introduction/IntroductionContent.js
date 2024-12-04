@@ -2,9 +2,11 @@ import React, { useContext } from "react";
 import { Box, Grid, Typography } from "@mui/material";
 import styles from "./styles.module.css";
 import { ThemeContext } from "../../../context/ThemeProvider";
+import { Trans, useTranslation } from "next-i18next";
 
 const Introduction = () => {
   const { state } = useContext(ThemeContext);
+  const { t } = useTranslation();
 
   return (
     <Grid
@@ -29,10 +31,12 @@ const Introduction = () => {
           fontFamily="iran-yekan-bold"
           fontSize="35px"
         >
-          {" "}
-          وب سرویس
-          <span> ‌شهر و استان </span>
-          های ایران
+          <Trans
+            i18nKey="introduction:content.title"
+            components={{
+              span: <span />,
+            }}
+          />
         </Typography>
         <Typography
           color={state === "light" ? "black" : "white"}
@@ -42,8 +46,7 @@ const Introduction = () => {
           fontFamily="iran-yekan"
           width={["80%", "100"]}
         >
-          وب‌سایت وب سرویس شهر و استان‌های ایران API‌ای برای دریافت اطلاعات
-          شهرها و استان‌ها، شامل نام، کد و موقعیت جغرافیایی، ارائه می‌دهد.
+          {t("introduction:content.description")}
         </Typography>
       </Box>
     </Grid>

@@ -1,3 +1,4 @@
+'use client'
 import {
   Box,
   Collapse,
@@ -23,9 +24,12 @@ import {
   materialLight,
 } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { ThemeContext } from "../../context/ThemeProvider";
+import { useTranslation } from "next-i18next";
 
 export const QueryBuilder = ({ domain }) => {
   const { state } = useContext(ThemeContext);
+
+  const { t } = useTranslation();
 
   const [checked, setChecked] = useState(1);
 
@@ -219,7 +223,7 @@ export const QueryBuilder = ({ domain }) => {
                       gutterBottom
                       component="div"
                     >
-                      ورودی ها
+                      {t("queryBuilder:table.expand.inputs")}
                     </Typography>
                     <GuideItem.Inputs>
                       <GuideItem.InputItem>
@@ -229,7 +233,9 @@ export const QueryBuilder = ({ domain }) => {
                         {row.example.parameter.description}
                       </GuideItem.InputItem>
                       <GuideItem.InputItem>
-                        {row.example.parameter.isRequired ? "بله" : "خیر"}
+                        {row.example.parameter.isRequired
+                          ? t("queryBuilder:table.expand.yes")
+                          : t("queryBuilder:table.expand.no")}
                       </GuideItem.InputItem>
                       <GuideItem.InputItem>
                         {row.example.parameter.responseType}
@@ -245,7 +251,7 @@ export const QueryBuilder = ({ domain }) => {
                       gutterBottom
                       component="div"
                     >
-                      نمونه جواب
+                      {t("queryBuilder:table.expand.exampleResponse")}
                     </Typography>
                     <SyntaxHighlighter
                       wrapLongLines
@@ -287,8 +293,8 @@ export const QueryBuilder = ({ domain }) => {
         zIndex="999"
       >
         <Tabs value={tab} width="100%" onChange={(_, newTab) => setTab(newTab)}>
-          <Tab label="استان" style={{ fontSize: 12 }} />
-          <Tab label="شهر" style={{ fontSize: 12 }} />
+          <Tab label={t("queryBuilder:tab.state")} style={{ fontSize: 12 }} />
+          <Tab label={t("queryBuilder:tab.city")} style={{ fontSize: 12 }} />
         </Tabs>
 
         <br />
@@ -302,10 +308,10 @@ export const QueryBuilder = ({ domain }) => {
                 <TableCell />
                 <TableCell />
                 <TableCell style={{ fontSize: 13 }} width="20%" align="right">
-                  عنوان
+                  {t("queryBuilder:table.column.title")}
                 </TableCell>
                 <TableCell style={{ fontSize: 13 }} width="60%" align="right">
-                  توضیحات
+                  {t("queryBuilder:table.column.description")}
                 </TableCell>
               </TableRow>
             </TableHead>
