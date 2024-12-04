@@ -12,12 +12,16 @@ import Link from "next/link";
 import { ThemeContext } from "../../context/ThemeProvider";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
+import { useTranslation } from "next-i18next";
 const Header = () => {
   const { state, setState } = useContext(ThemeContext);
 
   const handleClickToggleTheme = () => {
     setState(state === "dark" ? "light" : "dark");
   };
+
+  const { t } = useTranslation();
+
   return (
     <Grid
       container
@@ -52,12 +56,12 @@ const Header = () => {
                   display: "flex",
                 }}
               >
-                <Link href="/#guide">راهنما</Link>
+                <Link href="/#guide">{t("header:nav.help")}</Link>
                 <Link href="https://github.com/hamidrezaramzani/iran-locations-api">
-                  گیت هاب
+                  {t("header:nav.github")}
                 </Link>
                 <Link href="https://github.com/hamidrezaramzani/hamidrezaramzani">
-                  درباره من
+                {t("header:nav.aboutMe")}
                 </Link>
               </Box>
 

@@ -1,5 +1,7 @@
 const introduction = require("./public/locales/fa/introduction.json");
 const queryBuilder = require("./public/locales/fa/query-builder.json");
+const header = require("./public/locales/fa/header.json");
+const footer = require("./public/locales/fa/footer.json");
 
 /**
  * @type {import('next-i18next').UserConfig}
@@ -9,6 +11,8 @@ module.exports = {
     fa: {
       introduction,
       queryBuilder,
+      header,
+      footer,
     },
   },
   // https://www.i18next.com/overview/configuration-options#logging
