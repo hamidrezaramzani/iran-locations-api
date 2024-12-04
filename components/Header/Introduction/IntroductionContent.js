@@ -2,12 +2,11 @@ import React, { useContext } from "react";
 import { Box, Grid, Typography } from "@mui/material";
 import styles from "./styles.module.css";
 import { ThemeContext } from "../../../context/ThemeProvider";
-import { Trans } from "react-i18next";
+import { Trans, useTranslation } from "next-i18next";
 
 const Introduction = () => {
   const { state } = useContext(ThemeContext);
   const { t } = useTranslation();
-
 
   return (
     <Grid

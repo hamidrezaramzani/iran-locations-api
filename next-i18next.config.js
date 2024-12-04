@@ -1,5 +1,5 @@
 const introduction = require("./public/locales/fa/introduction.json");
-const common = require("./public/locales/fa/common.json");
+const queryBuilder = require("./public/locales/fa/query-builder.json");
 
 /**
  * @type {import('next-i18next').UserConfig}
@@ -8,7 +8,7 @@ module.exports = {
   resources: {
     fa: {
       introduction,
-      common,
+      queryBuilder,
     },
   },
   // https://www.i18next.com/overview/configuration-options#logging

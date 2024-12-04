@@ -1,3 +1,4 @@
+"use client";
 /* eslint-disable react/display-name */
 import {
   Alert,
@@ -13,9 +14,9 @@ import {
   TableCell,
   Paper,
 } from "@mui/material";
-import { Box } from "@mui/system";
 import React, { useState } from "react";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
+import { useTranslation } from "next-i18next";
 const GuideItem = ({ children }) => {
   return (
     <Grid width="100%" paddingY="50px">
@@ -54,6 +55,8 @@ GuideItem.Description = ({ children }) => {
 };
 
 GuideItem.Inputs = ({ children }) => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { t } = useTranslation();
   return (
     <TableContainer
       component={Paper}
@@ -69,16 +72,16 @@ GuideItem.Inputs = ({ children }) => {
         <TableHead>
           <TableRow>
             <TableCell align="center" sx={{ fontFamily: "iran-yekan" }}>
-              نام
+              {t("queryBuilder:table.expand.guide.table.column.name")}
             </TableCell>
             <TableCell align="center" sx={{ fontFamily: "iran-yekan" }}>
-              توضیحات
+              {t("queryBuilder:table.expand.guide.table.column.description")}
             </TableCell>
             <TableCell align="center" sx={{ fontFamily: "iran-yekan" }}>
-              ضروری
+              {t("queryBuilder:table.expand.guide.table.column.required")}
             </TableCell>
             <TableCell align="center" sx={{ fontFamily: "iran-yekan" }}>
-              نوع جواب
+              {t("queryBuilder:table.expand.guide.table.column.responseType")}
             </TableCell>
           </TableRow>
         </TableHead>
@@ -110,6 +113,9 @@ GuideItem.Url = ({ children, domain }) => {
     setOpen(false);
   };
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { t } = useTranslation();
+
   return (
     <Alert
       severity="info"
@@ -121,7 +127,7 @@ GuideItem.Url = ({ children, domain }) => {
           severity="success"
           sx={{ width: "100%", fontFamily: "iran-yekan" }}
         >
-          کپی شد
+          {t("queryBuilder:table.expand.guide.table.feedback.copied")}
         </Alert>
       </Snackbar>
       {domain}
