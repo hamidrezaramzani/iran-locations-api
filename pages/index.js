@@ -1,13 +1,14 @@
-import { ThemeContext } from "../context/ThemeProvider";
-import { CssBaseline, Grid } from "@mui/material";
-import Head from "next/head";
-import { useContext, useMemo } from "react";
-import Header from "../components/Header/Header";
-import Introduction from "../components/Header/Introduction/Introduction";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import styles from "../styles/Home.module.css";
-import Footer from "../components/Footer/Footer";
-import { QueryBuilder } from "../components/QueryBuilder/QueryBuilder";
+import { CssBaseline, Grid } from '@mui/material';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Head from 'next/head';
+import { useContext, useMemo } from 'react';
+
+import Footer from '../components/Footer/Footer';
+import Header from '../components/Header/Header';
+import Introduction from '../components/Header/Introduction/Introduction';
+import { QueryBuilder } from '../components/QueryBuilder/QueryBuilder';
+import { ThemeContext } from '../context/ThemeProvider';
+import styles from '../styles/Home.module.css';
 export default function Home({ domain, starCount }) {
   const { state } = useContext(ThemeContext);
   const theme = useMemo(
@@ -16,21 +17,20 @@ export default function Home({ domain, starCount }) {
         palette: {
           mode: state,
           background: {
-            default: state === "dark" ? "#000000" : "#ffffff",
+            default: state === 'dark' ? '#000000' : '#ffffff',
           },
         },
         typography: {
-          fontFamily: "iran-yekan",
+          fontFamily: 'iran-yekan',
         },
       }),
     [state]
   );
 
   const META_TITLE =
-    "وب سرویس شهرها و استان‌های ایران | اطلاعات جامع شهری و استانی";
+    'وب سرویس شهرها و استان‌های ایران | اطلاعات جامع شهری و استانی';
   const META_DESCRIPTION =
-    "وب سرویس شهرها و استان‌های ایران: دسترسی به اطلاعات جامع و به‌روز درباره شهرها و استان‌های ایران. انواع داده ها بر اساس دسته بندی های متفاوت را میتوانید داشته باشید.";
-  const META_KEWORDS = "";
+    'وب سرویس شهرها و استان‌های ایران: دسترسی به اطلاعات جامع و به‌روز درباره شهرها و استان‌های ایران. انواع داده ها بر اساس دسته بندی های متفاوت را میتوانید داشته باشید.';
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -108,8 +108,8 @@ export default function Home({ domain, starCount }) {
         container
         height="100vh"
         className={`${
-          state === "light" ? styles.backgroundLight : styles.backgroundDark
-        } ${state === "light" ? styles.darkWelcome : styles.lightWelcome}`}
+          state === 'light' ? styles.backgroundLight : styles.backgroundDark
+        } ${state === 'light' ? styles.darkWelcome : styles.lightWelcome}`}
       >
         <Header />
         <Introduction starCount={starCount} domain={domain} />
@@ -123,8 +123,8 @@ export default function Home({ domain, starCount }) {
 export async function getServerSideProps({ req }) {
   const domain = req.headers.host;
 
-  const owner = "hamidrezaramzani";
-  const repo = "iran-locations-api";
+  const owner = 'hamidrezaramzani';
+  const repo = 'iran-locations-api';
   const res = await fetch(`https://api.github.com/repos/${owner}/${repo}`);
   const data = await res.json();
 

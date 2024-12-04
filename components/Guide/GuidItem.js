@@ -1,5 +1,6 @@
-"use client";
+'use client';
 /* eslint-disable react/display-name */
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import {
   Alert,
   Button,
@@ -13,46 +14,39 @@ import {
   TableRow,
   TableCell,
   Paper,
-} from "@mui/material";
-import React, { useState } from "react";
-import ContentCopyIcon from "@mui/icons-material/ContentCopy";
-import { useTranslation } from "next-i18next";
-const GuideItem = ({ children }) => {
-  return (
-    <Grid width="100%" paddingY="50px">
-      {children}
-    </Grid>
-  );
-};
+} from '@mui/material';
+import { useTranslation } from 'next-i18next';
+import React, { useState } from 'react';
+const GuideItem = ({ children }) => (
+  <Grid width="100%" paddingY="50px">
+    {children}
+  </Grid>
+);
 
-GuideItem.Title = ({ children }) => {
-  return (
-    <Typography
-      component="h3"
-      fontSize="18px"
-      textAlign="center"
-      paddingY="10px"
-      fontFamily="iran-yekan"
-    >
-      {children}
-    </Typography>
-  );
-};
+GuideItem.Title = ({ children }) => (
+  <Typography
+    component="h3"
+    fontSize="18px"
+    textAlign="center"
+    paddingY="10px"
+    fontFamily="iran-yekan"
+  >
+    {children}
+  </Typography>
+);
 
-GuideItem.Description = ({ children }) => {
-  return (
-    <Typography
-      component="p"
-      fontSize="14px"
-      textAlign="center"
-      color="#777"
-      fontFamily="iran-yekan"
-      paddingY="10px"
-    >
-      {children}
-    </Typography>
-  );
-};
+GuideItem.Description = ({ children }) => (
+  <Typography
+    component="p"
+    fontSize="14px"
+    textAlign="center"
+    color="#777"
+    fontFamily="iran-yekan"
+    paddingY="10px"
+  >
+    {children}
+  </Typography>
+);
 
 GuideItem.Inputs = ({ children }) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -60,28 +54,28 @@ GuideItem.Inputs = ({ children }) => {
   return (
     <TableContainer
       component={Paper}
-      sx={{ margin: "50px 0", textAlign: "center", fontFamily: "iran-yekan" }}
+      sx={{ margin: '50px 0', textAlign: 'center', fontFamily: 'iran-yekan' }}
     >
       <Table
         sx={{
           minWidth: 250,
-          direction: "rtl",
+          direction: 'rtl',
         }}
         aria-label="simple table"
       >
         <TableHead>
           <TableRow>
-            <TableCell align="center" sx={{ fontFamily: "iran-yekan" }}>
-              {t("queryBuilder:table.expand.guide.table.column.name")}
+            <TableCell align="center" sx={{ fontFamily: 'iran-yekan' }}>
+              {t('queryBuilder:table.expand.guide.table.column.name')}
             </TableCell>
-            <TableCell align="center" sx={{ fontFamily: "iran-yekan" }}>
-              {t("queryBuilder:table.expand.guide.table.column.description")}
+            <TableCell align="center" sx={{ fontFamily: 'iran-yekan' }}>
+              {t('queryBuilder:table.expand.guide.table.column.description')}
             </TableCell>
-            <TableCell align="center" sx={{ fontFamily: "iran-yekan" }}>
-              {t("queryBuilder:table.expand.guide.table.column.required")}
+            <TableCell align="center" sx={{ fontFamily: 'iran-yekan' }}>
+              {t('queryBuilder:table.expand.guide.table.column.required')}
             </TableCell>
-            <TableCell align="center" sx={{ fontFamily: "iran-yekan" }}>
-              {t("queryBuilder:table.expand.guide.table.column.responseType")}
+            <TableCell align="center" sx={{ fontFamily: 'iran-yekan' }}>
+              {t('queryBuilder:table.expand.guide.table.column.responseType')}
             </TableCell>
           </TableRow>
         </TableHead>
@@ -93,13 +87,11 @@ GuideItem.Inputs = ({ children }) => {
   );
 };
 
-GuideItem.InputItem = ({ children }) => {
-  return (
-    <TableCell sx={{ fontFamily: "iran-yekan" }} align="center">
-      {children}
-    </TableCell>
-  );
-};
+GuideItem.InputItem = ({ children }) => (
+  <TableCell sx={{ fontFamily: 'iran-yekan' }} align="center">
+    {children}
+  </TableCell>
+);
 
 GuideItem.Url = ({ children, domain }) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -119,22 +111,22 @@ GuideItem.Url = ({ children, domain }) => {
   return (
     <Alert
       severity="info"
-      sx={{ direction: "ltr", fontFamily: "Roboto Mono", position: "relative" }}
+      sx={{ direction: 'ltr', fontFamily: 'Roboto Mono', position: 'relative' }}
     >
       <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
         <Alert
           onClose={handleClose}
           severity="success"
-          sx={{ width: "100%", fontFamily: "iran-yekan" }}
+          sx={{ width: '100%', fontFamily: 'iran-yekan' }}
         >
-          {t("queryBuilder:table.expand.guide.table.feedback.copied")}
+          {t('queryBuilder:table.expand.guide.table.feedback.copied')}
         </Alert>
       </Snackbar>
       {domain}
       {children}
 
       <Button
-        sx={{ position: "absolute", right: "0", top: "0" }}
+        sx={{ position: 'absolute', right: '0', top: '0' }}
         onClick={handleCopyUrl}
       >
         <ContentCopyIcon />

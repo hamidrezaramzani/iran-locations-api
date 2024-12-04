@@ -1,7 +1,7 @@
-import { getCities } from "../../../../lib/city";
-import { cors } from "../../../../middlewares/cors";
+import { getCities } from '../../../../lib/city';
+import { cors } from '../../../../middlewares/cors';
 
-const states = require("../../../../public/iran_cities_with_coordinates.json");
+const states = require('../../../../public/iran_cities_with_coordinates.json');
 
 export default async function handler(req, res) {
   cors(req, res);

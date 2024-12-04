@@ -1,7 +1,7 @@
-import { getStates } from "../../../../lib/state";
+import { getStates } from '../../../../lib/state';
 
-const states = require("../../../../public/iran_cities_in_english.json");
-const { cors } = require("../../../../middlewares/cors");
+const { cors } = require('../../../../middlewares/cors');
+const states = require('../../../../public/iran_cities_in_english.json');
 
 export default async function handler(req, res) {
   cors(req, res);

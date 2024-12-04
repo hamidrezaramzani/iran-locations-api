@@ -1,3 +1,5 @@
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import LightModeIcon from '@mui/icons-material/LightMode';
 import {
   AppBar,
   Container,
@@ -6,18 +8,19 @@ import {
   Typography,
   Button,
   Box,
-} from "@mui/material";
-import React, { useContext } from "react";
-import Link from "next/link";
-import { ThemeContext } from "../../context/ThemeProvider";
-import LightModeIcon from "@mui/icons-material/LightMode";
-import DarkModeIcon from "@mui/icons-material/DarkMode";
-import { useTranslation } from "next-i18next";
+} from '@mui/material';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
+import React, { useContext } from 'react';
+
+import { ThemeContext } from '../../context/ThemeProvider';
+
 const Header = () => {
   const { state, setState } = useContext(ThemeContext);
 
   const handleClickToggleTheme = () => {
-    setState(state === "dark" ? "light" : "dark");
+    setState(state === 'dark' ? 'light' : 'dark');
   };
 
   const { t } = useTranslation();
@@ -36,7 +39,7 @@ const Header = () => {
         <AppBar
           position="static"
           color="transparent"
-          sx={{ boxShadow: "none", borderRadius: "5px" }}
+          sx={{ boxShadow: 'none', borderRadius: '5px' }}
         >
           <Container maxWidth="xl">
             <Toolbar disableGutters>
@@ -46,28 +49,33 @@ const Header = () => {
                 component="div"
                 sx={{ flexGrow: 1 }}
               >
-                <img src="/logo.png" width="70px" alt="website logo" />
+                <Image
+                  src="/logo.png"
+                  width={70}
+                  height={30}
+                  alt="website logo"
+                />
               </Typography>
               <Box
                 sx={{
                   flexGrow: 1,
-                  fontSize: "14px",
-                  gap: "15px",
-                  display: "flex",
+                  fontSize: '14px',
+                  gap: '15px',
+                  display: 'flex',
                 }}
               >
-                <Link href="/#guide">{t("header:nav.help")}</Link>
+                <Link href="/#guide">{t('header:nav.help')}</Link>
                 <Link href="https://github.com/hamidrezaramzani/iran-locations-api">
-                  {t("header:nav.github")}
+                  {t('header:nav.github')}
                 </Link>
                 <Link href="https://github.com/hamidrezaramzani/hamidrezaramzani">
-                {t("header:nav.aboutMe")}
+                  {t('header:nav.aboutMe')}
                 </Link>
               </Box>
 
-              <Box sx={{ display: "flex", flexGrow: 0, alignItems: "center" }}>
+              <Box sx={{ display: 'flex', flexGrow: 0, alignItems: 'center' }}>
                 <Button onClick={handleClickToggleTheme}>
-                  {state === "dark" ? <DarkModeIcon /> : <LightModeIcon />}
+                  {state === 'dark' ? <DarkModeIcon /> : <LightModeIcon />}
                 </Button>
               </Box>
             </Toolbar>
