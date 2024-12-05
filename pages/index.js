@@ -3,10 +3,11 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Head from 'next/head';
 import { useContext, useMemo } from 'react';
 
+import { Facilities } from '../components/Facilities/Facilities.jsx';
+import { Faq } from '../components/FAQ/Faq.jsx';
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
 import Introduction from '../components/Header/Introduction/Introduction';
-import { QueryBuilder } from '../components/QueryBuilder/QueryBuilder';
 import { ThemeContext } from '../context/ThemeProvider';
 import styles from '../styles/Home.module.css';
 export default function Home({ domain, starCount }) {
@@ -114,7 +115,8 @@ export default function Home({ domain, starCount }) {
         <Header />
         <Introduction starCount={starCount} domain={domain} />
       </Grid>
-      <QueryBuilder domain={domain} />
+      <Facilities />
+      <Faq />
       <Footer />
     </ThemeProvider>
   );
