@@ -1,10 +1,9 @@
-"use client";
 import { Box, Button, Chip, Drawer } from "@mui/material";
 import { SimpleTreeView, TreeItem } from "@mui/x-tree-view";
 
 import * as SC from "./styles";
-import { MdClose, MdMenu } from "react-icons/md";
-import { useContext, useState } from "react";
+import { MdClose } from "react-icons/md";
+import { useContext } from "react";
 import { ThemeContext } from "../../context/ThemeProvider";
 import Image from "next/image";
 import Link from "next/link";
@@ -60,7 +59,11 @@ export const DocumentationHierarchy = ({
       <Box className="md-tree-view">
         <TreeView />
       </Box>
-      <Drawer anchor="right" open={isDrawerOpen}>
+      <Drawer
+        sx={{ "& .MuiDrawer-paper": { width: "80%" } }}
+        anchor="right"
+        open={isDrawerOpen}
+      >
         <Box padding="20px">
           <Box
             className="drawer-top"

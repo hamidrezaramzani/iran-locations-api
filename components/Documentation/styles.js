@@ -7,17 +7,6 @@ export const DocumentationHierarchy = styled(Paper)`
   padding: 20px;
   background-color: ${({ isDark }) => (isDark ? '#000' : '#efefef')} !important;
 
-  .drawer-content {
-    padding: 10px !important;
-  }
-  .drawer-top {
-    width: 100px;
-    display: flex;
-    justify-content: space-between;
-  }
-  .drawer-close-button {
-    width: 20px;
-  }
 
   .tree-item-parent {
     margin: 10px 0;

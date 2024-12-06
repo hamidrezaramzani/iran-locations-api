@@ -5,6 +5,7 @@ import { useContext, useEffect, useMemo, useState } from 'react';
 import { DocumentationContent } from '../../components/Documentation/DocumentationContent';
 import { DocumentationHeader } from '../../components/Documentation/DocumentationHeader';
 import { DocumentationHierarchy } from '../../components/Documentation/DocumentationHierarchy';
+import { Head } from '../../components/Head/Head';
 import { ThemeContext } from '../../context/ThemeProvider';
 import { supabase } from '../../lib/supabase';
 import { getMuiTheme } from '../../lib/theme';
@@ -204,6 +205,12 @@ export default function Documentation() {
 
   return (
     <ThemeProvider theme={theme}>
+      <Head
+        title="مستندات API اطلاعات استان‌ها و شهرهای ایران"
+        description={
+          'مستندات کامل و جامع API برای دسترسی به اطلاعات به‌روز استان‌ها و شهرهای ایران، شامل داده‌های فارسی و انگلیسی با امکان استفاده رایگان و اوپن سورس.'
+        }
+      />
       <CssBaseline />
       <Box
         width="100%"

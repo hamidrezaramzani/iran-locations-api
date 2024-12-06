@@ -7,7 +7,15 @@ export const FacilityItem = styled.div`
   width: 32%;
   .card {
     width: 100%;
-    background-color: #000 !important;
+    background-color: ${({ isDark }) =>
+    isDark ? '#000' : '#efefef'} !important;
     border: 1px solid #242424;
+
+    .description {
+      margin-top: 5px;
+      color: ${({ isDark }) => (isDark ? '#ccc' : '#888')} !important;
+    }
+
+
   }
 `;

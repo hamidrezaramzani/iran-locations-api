@@ -39,8 +39,8 @@ export const Facilities = () => {
   ];
   return (
     <Box alignItems="center" flexDirection="column" display="flex" py="50px">
-      <Box my="50px" display="flex" flexDirection='column' alignItems="center" gap="10px">
-        <Typography variant="h4">
+      <Box my="50px" px="10px" display="flex" flexDirection='column' alignItems="center" gap="10px">
+        <Typography variant="h4" textAlign="center">
           چرا سرویس ما میتونه به شما کمک کنه؟
         </Typography>
         <Typography variant="body1" color="#cdcdcd">

@@ -30,7 +30,11 @@ export const DocumentationContent = ({
 
   const nextSectionName = documentationSections.filter(
     ({ isComingSoon }) => !isComingSoon
-  )[currentSectionIndex + 1].title;
+  )[
+    currentSectionIndex === documentationSections.length - 1
+      ? currentSectionIndex
+      : currentSectionIndex + 1
+  ].title;
 
   let prevSectionName = "";
   if (currentSectionIndex > 0) {
@@ -71,7 +75,7 @@ export const DocumentationContent = ({
           <Skeleton variant="text" height="40px" width="100%" />
         </Box>
       )}
-      {content.length && !loading && (
+      {content.length && !loading ? (
         <>
           <Markdown
             remarkPlugins={[remarkGfm]}
@@ -104,7 +108,7 @@ export const DocumentationContent = ({
             ) : null}
           </Box>
         </>
-      )}
+      ) : null}
     </SC.DocumentationContent>
   );
 };
