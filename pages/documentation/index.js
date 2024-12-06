@@ -221,7 +221,7 @@ export default function Documentation() {
           state === 'light' ? styles.backgroundLight : styles.backgroundDark
         } ${state === 'light' ? styles.darkWelcome : styles.lightWelcome}`}
       >
-        <Box width="80%">
+        <Box width={['95%','80%']}>
           <br />
           <DocumentationHeader setDrawerOpen={setDrawerOpen} />
           <Box display="flex" flexDirection="column">
