@@ -1,5 +1,5 @@
 import { CssBaseline, Grid } from '@mui/material';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 import Head from 'next/head';
 import { useContext, useMemo } from 'react';
 
@@ -9,24 +9,11 @@ import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
 import Introduction from '../components/Header/Introduction/Introduction';
 import { ThemeContext } from '../context/ThemeProvider';
+import { getMuiTheme } from '../lib/theme.js';
 import styles from '../styles/Home.module.css';
-export default function Home({ domain, starCount }) {
+export default function Home({ domain }) {
   const { state } = useContext(ThemeContext);
-  const theme = useMemo(
-    () =>
-      createTheme({
-        palette: {
-          mode: state,
-          background: {
-            default: state === 'dark' ? '#000000' : '#ffffff',
-          },
-        },
-        typography: {
-          fontFamily: 'iran-yekan',
-        },
-      }),
-    [state]
-  );
+  const theme = useMemo(() => getMuiTheme(state), [state]);
 
   const META_TITLE =
     'وب سرویس شهرها و استان‌های ایران | اطلاعات جامع شهری و استانی';
@@ -113,7 +100,7 @@ export default function Home({ domain, starCount }) {
         } ${state === 'light' ? styles.darkWelcome : styles.lightWelcome}`}
       >
         <Header />
-        <Introduction starCount={starCount} domain={domain} />
+        <Introduction domain={domain} />
       </Grid>
       <Facilities />
       <Faq />
@@ -125,16 +112,8 @@ export default function Home({ domain, starCount }) {
 export async function getServerSideProps({ req }) {
   const domain = req.headers.host;
 
-  const owner = 'hamidrezaramzani';
-  const repo = 'iran-locations-api';
-  const res = await fetch(`https://api.github.com/repos/${owner}/${repo}`);
-  const data = await res.json();
-
-  const starCount = data.stargazers_count || 0;
-
   return {
     props: {
-      starCount,
       domain,
     },
   };

@@ -1,10 +1,10 @@
-import { Box, Grid, Typography } from '@mui/material';
+import { Box, Button, Grid, Typography } from '@mui/material';
+import Link from 'next/link';
 import { Trans, useTranslation } from 'next-i18next';
 import React, { useContext } from 'react';
 
 import styles from './styles.module.css';
 import { ThemeContext } from '../../../context/ThemeProvider';
-
 
 const Introduction = () => {
   const { state } = useContext(ThemeContext);
@@ -50,6 +50,15 @@ const Introduction = () => {
         >
           {t('introduction:content.description')}
         </Typography>
+
+        <Button
+          variant="contained"
+          color="primary"
+          LinkComponent={Link}
+          href="/documentation"
+        >
+          شروع کنید
+        </Button>
       </Box>
     </Grid>
   );

@@ -64,7 +64,7 @@ const Header = () => {
                   display: 'flex',
                 }}
               >
-                <Link href="/#guide">{t('header:nav.help')}</Link>
+                <Link href="/documentation">{t('header:nav.help')}</Link>
                 <Link href="https://github.com/hamidrezaramzani/iran-locations-api">
                   {t('header:nav.github')}
                 </Link>
