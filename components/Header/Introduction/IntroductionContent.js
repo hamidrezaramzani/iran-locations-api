@@ -32,6 +32,7 @@ const Introduction = () => {
           textAlign="center"
           fontFamily="iran-yekan-bold"
           fontSize="35px"
+          paddingX="8px"
         >
           <Trans
             i18nKey="introduction:content.title"

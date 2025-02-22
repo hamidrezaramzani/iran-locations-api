@@ -41,7 +41,17 @@ path:hover {
 }
 
 @media (max-width: 768px) {
-  .iran-map {
-    display: none !important;
+  .mobile-menu {
+    display: block !important;
   }
+  .desktop-menu {
+    display: none;
+  }
+  .desktop-theme {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  display: none;
 }
