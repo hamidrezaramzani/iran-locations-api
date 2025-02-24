@@ -6,10 +6,10 @@ import { DocumentationContent } from '../../components/Documentation/Documentati
 import { DocumentationHeader } from '../../components/Documentation/DocumentationHeader';
 import { DocumentationHierarchy } from '../../components/Documentation/DocumentationHierarchy';
 import { Head } from '../../components/Head/Head';
+import Header from '../../components/Header/Header';
 import { ThemeContext } from '../../context/ThemeProvider';
 import { supabase } from '../../lib/supabase';
 import { getMuiTheme } from '../../lib/theme';
-import styles from '../../styles/Home.module.css';
 
 export default function Documentation() {
   const { state } = useContext(ThemeContext);
@@ -217,14 +217,11 @@ export default function Documentation() {
         height="100vh"
         display="flex"
         justifyContent="center"
-        className={`${
-          state === 'light' ? styles.backgroundLight : styles.backgroundDark
-        } ${state === 'light' ? styles.darkWelcome : styles.lightWelcome}`}
       >
-        <Box width={['95%','80%']}>
-          <br />
-          <DocumentationHeader setDrawerOpen={setDrawerOpen} />
-          <Box display="flex" flexDirection="column">
+        <Header setDrawerOpen={setDrawerOpen} />
+        <Box width={['95%', '80%']}>
+          <Box display="flex" flexDirection="column" mt="50px">
+            <DocumentationHeader setDrawerOpen={setDrawerOpen} />
             <Box display="flex" gap="10px">
               <DocumentationHierarchy
                 items={documentationNav}

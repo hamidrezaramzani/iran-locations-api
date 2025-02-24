@@ -18,15 +18,6 @@ export const DocumentationHeader = ({ setDrawerOpen }) => {
   return (
     <SC.HeaderContainer isDark={isDark} position="static">
       <Toolbar>
-        <Link href="/">
-          <Image
-            src="/logo.png"
-            width={70}
-            height={30}
-            className="logo"
-            alt="website logo"
-          />
-        </Link>
         <IconButton
           edge="start"
           className="menu-open-button"
@@ -39,14 +30,6 @@ export const DocumentationHeader = ({ setDrawerOpen }) => {
         <SC.HeaderText isDark={isDark} variant="h6">
           مستندات وب سرویس
         </SC.HeaderText>
-        <IconButton
-          onClick={handleClickToggleTheme}
-          edge="end"
-          color="inherit"
-          aria-label="menu"
-        >
-          {isDark ? <DarkModeIcon /> : <LightModeIcon className="light-icon" />}
-        </IconButton>
       </Toolbar>
     </SC.HeaderContainer>
   );

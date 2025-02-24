@@ -5,7 +5,7 @@ export const DocumentationHierarchy = styled(Paper)`
   width: 25%;
   height: calc(100vh - 100px);
   padding: 20px;
-  background-color: ${({ isDark }) => (isDark ? '#000' : '#efefef')} !important;
+  background: ${({ isDark }) => (isDark ? '#000' : '#efefef')} !important;
 
 
   .tree-item-parent {
@@ -55,9 +55,11 @@ export const DocumentationCode = styled.div`
 
 export const HeaderContainer = styled(AppBar)`
   width: 100%;
-  background-color: ${({ isDark }) => (isDark ? '#000' : '#efefef')} !important;
+  padding: 10px 0;
+  background: ${({ isDark }) => (isDark ? '#000' : '#efefef')} !important;
   box-shadow: none;
-  margin-bottom: 10px;
+  display: flex;
+  justify-content: start;
   .menu-open-button {
     display: none;
   }

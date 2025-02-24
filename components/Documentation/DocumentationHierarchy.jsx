@@ -64,22 +64,13 @@ export const DocumentationHierarchy = ({
         anchor="right"
         open={isDrawerOpen}
       >
-        <Box padding="20px">
+        <Box padding="20px" marginTop="50px">
           <Box
             className="drawer-top"
             display="flex"
             justifyContent="space-between"
             mb="10px"
           >
-            <Link href="/">
-              <Image
-                src="/logo.png"
-                width={60}
-                height={25}
-                className="logo"
-                alt="website logo"
-              />
-            </Link>
             <Button
               className="drawer-close-button"
               onClick={() => setDrawerOpen(false)}
