@@ -1,7 +1,7 @@
+const facilities = require('./public/locales/fa/facilities.json');
 const footer = require('./public/locales/fa/footer.json');
 const header = require('./public/locales/fa/header.json');
 const introduction = require('./public/locales/fa/introduction.json');
-const queryBuilder = require('./public/locales/fa/query-builder.json');
 
 /**
  * @type {import('next-i18next').UserConfig}
@@ -10,7 +10,7 @@ module.exports = {
   resources: {
     fa: {
       introduction,
-      queryBuilder,
+      facilities,
       header,
       footer,
     },

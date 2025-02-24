@@ -1,10 +1,14 @@
 import { Box, Typography } from "@mui/material";
-import { FacilityItem } from "./FacilityItem.jsx";
+import { FacilityItem } from "./facility-item/facility-item.component.jsx";
 import { GoCode, GoDatabase, GoLock, GoRocket } from "react-icons/go";
 import { MdLanguage } from "react-icons/md";
 import { AiOutlineSetting } from "react-icons/ai";
+import * as SC from "./facilities.style.js";
+import { useTranslation } from "react-i18next";
 
 export const Facilities = () => {
+  const { t } = useTranslation();
+
   const facilities = [
     {
       title: "اطلاعات جامع و دقیق",
@@ -38,20 +42,20 @@ export const Facilities = () => {
     },
   ];
   return (
-    <Box alignItems="center" flexDirection="column" display="flex" py="50px">
-      <Box my="50px" px="10px" display="flex" flexDirection='column' alignItems="center" gap="10px">
-        <Typography variant="h4" textAlign="center">
-          چرا سرویس ما میتونه به شما کمک کنه؟
+    <SC.Facilities>
+      <div className="facilities__title">
+        <Typography variant="h4" className="title__h4">
+          {t("facilities:title")}
         </Typography>
-        <Typography variant="body1" color="#cdcdcd">
-          مزایای استفاده از سرویس ما اینجا برای شما نوشته شده
+        <Typography variant="body1" className="title__body">
+          {t("facilities:description")}
         </Typography>
-      </Box>
-      <Box display="flex" justifyContent='space-between' flexWrap="wrap" gap="15px" width={["90%", "50%"]}>
+      </div>
+      <div className="facilities__container">
         {facilities.map((facility, index) => (
           <FacilityItem {...facility} key={index} />
         ))}
-      </Box>
-    </Box>
+      </div>
+    </SC.Facilities>
   );
 };

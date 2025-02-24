@@ -1,7 +1,7 @@
 import { Box, Card, CardContent, Typography } from "@mui/material";
-import * as SC from "./styles";
-import { useContext} from "react";
-import { ThemeContext } from "../../context/ThemeProvider";
+import * as SC from "./facility-item.style";
+import { useContext } from "react";
+import { ThemeContext } from "../../../context/ThemeProvider";
 
 export const FacilityItem = ({ title, description, icon: Icon }) => {
   const { state } = useContext(ThemeContext);
@@ -9,13 +9,13 @@ export const FacilityItem = ({ title, description, icon: Icon }) => {
     <SC.FacilityItem isDark={state === "dark"}>
       <Card className="card">
         <CardContent>
-          <Box mb="30px">
-            <Icon fontSize={45} />
+          <Box className="card__icon-container">
+            <Icon className="card__icon" />
           </Box>
-          <Typography mb="5px" variant="h6">
+          <Typography className="card__title" variant="h6">
             {title}
           </Typography>
-          <Typography className="description" variant="body2">
+          <Typography className="card__description" variant="body2">
             {description}
           </Typography>
         </CardContent>
