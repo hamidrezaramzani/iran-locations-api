@@ -39,4 +39,19 @@ export const Header = styled.div`
          display: none;
     }  
 
+    .app-bar__a {
+        flex-grow: 1;
+    }
+
+    .app-bar_left-box {
+        display: "flex"; 
+        flex-grow: 0;
+        align-items: "center";
+    }
+
+    .app-bar__menu-item-icon {
+        margin-left: 10px !important;
+    }
+
+
 `;
