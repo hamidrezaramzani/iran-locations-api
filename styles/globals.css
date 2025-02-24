@@ -39,19 +39,3 @@ path:hover {
   fill: #323232 !important;
   cursor: pointer;
 }
-
-@media (max-width: 768px) {
-  .mobile-menu {
-    display: block !important;
-  }
-  .desktop-menu {
-    display: none;
-  }
-  .desktop-theme {
-    display: none;
-  }
-}
-
-.mobile-menu {
-  display: none;
-}

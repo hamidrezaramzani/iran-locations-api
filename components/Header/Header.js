@@ -7,7 +7,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import {
   AppBar,
   Container,
-  Grid,
   Toolbar,
   Typography,
   Button,
@@ -21,6 +20,7 @@ import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 import React, { useContext, useState } from 'react';
 
+import * as SC from './styles';
 import { ThemeContext } from '../../context/ThemeProvider';
 
 const Header = () => {
@@ -45,21 +45,10 @@ const Header = () => {
   };
 
   return (
-    <Grid
-      container
-      fontFamily="iran-yekan"
-      xs="12"
-      height="50px"
-      paddingY="20px"
-      justifyContent="center"
-      gap="10px"
-    >
+    <SC.Header isDark={state === 'dark'}>
       <Container>
         <AppBar
-          position="static"
-          color="transparent"
-          sx={{ boxShadow: 'none', borderRadius: '5px' }}
-        >
+          className="header__app-bar" color='transparent'>
           <Container maxWidth="xl">
             <Toolbar disableGutters>
               <Typography
@@ -75,15 +64,7 @@ const Header = () => {
                   alt="website logo"
                 />
               </Typography>
-              <Box
-                sx={{
-                  flexGrow: 1,
-                  fontSize: '14px',
-                  gap: '15px',
-                  display: 'flex',
-                }}
-                className="desktop-menu"
-              >
+              <Box className="desktop-menu">
                 <Link href="/documentation">{t('header:nav.help')}</Link>
                 <Link href="https://github.com/hamidrezaramzani/iran-locations-api">
                   {t('header:nav.github')}
@@ -129,7 +110,7 @@ const Header = () => {
           </Container>
         </AppBar>
       </Container>
-    </Grid>
+    </SC.Header>
   );
 };
 
