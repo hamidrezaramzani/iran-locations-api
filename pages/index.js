@@ -2,8 +2,7 @@ import { CssBaseline, Grid } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import { useContext, useMemo } from 'react';
 
-import { Header, Introduction, Facilities } from '../components';
-import { Faq } from '../components/FAQ/Faq.jsx';
+import { Header, Introduction, Facilities, Faq } from '../components';
 import Footer from '../components/Footer/Footer';
 import { Head } from '../components/Head/Head.jsx';
 import { ThemeContext } from '../context/ThemeProvider';

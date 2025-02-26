@@ -5,9 +5,9 @@ import {
   Box,
 } from "@mui/material";
 
-import * as SC from "./styles";
+import * as SC from "././faq.style";
 import { useContext } from "react";
-import { ThemeContext } from "../../context/ThemeProvider";
+import { ThemeContext } from "../../../context/ThemeProvider";
 
 export const FaqItem = ({ title, description }) => {
   const { state } = useContext(ThemeContext);

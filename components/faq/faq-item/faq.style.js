@@ -15,7 +15,4 @@ export const FaqItem = styled.div`
     border: 1px solid #242424;
 
   }
-
-
-
 `;

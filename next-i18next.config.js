@@ -1,4 +1,5 @@
 const facilities = require('./public/locales/fa/facilities.json');
+const faq = require('./public/locales/fa/faq.json');
 const footer = require('./public/locales/fa/footer.json');
 const header = require('./public/locales/fa/header.json');
 const introduction = require('./public/locales/fa/introduction.json');
@@ -10,6 +11,7 @@ module.exports = {
   resources: {
     fa: {
       introduction,
+      faq,
       facilities,
       header,
       footer,
