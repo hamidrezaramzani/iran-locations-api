@@ -2,11 +2,10 @@ import { Box, CssBaseline, ThemeProvider } from '@mui/material';
 import { useRouter } from 'next/router';
 import { useContext, useEffect, useMemo, useState } from 'react';
 
-import { Header } from '../../components';
+import { Header, Head } from '../../components';
 import { DocumentationContent } from '../../components/Documentation/DocumentationContent';
 import { DocumentationHeader } from '../../components/Documentation/DocumentationHeader';
 import { DocumentationHierarchy } from '../../components/Documentation/DocumentationHierarchy';
-import { Head } from '../../components/Head/Head';
 import { ThemeContext } from '../../context/ThemeProvider';
 import { supabase } from '../../lib/supabase';
 import { getMuiTheme } from '../../lib/theme';
