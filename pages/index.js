@@ -2,12 +2,7 @@ import { CssBaseline, Grid } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import { useContext, useMemo } from 'react';
 
-import { Facilities } from '../components/Facilities/Facilities.jsx';
-import { Faq } from '../components/FAQ/Faq.jsx';
-import Footer from '../components/Footer/Footer';
-import { Head } from '../components/Head/Head.jsx';
-import Header from '../components/Header/Header';
-import Introduction from '../components/Header/Introduction/Introduction';
+import { Header, Introduction, Facilities, Faq, Head, Footer } from '../components';
 import { ThemeContext } from '../context/ThemeProvider';
 import { getMuiTheme } from '../lib/theme.js';
 import styles from '../styles/Home.module.css';
@@ -30,8 +25,7 @@ export default function Home({ domain }) {
         justifyContent="center"
         container
         height="100vh"
-        className={`${
-          state === 'light' ? styles.backgroundLight : styles.backgroundDark
+        className={`${state === 'light' ? styles.backgroundLight : styles.backgroundDark
         } ${state === 'light' ? styles.darkWelcome : styles.lightWelcome}`}
       >
         <Header />

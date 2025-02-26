@@ -5,8 +5,6 @@ import * as SC from "./styles";
 import { MdClose } from "react-icons/md";
 import { useContext } from "react";
 import { ThemeContext } from "../../context/ThemeProvider";
-import Image from "next/image";
-import Link from "next/link";
 
 export const DocumentationHierarchy = ({
   onItemSelect,
