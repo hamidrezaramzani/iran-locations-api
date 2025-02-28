@@ -1,4 +1,5 @@
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { appWithTranslation } from 'next-i18next';
 
 import ThemeProvider from '../context/ThemeProvider';
@@ -11,6 +12,7 @@ function MyApp({ Component, pageProps }) {
     <ThemeProvider>
       <Component {...pageProps} />
       <Analytics />
+      <SpeedInsights />
     </ThemeProvider>
   );
 }
