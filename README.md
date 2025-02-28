@@ -1,7 +1,7 @@
 # Iran Locations API
 > A simple API for finding provinces and cities of Iran.
 
-![Iran Locations API](https://github.com/hamidrezaramzani/iran-locations-api/raw/main/screenshot.png)
+![Iran Locations API](https://github.com/hamidrezaramzani/iran-locations-api/raw/main/screen.png)
 
 ## General Information
 - This repository provides a RESTful API that allows users to retrieve a list of provinces and their corresponding cities within Iran. The API serves a comprehensive and accurate dataset, making it easy to access this information for applications that require geographic data related to provinces and cities of Iran. The web API is built with modern web technologies to ensure efficient and scalable access.
