@@ -11,28 +11,9 @@ export const Introduction = () => {
   const { t } = useTranslation();
   return (
     <SC.Introduction>
-      <Grid
-        xs={12}
-        md={12}
-        flexDirection="column"
-        justifyContent="center"
-        display="flex"
-        item
-        marginTop={2}
-      >
-        <Box
-          display="flex"
-          justifyContent="center"
-          flexDirection="column"
-          alignItems="center"
-        >
-          <Typography
-            component="h1"
-            textAlign="center"
-            fontFamily="iran-yekan-bold"
-            fontSize="35px"
-            paddingX="8px"
-          >
+      <div className="introduction-container">
+        <div className="introduction">
+          <Typography component="h1" className="main-title">
             <Trans
               i18nKey="introduction:content.title"
               components={{
@@ -42,11 +23,7 @@ export const Introduction = () => {
           </Typography>
           <Typography
             color={state === "light" ? "black" : "white"}
-            textAlign="center"
-            paddingY="15px"
-            fontSize="14px"
-            fontFamily="iran-yekan"
-            width={["80%", "100"]}
+            className="secondary-title"
           >
             {t("introduction:content.description")}
           </Typography>
@@ -59,8 +36,8 @@ export const Introduction = () => {
           >
             {t("introduction:content.startButton")}
           </Button>
-        </Box>
-      </Grid>
+        </div>
+      </div>
     </SC.Introduction>
   );
 };

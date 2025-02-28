@@ -5,7 +5,7 @@ import {
   Box,
 } from "@mui/material";
 
-import * as SC from "././faq.style";
+import * as SC from "./faq-item.style";
 import { useContext } from "react";
 import { ThemeContext } from "../../../context/ThemeProvider";
 

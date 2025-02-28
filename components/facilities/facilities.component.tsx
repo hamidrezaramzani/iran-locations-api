@@ -1,10 +1,10 @@
-import { FacilityItem } from "./facility-item/facility-item.component.jsx";
+import { FacilityItem } from "./facility-item";
 import { GoCode, GoDatabase, GoLock, GoRocket } from "react-icons/go";
 import { MdLanguage } from "react-icons/md";
 import { AiOutlineSetting } from "react-icons/ai";
-import * as SC from "./facilities.style.js";
 import { useTranslation } from "react-i18next";
 import { SectionTitle } from "../section-title";
+import * as SC from "./facilities.style";
 
 export const Facilities = () => {
   const { t } = useTranslation();

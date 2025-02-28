@@ -31,7 +31,7 @@ export const Header = () => {
     setState(state === "dark" ? "light" : "dark");
   };
 
-  const handleMenuOpen = (event) => {
+  const handleMenuOpen = (event: any) => {
     setAnchorEl(event.currentTarget);
   };
 
@@ -83,18 +83,27 @@ export const Header = () => {
                     open={Boolean(anchorEl)}
                     onClose={handleMenuClose}
                   >
-                    <MenuItem onClick={handleMenuClose}>
-                      <HelpIcon className="app-bar__menu-item-icon" />
+                    <MenuItem
+                      onClick={handleMenuClose}
+                      className="app-bar__menu-icon"
+                    >
+                      <HelpIcon />
                       <Link href="/documentation">{t("header:nav.help")}</Link>
                     </MenuItem>
-                    <MenuItem onClick={handleMenuClose}>
-                      <GitHubIcon className="app-bar__menu-item-icon" />
+                    <MenuItem
+                      onClick={handleMenuClose}
+                      className="app-bar__menu-icon"
+                    >
+                      <GitHubIcon />
                       <Link href="https://github.com/hamidrezaramzani/iran-locations-api">
                         {t("header:nav.github")}
                       </Link>
                     </MenuItem>
-                    <MenuItem onClick={handleMenuClose}>
-                      <InfoIcon className="app-bar__menu-item-icon" />
+                    <MenuItem
+                      onClick={handleMenuClose}
+                      className="app-bar__menu-icon"
+                    >
+                      <InfoIcon />
                       <Link href="https://github.com/hamidrezaramzani/hamidrezaramzani">
                         {t("header:nav.aboutMe")}
                       </Link>
@@ -105,11 +114,7 @@ export const Header = () => {
                         handleMenuClose();
                       }}
                     >
-                      {state === "dark" ? (
-                        <DarkModeIcon className="app-bar__menu-item-icon" />
-                      ) : (
-                        <LightModeIcon className="app-bar__menu-item-icon" />
-                      )}
+                      {state === "dark" ? <DarkModeIcon /> : <LightModeIcon />}
                       {state === "dark"
                         ? t("header:nav.dark")
                         : t("header:nav.light")}

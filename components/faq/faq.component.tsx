@@ -1,5 +1,4 @@
 "use client";
-import { Box } from "@mui/material";
 import { FaqItem } from "./faq-item";
 import { faqItems } from "./faq.constant";
 import { useTranslation } from "react-i18next";

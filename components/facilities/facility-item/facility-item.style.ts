@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { SCFacilityItem } from './facility-item.type';
 
-export const FacilityItem = styled.div`
+export const FacilityItem = styled.div<SCFacilityItem>`
   @media screen and (max-width: 768px) {
     width: 90%;
   }

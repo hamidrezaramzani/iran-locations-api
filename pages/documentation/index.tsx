@@ -1,11 +1,17 @@
-import { Box, CssBaseline, ThemeProvider } from '@mui/material';
-import { useRouter } from 'next/router';
-import { useContext, useEffect, useMemo, useState } from 'react';
+import { Box, CssBaseline, ThemeProvider } from "@mui/material";
+import { useRouter } from "next/router";
+import { useContext, useEffect, useMemo, useState } from "react";
 
-import { Header, Head, DocumentationHeader, DocumentationContent, DocumentationHierarchy } from '../../components';
-import { ThemeContext } from '../../context/ThemeProvider';
-import { supabase } from '../../lib/supabase';
-import { getMuiTheme } from '../../lib/theme';
+import {
+  Header,
+  Head,
+  DocumentationHeader,
+  DocumentationContent,
+  DocumentationHierarchy,
+} from "../../components";
+import { ThemeContext } from "../../context/ThemeProvider";
+import { supabase } from "../../lib/supabase";
+import { getMuiTheme } from "../../lib/theme";
 
 export default function Documentation() {
   const { state } = useContext(ThemeContext);
@@ -15,101 +21,101 @@ export default function Documentation() {
 
   const documentationNav = [
     {
-      title: 'مقدمه',
+      title: "مقدمه",
       items: [
         {
-          title: 'درباره پروژه',
-          value: 'aboutProject',
+          title: "درباره پروژه",
+          value: "aboutProject",
         },
         {
-          title: 'هدف و کاربردها',
-          value: 'goalsAndUses',
+          title: "هدف و کاربردها",
+          value: "goalsAndUses",
         },
       ],
     },
     {
-      title: 'مستندات دسترسی به استان‌ها',
+      title: "مستندات دسترسی به استان‌ها",
       items: [
         {
-          title: 'دریافت تمامی استان‌ها',
-          value: 'getAllStates',
+          title: "دریافت تمامی استان‌ها",
+          value: "getAllStates",
         },
         {
-          title: 'دریافت استان با آیدی',
-          value: 'getStateById',
+          title: "دریافت استان با آیدی",
+          value: "getStateById",
         },
         {
-          title: 'دریافت استان‌ها با نام',
-          value: 'getStateByName',
+          title: "دریافت استان‌ها با نام",
+          value: "getStateByName",
         },
         {
-          title: 'دریافت استان با مختصات جغرافیایی',
-          value: 'getStateByLatAndLong',
+          title: "دریافت استان با مختصات جغرافیایی",
+          value: "getStateByLatAndLong",
           isComingSoon: true,
         },
       ],
     },
     {
-      title: 'مستندات دسترسی به شهرها',
+      title: "مستندات دسترسی به شهرها",
       items: [
         {
-          title: 'دریافت تمامی شهرها',
-          value: 'getAllCities',
+          title: "دریافت تمامی شهرها",
+          value: "getAllCities",
         },
         {
-          title: 'دریافت شهرها بر اساس نام',
-          value: 'getCityByName',
+          title: "دریافت شهرها بر اساس نام",
+          value: "getCityByName",
         },
         {
-          title: 'دریافت شهرها بر اساس آیدی استان',
-          value: 'getCitiesByStateId',
+          title: "دریافت شهرها بر اساس آیدی استان",
+          value: "getCitiesByStateId",
         },
         {
-          title: 'دریافت شهرها بر اساس نام استان',
-          value: 'getCitiesByStateName',
+          title: "دریافت شهرها بر اساس نام استان",
+          value: "getCitiesByStateName",
         },
         {
-          title: 'دریافت شهر با مختصات جغرافیایی',
-          value: 'getCityByLatAndLong',
+          title: "دریافت شهر با مختصات جغرافیایی",
+          value: "getCityByLatAndLong",
           isComingSoon: true,
         },
 
         {
-          title: 'دریافت شهر با پلاک خودرو',
-          value: 'getCityByLicensePlate',
+          title: "دریافت شهر با پلاک خودرو",
+          value: "getCityByLicensePlate",
           isComingSoon: true,
         },
       ],
     },
     {
-      title: 'ویژگی‌ها',
+      title: "ویژگی‌ها",
       items: [
         {
-          title: 'اطلاعات ارائه شده در API',
-          value: 'apiFeatures',
+          title: "اطلاعات ارائه شده در API",
+          value: "apiFeatures",
         },
         {
-          title: 'انواع داده‌ها',
-          value: 'dataTypes',
+          title: "انواع داده‌ها",
+          value: "dataTypes",
         },
       ],
     },
     {
-      title: 'پشتیبانی',
+      title: "پشتیبانی",
       items: [
         {
-          title: 'سوالات متداول',
-          value: 'faq',
+          title: "سوالات متداول",
+          value: "faq",
         },
         {
-          title: 'تماس با من',
-          value: 'contactMe',
+          title: "تماس با من",
+          value: "contactMe",
         },
       ],
     },
   ];
 
-  const [content, setContent] = useState('');
+  const [content, setContent] = useState("");
   const [loading, setLoading] = useState(false);
 
   const theme = useMemo(() => getMuiTheme(state), [state]);
@@ -117,14 +123,14 @@ export default function Documentation() {
   const fetchDocumentationByName = async (name) => {
     setLoading(true);
     const { data, error } = await supabase
-      .from('documentation')
+      .from("documentation")
       .select(
         `
         id,
         text
       `
       )
-      .eq('name', name)
+      .eq("name", name)
       .single();
 
     if (error) {
@@ -142,10 +148,10 @@ export default function Documentation() {
 
   useEffect(() => {
     const fetch = async () => {
-      const name = router.query.name || 'aboutProject';
+      const name = router.query.name || "aboutProject";
 
       const isValidName = documentationSections.some(
-        ({ value }) => value === name
+        ({ value }: any) => value === name
       );
 
       if (name && isValidName && !content.length) {
@@ -204,18 +210,13 @@ export default function Documentation() {
       <Head
         title="مستندات API اطلاعات استان‌ها و شهرهای ایران"
         description={
-          'مستندات کامل و جامع API برای دسترسی به اطلاعات به‌روز استان‌ها و شهرهای ایران، شامل داده‌های فارسی و انگلیسی با امکان استفاده رایگان و اوپن سورس.'
+          "مستندات کامل و جامع API برای دسترسی به اطلاعات به‌روز استان‌ها و شهرهای ایران، شامل داده‌های فارسی و انگلیسی با امکان استفاده رایگان و اوپن سورس."
         }
       />
       <CssBaseline />
-      <Box
-        width="100%"
-        height="100vh"
-        display="flex"
-        justifyContent="center"
-      >
-        <Header setDrawerOpen={setDrawerOpen} />
-        <Box width={['95%', '80%']}>
+      <Box width="100%" height="100vh" display="flex" justifyContent="center">
+        <Header />
+        <Box width={["95%", "80%"]}>
           <Box display="flex" flexDirection="column" mt="50px">
             <DocumentationHeader setDrawerOpen={setDrawerOpen} />
             <Box display="flex" gap="10px">
@@ -223,7 +224,7 @@ export default function Documentation() {
                 items={documentationNav}
                 onItemSelect={handleItemSelect}
                 expandedItem={Number(router.query.parent) || 0}
-                selectedItem={router.query.name || 'aboutProject'}
+                selectedItem={router.query.name || "aboutProject"}
                 isDrawerOpen={isDrawerOpen}
                 setDrawerOpen={setDrawerOpen}
               />

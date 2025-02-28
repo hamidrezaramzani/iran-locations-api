@@ -5,7 +5,7 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import * as SC from "./documentation-code.style";
 
-export const DocumentationCode = (props) => {
+export const DocumentationCode = (props: any) => {
   const { children, className, ...rest } = props;
   const match = /language-(\w+)/.exec(className || "");
 

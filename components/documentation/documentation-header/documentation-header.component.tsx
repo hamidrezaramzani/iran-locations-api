@@ -3,8 +3,11 @@ import { Toolbar, IconButton } from "@mui/material";
 import { MdMenu } from "react-icons/md";
 import * as SC from "./documentation-header.style";
 import { ThemeContext } from "../../../context/ThemeProvider";
+import { DocumentationHeaderProps } from "./documentation-header.type";
 
-export const DocumentationHeader = ({ setDrawerOpen }) => {
+export const DocumentationHeader = ({
+  setDrawerOpen,
+}: DocumentationHeaderProps) => {
   const { state } = useContext(ThemeContext);
   const isDark = state === "dark";
   return (
@@ -15,7 +18,7 @@ export const DocumentationHeader = ({ setDrawerOpen }) => {
           className="menu-open-button"
           color="inherit"
           aria-label="menu"
-          onClick={() => setDrawerOpen((prevOpen) => !prevOpen)}
+          onClick={() => setDrawerOpen((prevOpen: boolean) => !prevOpen)}
         >
           <MdMenu />
         </IconButton>
