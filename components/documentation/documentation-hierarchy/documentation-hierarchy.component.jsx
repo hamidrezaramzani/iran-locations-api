@@ -1,10 +1,10 @@
 import { Box, Button, Chip, Drawer } from "@mui/material";
 import { SimpleTreeView, TreeItem } from "@mui/x-tree-view";
 
-import * as SC from "./styles";
+import * as SC from "./documentation-hierarchy.style";
 import { MdClose } from "react-icons/md";
 import { useContext } from "react";
-import { ThemeContext } from "../../context/ThemeProvider";
+import { ThemeContext } from "../../../context/ThemeProvider";
 
 export const DocumentationHierarchy = ({
   onItemSelect,
@@ -52,6 +52,7 @@ export const DocumentationHierarchy = ({
       ))}
     </SimpleTreeView>
   );
+  
   return (
     <SC.DocumentationHierarchy isDark={state === "dark"}>
       <Box className="md-tree-view">

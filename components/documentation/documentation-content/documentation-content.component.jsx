@@ -3,11 +3,11 @@ import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
-import { DocumentationCode } from "../../components/Documentation/DocumentationCode";
+import { DocumentationCode } from "../..";
 import { useRouter } from "next/router";
-import * as SC from "./styles";
+import * as SC from "./documentation-content.style";
 import { useContext } from "react";
-import { ThemeContext } from "../../context/ThemeProvider";
+import { ThemeContext } from "../../../context/ThemeProvider";
 
 export const DocumentationContent = ({
   documentationSections,
@@ -43,7 +43,7 @@ export const DocumentationContent = ({
     )[currentSectionIndex - 1].title;
   }
 
-  const handleNextSection = async () => {
+  const handleSectionNext = async () => {
     const currentSectionIndex = documentationSections.findIndex(
       ({ value }) => value === router.query.name
     );
@@ -54,7 +54,7 @@ export const DocumentationContent = ({
     await handleItemSelect(0, nextSectionName);
   };
 
-  const handlePrevSection = async () => {
+  const handleSectionPrev = async () => {
     const currentSectionIndex = documentationSections.findIndex(
       ({ value }) => value === router.query.name
     );
@@ -87,26 +87,20 @@ export const DocumentationContent = ({
           >
             {content}
           </Markdown>
-          <Box
-            mt="20px"
-            width="100%"
-            display="flex"
-            justifyContent="space-between"
-            py="30"
-          >
+          <div className="documentation-content-buttons">
             {!isLast ? (
-              <Button onClick={handleNextSection}>
+              <Button onClick={handleSectionNext}>
                 <MdKeyboardArrowRight fontSize={17} />
                 {nextSectionName}{" "}
               </Button>
             ) : null}
             {!isFirst ? (
-              <Button onClick={handlePrevSection}>
+              <Button onClick={handleSectionPrev}>
                 {prevSectionName}
                 <MdKeyboardArrowLeft fontSize={17} />
               </Button>
             ) : null}
-          </Box>
+          </div>
         </>
       ) : null}
     </SC.DocumentationContent>

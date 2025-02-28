@@ -3,7 +3,7 @@ import { Button } from "@mui/material";
 import { FaRegCopy } from "react-icons/fa";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
-import * as SC from "./styles";
+import * as SC from "./documentation-code.style";
 
 export const DocumentationCode = (props) => {
   const { children, className, ...rest } = props;
