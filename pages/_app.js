@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/next';
 import { appWithTranslation } from 'next-i18next';
 
 import ThemeProvider from '../context/ThemeProvider';
@@ -9,6 +10,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider>
       <Component {...pageProps} />
+      <Analytics />
     </ThemeProvider>
   );
 }
