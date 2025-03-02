@@ -1,6 +1,5 @@
-import { CssBaseline, Grid } from "@mui/material";
-import { ThemeProvider } from "@mui/material/styles";
-import { useContext, useMemo } from "react";
+import { Grid } from "@mui/material";
+import { useContext } from "react";
 
 import {
   Header,
@@ -10,12 +9,10 @@ import {
   Head,
   Footer,
 } from "../components";
-import { ThemeContext } from "../context/ThemeProvider";
-import { getMuiTheme } from "../lib/theme.js";
+import { ColorModeContext } from "../providers/color-mode-provider/color-mode-provider.component";
 import styles from "../styles/Home.module.css";
 export default function Home() {
-  const { state } = useContext(ThemeContext);
-  const theme = useMemo(() => getMuiTheme(state), [state]);
+  const { state } = useContext(ColorModeContext);
 
   const META_TITLE =
     "وب سرویس شهرها و استان‌های ایران | اطلاعات جامع شهری و استانی";
@@ -23,8 +20,7 @@ export default function Home() {
     "وب سرویس شهرها و استان‌های ایران: دسترسی به اطلاعات جامع و به‌روز درباره شهرها و استان‌های ایران. انواع داده ها بر اساس دسته بندی های متفاوت را میتوانید داشته باشید.";
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
+    <>
       <Head title={META_TITLE} description={META_DESCRIPTION} />
       <Grid
         width="100%"
@@ -42,6 +38,6 @@ export default function Home() {
       <Facilities />
       <Faq />
       <Footer />
-    </ThemeProvider>
+    </>
   );
 }

@@ -3,11 +3,11 @@ import Link from "next/link";
 import React, { useContext } from "react";
 import { Trans, useTranslation } from "react-i18next";
 
-import { ThemeContext } from "../../../context/ThemeProvider";
+import { ColorModeContext } from "../../../providers/color-mode-provider/color-mode-provider.component";
 import * as SC from "./introduction.style";
 
 export const Introduction = () => {
-  const { state } = useContext(ThemeContext);
+  const { state } = useContext(ColorModeContext);
   const { t } = useTranslation();
   return (
     <SC.Introduction>

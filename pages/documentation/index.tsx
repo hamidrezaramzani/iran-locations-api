@@ -1,4 +1,4 @@
-import { Box, CssBaseline, ThemeProvider } from "@mui/material";
+import { Box } from "@mui/material";
 import { useRouter } from "next/router";
 import { useContext, useEffect, useMemo, useState } from "react";
 
@@ -9,12 +9,11 @@ import {
   DocumentationContent,
   DocumentationHierarchy,
 } from "../../components";
-import { ThemeContext } from "../../context/ThemeProvider";
+import { ColorModeContext } from "../../providers/color-mode-provider/color-mode-provider.component";
 import { supabase } from "../../lib/supabase";
-import { getMuiTheme } from "../../lib/theme";
 
 export default function Documentation() {
-  const { state } = useContext(ThemeContext);
+  const { state } = useContext(ColorModeContext);
   const router = useRouter();
 
   const [isDrawerOpen, setDrawerOpen] = useState(false);
@@ -122,8 +121,6 @@ export default function Documentation() {
   const [content, setContent] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const theme = useMemo(() => getMuiTheme(state), [state]);
-
   const fetchDocumentationByName = async (name) => {
     setLoading(true);
     const { data, error } = await supabase
@@ -228,14 +225,13 @@ export default function Documentation() {
   };
 
   return (
-    <ThemeProvider theme={theme}>
+    <>
       <Head
         title="مستندات API اطلاعات استان‌ها و شهرهای ایران"
         description={
           "مستندات کامل و جامع API برای دسترسی به اطلاعات به‌روز استان‌ها و شهرهای ایران، شامل داده‌های فارسی و انگلیسی با امکان استفاده رایگان و اوپن سورس."
         }
       />
-      <CssBaseline />
       <Box width="100%" height="100vh" display="flex" justifyContent="center">
         <Header />
         <Box width={["95%", "80%"]}>
@@ -261,6 +257,6 @@ export default function Documentation() {
           </Box>
         </Box>
       </Box>
-    </ThemeProvider>
+    </>
   );
 }

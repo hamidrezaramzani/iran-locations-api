@@ -4,7 +4,7 @@ import { SimpleTreeView, TreeItem } from "@mui/x-tree-view";
 import * as SC from "./documentation-hierarchy.style";
 import { MdClose } from "react-icons/md";
 import { useContext } from "react";
-import { ThemeContext } from "../../../context/ThemeProvider";
+import { ColorModeContext } from "../../../providers/color-mode-provider/color-mode-provider.component";
 
 export const DocumentationHierarchy = ({
   onItemSelect,
@@ -14,7 +14,7 @@ export const DocumentationHierarchy = ({
   isDrawerOpen,
   setDrawerOpen,
 }) => {
-  const { state } = useContext(ThemeContext);
+  const { state } = useContext(ColorModeContext);
   const TreeView = () => (
     <SimpleTreeView
       onItemClick={onItemSelect}

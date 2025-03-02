@@ -4,7 +4,7 @@ export const Introduction = styled.div`
   width: 100%;
   display: flex;
   .welcome-span {
-    color: #2b3de2;
+    color: ${({ theme }) => theme.palette.primary.main};
   }
 
   .introduction-container {

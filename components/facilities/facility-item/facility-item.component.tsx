@@ -1,7 +1,7 @@
 import { Box, Card, CardContent, Typography } from "@mui/material";
 import * as SC from "./facility-item.style";
 import { useContext } from "react";
-import { ThemeContext } from "../../../context/ThemeProvider";
+import { ColorModeContext } from "../../../providers/color-mode-provider/color-mode-provider.component";
 import { FacilityItemProps } from "./facility-item.type";
 
 export const FacilityItem = ({
@@ -9,7 +9,7 @@ export const FacilityItem = ({
   description,
   icon: Icon,
 }: FacilityItemProps) => {
-  const { state } = useContext(ThemeContext);
+  const { state } = useContext(ColorModeContext);
   return (
     <SC.FacilityItem isDark={state === "dark"}>
       <Card className="card">

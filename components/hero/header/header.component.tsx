@@ -19,13 +19,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import * as SC from "./head.style";
-import { ThemeContext } from "../../../context/ThemeProvider";
+import { ColorModeContext } from "../../../providers/color-mode-provider/color-mode-provider.component";
 
 export const Header = () => {
   const { t } = useTranslation();
   const [anchorEl, setAnchorEl] = useState(null);
 
-  const { state, setState } = useContext(ThemeContext);
+  const { state, setState } = useContext(ColorModeContext);
 
   const handleClickToggleTheme = () => {
     setState(state === "dark" ? "light" : "dark");

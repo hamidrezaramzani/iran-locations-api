@@ -7,10 +7,10 @@ import {
 
 import * as SC from "./faq-item.style";
 import { useContext } from "react";
-import { ThemeContext } from "../../../context/ThemeProvider";
+import { ColorModeContext } from "../../../providers/color-mode-provider/color-mode-provider.component";
 
 export const FaqItem = ({ title, description }) => {
-  const { state } = useContext(ThemeContext);
+  const { state } = useContext(ColorModeContext);
   return (
     <SC.FaqItem isDark={state === "dark"}>
       <Accordion className="accordion">

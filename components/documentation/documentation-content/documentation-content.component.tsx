@@ -7,7 +7,7 @@ import { DocumentationCode } from "../..";
 import { useRouter } from "next/router";
 import * as SC from "./documentation-content.style";
 import { useContext } from "react";
-import { ThemeContext } from "../../../context/ThemeProvider";
+import { ColorModeContext } from "../../../providers/color-mode-provider/color-mode-provider.component";
 
 export const DocumentationContent = ({
   documentationSections,
@@ -17,7 +17,7 @@ export const DocumentationContent = ({
 }) => {
   const router = useRouter();
 
-  const { state } = useContext(ThemeContext);
+  const { state } = useContext(ColorModeContext);
 
   const isFirst = router.query.name === documentationSections[0].value;
   const isLast =

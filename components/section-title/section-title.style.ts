@@ -1,5 +1,4 @@
-import styled from 'styled-components';
-
+import styled from "styled-components";
 
 export const SectionTitle = styled.div`
   margin: 50px 0;
@@ -11,7 +10,7 @@ export const SectionTitle = styled.div`
 
   .title__h4 {
     text-align: center;
-    color: #2b3de2;
+    color: ${({ theme }) => theme.palette.primary.main};
     font-family: iran-yekan-bold;
   }
 
