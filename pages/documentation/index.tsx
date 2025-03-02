@@ -49,6 +49,10 @@ export default function Documentation() {
           value: "getStateByName",
         },
         {
+          title: "دریافت استان‌ با پیش شماره",
+          value: "getStateByLandlinePrefix",
+        },
+        {
           title: "دریافت استان با مختصات جغرافیایی",
           value: "getStateByLatAndLong",
           isComingSoon: true,
