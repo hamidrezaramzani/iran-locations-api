@@ -8,21 +8,29 @@ import * as SC from "./documentation-code.style";
 export const DocumentationCode = (props: any) => {
   const { children, className, ...rest } = props;
   const match = /language-(\w+)/.exec(className || "");
+  const code = String(children).replace(/\n$/, "");
+
+  const handleCodeCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(code);
+    } catch (error) {
+      console.error("Failed to copy:", error);
+    }
+  };
 
   return match ? (
     <SC.DocumentationCode>
       <SyntaxHighlighter
         {...rest}
         PreTag="div"
-        // eslint-disable-next-line react/no-children-prop
-        children={String(children).replace(/\n$/, "")}
+        children={code}
         language={match[1]}
         style={atomDark}
         customStyle={{
           direction: "ltr",
         }}
       />
-      <Button className="copy-button">
+      <Button className="copy-button" onClick={handleCodeCopy}>
         <FaRegCopy className="copy-button-icon" />
       </Button>
     </SC.DocumentationCode>
