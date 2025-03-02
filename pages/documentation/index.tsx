@@ -151,6 +151,8 @@ export default function Documentation() {
     .flat(Infinity);
 
   useEffect(() => {
+    if (!router.isReady) return;
+
     if (Object.keys(router.query).length > 0) {
       const fetch = async () => {
         const name = router.query.name || "aboutProject";
@@ -161,15 +163,20 @@ export default function Documentation() {
         if (name && isValidName && !content.length) {
           const documentationObject = await fetchDocumentationByName(name);
 
-          router.push({
-            query: {
-              name: name,
-              parent:
-                documentationNav.findIndex(({ items }) =>
-                  items.some(({ value }) => value === name)
-                ) || 0,
+          router.push(
+            {
+              query: {
+                name: name,
+                parent:
+                  documentationNav.findIndex(({ items }) =>
+                    items.some(({ value }) => value === name)
+                  ) || 0,
+              },
             },
-          });
+            undefined,
+            { shallow: true }
+          );
+
           if (documentationObject) {
             setContent(documentationObject.text);
           }
@@ -177,8 +184,19 @@ export default function Documentation() {
       };
 
       fetch();
+    } else {
+      router.push(
+        {
+          query: {
+            name: "aboutProject",
+            parent: 0,
+          },
+        },
+        undefined,
+        { shallow: true }
+      );
     }
-  }, [router.query]);
+  }, [router.isReady, router.query]);
 
   const handleItemSelect = async (_, name) => {
     const isComingSoon = documentationNav.some(({ items }) =>
