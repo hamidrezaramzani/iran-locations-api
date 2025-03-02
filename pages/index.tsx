@@ -1,6 +1,3 @@
-import { Grid } from "@mui/material";
-import { useContext } from "react";
-
 import {
   Header,
   Introduction,
@@ -8,12 +5,9 @@ import {
   Faq,
   Head,
   Footer,
+  HeroContainer,
 } from "../components";
-import { ColorModeContext } from "../providers/color-mode-provider/color-mode-provider.component";
-import styles from "../styles/Home.module.css";
 export default function Home() {
-  const { state } = useContext(ColorModeContext);
-
   const META_TITLE =
     "وب سرویس شهرها و استان‌های ایران | اطلاعات جامع شهری و استانی";
   const META_DESCRIPTION =
@@ -22,19 +16,10 @@ export default function Home() {
   return (
     <>
       <Head title={META_TITLE} description={META_DESCRIPTION} />
-      <Grid
-        width="100%"
-        display="flex"
-        justifyContent="center"
-        container
-        height="100vh"
-        className={`${
-          state === "light" ? styles.backgroundLight : styles.backgroundDark
-        } ${state === "light" ? styles.darkWelcome : styles.lightWelcome}`}
-      >
+      <HeroContainer>
         <Header />
         <Introduction />
-      </Grid>
+      </HeroContainer>
       <Facilities />
       <Faq />
       <Footer />
