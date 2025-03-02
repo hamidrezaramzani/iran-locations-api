@@ -151,34 +151,34 @@ export default function Documentation() {
     .flat(Infinity);
 
   useEffect(() => {
-    const fetch = async () => {
-      const name = router.query.name || "aboutProject";
+    if (Object.keys(router.query).length > 0) {
+      const fetch = async () => {
+        const name = router.query.name || "aboutProject";
+        const isValidName = documentationSections.some(
+          ({ value }: any) => value === name
+        );
 
-      const isValidName = documentationSections.some(
-        ({ value }: any) => value === name
-      );
+        if (name && isValidName && !content.length) {
+          const documentationObject = await fetchDocumentationByName(name);
 
-      if (name && isValidName && !content.length) {
-        const documentationObject = await fetchDocumentationByName(name);
-
-        router.push({
-          query: {
-            name: name,
-            parent:
-              documentationNav.findIndex(({ items }) =>
-                items.some(({ value }) => value === name)
-              ) || 0,
-          },
-        });
-        if (documentationObject) {
-          setContent(documentationObject.text);
+          router.push({
+            query: {
+              name: name,
+              parent:
+                documentationNav.findIndex(({ items }) =>
+                  items.some(({ value }) => value === name)
+                ) || 0,
+            },
+          });
+          if (documentationObject) {
+            setContent(documentationObject.text);
+          }
         }
-      }
-    };
+      };
 
-    fetch();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+      fetch();
+    }
+  }, [router.query]);
 
   const handleItemSelect = async (_, name) => {
     const isComingSoon = documentationNav.some(({ items }) =>
