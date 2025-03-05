@@ -2,7 +2,7 @@ import { States } from './state';
 
 export type CitiesQueryParams = {
   state: string;
-  state_id: number;
+  state_id: string;
   city: string;
 };
 
@@ -29,7 +29,7 @@ const getCitiesByStateId = (
   states: States,
   stateId: CitiesQueryParams['state_id'],
 ) => {
-  const matchedState = states.find(({ id }) => id === stateId);
+  const matchedState = states.find(({ id }) => id === Number(stateId));
   return matchedState ? matchedState.cities : [];
 };
 

@@ -15,7 +15,7 @@ export type States = {
 }[];
 
 export type StateQueryParams = {
-  id: number;
+  id: string;
   state: string;
   landlinePrefix: string;
 };
@@ -23,9 +23,9 @@ export type StateQueryParams = {
 const getAllStates = (states: States) =>
   states.map(state => _.omit(state, 'cities'));
 
-const getStatesById = (states: States, stateId: StateQueryParams['id']) => {
+const getStatesById = (states: States, stateId: number) => {
   const matchedState = states
-    .filter(({ id }) => id === stateId)
+    .filter(({ id }) => id === Number(stateId))
     .map(state => _.omit(state, 'cities'));
   return matchedState.length ? matchedState[0] : {};
 };
@@ -50,7 +50,7 @@ export const getStates = (
   landlinePrefix: StateQueryParams['landlinePrefix'],
 ) => {
   if (stateId) {
-    if (isNaN(stateId)) {
+    if (isNaN(Number(stateId))) {
       const error = new Error('Invalid id parameter, id must be number');
       throw error;
     }
