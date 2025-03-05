@@ -1,11 +1,16 @@
-import { getStates } from '../../../../lib/state';
+import { NextApiRequest, NextApiResponse } from 'next';
+import { getStates, StateQueryParams } from '../../../../lib/state';
 
 const { cors } = require('../../../../middlewares/cors');
 const states = require('../../../../public/iran_cities_with_coordinates.json');
 
-export default async function handler(req, res) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {
   cors(req, res);
-  const { id, state, landlinePrefix } = req.query;
+  const { id, state, landlinePrefix } =
+    req.query as unknown as StateQueryParams;
 
   try {
     const matchedStates = getStates(states, id, state, landlinePrefix);
