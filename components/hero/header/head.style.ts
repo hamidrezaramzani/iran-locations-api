@@ -1,12 +1,12 @@
-import styled from "styled-components";
-import { SCHeaderProps } from "./header.type";
+import styled from 'styled-components';
+import { SCHeaderProps } from './header.type';
 
 export const Header = styled.div<SCHeaderProps>`
   width: 100%;
   height: 60px;
   display: flex;
   justify-content: space-between;
-  background: ${({ isDark }) => (isDark ? "#000" : "#fff")};
+  background: ${({ isDark }) => (isDark ? '#000' : '#fff')};
   border-bottom: 1px solid #444;
   position: fixed;
   z-index: 9999;
@@ -43,9 +43,9 @@ export const Header = styled.div<SCHeaderProps>`
   }
 
   .app-bar_left-box {
-    display: "flex";
+    display: 'flex';
     flex-grow: 0;
-    align-items: "center";
+    align-items: 'center';
   }
 
   .app-bar__menu-icon {

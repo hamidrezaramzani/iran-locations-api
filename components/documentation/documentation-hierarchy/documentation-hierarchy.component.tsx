@@ -1,10 +1,10 @@
-import { Box, Button, Chip, Drawer } from "@mui/material";
-import { SimpleTreeView, TreeItem } from "@mui/x-tree-view";
+import { Box, Button, Chip, Drawer } from '@mui/material';
+import { SimpleTreeView, TreeItem } from '@mui/x-tree-view';
 
-import * as SC from "./documentation-hierarchy.style";
-import { MdClose } from "react-icons/md";
-import { useContext } from "react";
-import { ColorModeContext } from "../../../providers/color-mode-provider/color-mode-provider.component";
+import * as SC from './documentation-hierarchy.style';
+import { MdClose } from 'react-icons/md';
+import { useContext } from 'react';
+import { ColorModeContext } from '../../../providers/color-mode-provider/color-mode-provider.component';
 
 export const DocumentationHierarchy = ({
   onItemSelect,
@@ -28,13 +28,13 @@ export const DocumentationHierarchy = ({
           className="tree-item-parent"
           label={item.title}
         >
-          {item.items.map((item2) => (
+          {item.items.map(item2 => (
             <TreeItem
               itemId={item2.value}
               className="tree-item-child"
               label={
                 <>
-                  {item2.title}{" "}
+                  {item2.title}{' '}
                   {item2.isComingSoon && (
                     <Chip
                       variant="outlined"
@@ -52,14 +52,14 @@ export const DocumentationHierarchy = ({
       ))}
     </SimpleTreeView>
   );
-  
+
   return (
-    <SC.DocumentationHierarchy isDark={state === "dark"}>
+    <SC.DocumentationHierarchy isDark={state === 'dark'}>
       <Box className="md-tree-view">
         <TreeView />
       </Box>
       <Drawer
-        sx={{ "& .MuiDrawer-paper": { width: "80%" } }}
+        sx={{ '& .MuiDrawer-paper': { width: '80%' } }}
         anchor="right"
         open={isDrawerOpen}
       >

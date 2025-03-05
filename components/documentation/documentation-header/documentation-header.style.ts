@@ -1,11 +1,11 @@
-import { AppBar } from "@mui/material";
-import styled from "styled-components";
-import { SCDocumentationHeaderProps } from "./documentation-header.type";
+import { AppBar } from '@mui/material';
+import styled from 'styled-components';
+import { SCDocumentationHeaderProps } from './documentation-header.type';
 
 export const DocumentationHeader = styled(AppBar)<SCDocumentationHeaderProps>`
   width: 100%;
   padding: 10px 0;
-  background: ${({ isDark }) => (isDark ? "#000" : "#efefef")} !important;
+  background: ${({ isDark }) => (isDark ? '#000' : '#efefef')} !important;
   box-shadow: none;
   display: flex;
   justify-content: start;
@@ -18,7 +18,7 @@ export const DocumentationHeader = styled(AppBar)<SCDocumentationHeaderProps>`
     }
     .menu-open-button {
       display: block;
-      color: ${({ isDark }) => (isDark ? "#fff" : "#242424")} !important;
+      color: ${({ isDark }) => (isDark ? '#fff' : '#242424')} !important;
     }
   }
 

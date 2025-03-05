@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
-import { Navbar } from "./navbar/navbar.component";
-import { SocialMedia } from "./social-media/social-media.component";
+import { Navbar } from './navbar';
+import { SocialMedia } from './social-media';
 
-import * as SC from "./footer.style";
+import * as SC from './footer.style';
 
 export const Footer = () => (
   <SC.Footer>

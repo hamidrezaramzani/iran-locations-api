@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const HeroContainer = styled.div`
   width: 100%;
@@ -6,17 +6,16 @@ export const HeroContainer = styled.div`
   justify-content: center;
   height: 100vh;
 
-
   width: 100%;
   height: 100vh;
   opacity: 0.8;
   background-size: 20px 20px;
-  
+
   background-color: ${({ theme }) =>
-    theme.palette.mode === "dark" ? "#000000" : "#ffffff"};
+    theme.palette.mode === 'dark' ? '#000000' : '#ffffff'};
 
   background-image: ${({ theme }) =>
-    theme.palette.mode === "dark"
+    theme.palette.mode === 'dark'
       ? `repeating-linear-gradient(
           to right,
           #131111,

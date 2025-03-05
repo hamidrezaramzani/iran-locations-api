@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Introduction = styled.div`
   width: 100%;
@@ -22,7 +22,7 @@ export const Introduction = styled.div`
 
     .main-title {
       text-align: center;
-      font-family: "iran-yekan-bold";
+      font-family: 'iran-yekan-bold';
       font-size: 35px;
       padding: 0 8px;
     }
@@ -31,7 +31,7 @@ export const Introduction = styled.div`
       text-align: center;
       padding: 15px 0;
       font-size: 14px;
-      font-family: "iran-yekan";
+      font-family: 'iran-yekan';
       width: 80%;
     }
   }

@@ -1,6 +1,6 @@
-import { Typography } from "@mui/material";
-import * as SC from "./section-title.style";
-import { SectionTitleProps } from "./section-title.type";
+import { Typography } from '@mui/material';
+import * as SC from './section-title.style';
+import { SectionTitleProps } from './section-title.type';
 
 export const SectionTitle = ({ title, description }: SectionTitleProps) => (
   <SC.SectionTitle>

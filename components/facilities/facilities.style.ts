@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const Facilities = styled.div`
-  flex-direction:column;
-  justify-items:center;
+  flex-direction: column;
+  justify-items: center;
   align-items: center;
-  display:flex;
-  padding:50px 0;
+  display: flex;
+  padding: 50px 0;
 
   .facilities__container {
     display: flex;
@@ -15,12 +15,9 @@ export const Facilities = styled.div`
     width: 50%;
   }
 
-
-
   @media screen and (max-width: 768px) {
-   .facilities__container {
+    .facilities__container {
       width: 100% !important;
-   }
+    }
   }
-
 `;

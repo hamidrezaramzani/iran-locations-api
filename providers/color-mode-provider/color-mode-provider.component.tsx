@@ -1,15 +1,27 @@
-import { createContext, useState } from "react";
-import { ColorModeType } from "./color-mode-provider.type";
+import { type ReactNode } from 'react';
 
-export const ColorModeContext = createContext({
-  state: "light",
-  setState: (nextState: ColorModeType) => {},
-});
+import { createContext, useMemo, useState } from 'react';
 
-export const ColorModeProvider = ({ children }) => {
-  const [state, setState] = useState<ColorModeType>("dark");
+import {
+  type ColorModeContextType,
+  type ColorModeType,
+} from './color-mode-provider.type';
+
+export const ColorModeContext = createContext<ColorModeContextType | null>(
+  null,
+);
+
+interface ColorModeProviderProps {
+  children: ReactNode;
+}
+
+export const ColorModeProvider = ({ children }: ColorModeProviderProps) => {
+  const [state, setState] = useState<ColorModeType>('dark');
+
+  const value = useMemo(() => ({ state, setState }), [state]);
+
   return (
-    <ColorModeContext.Provider value={{ state, setState }}>
+    <ColorModeContext.Provider value={value}>
       {children}
     </ColorModeContext.Provider>
   );

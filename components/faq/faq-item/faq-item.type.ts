@@ -1,9 +1,8 @@
 export type SCFaqItem = {
-    isDark: boolean;
-}
-
+  isDark: boolean;
+};
 
 export type FaqItemProps = {
-    title: string;
-    description: string;
-}
+  title: string;
+  description: string;
+};

@@ -1,4 +1,4 @@
 export type SectionTitleProps = {
-    title: string;
-    description: string;
-}
+  title: string;
+  description: string;
+};

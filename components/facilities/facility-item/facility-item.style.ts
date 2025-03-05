@@ -9,7 +9,7 @@ export const FacilityItem = styled.div<SCFacilityItem>`
   .card {
     width: 100%;
     background-color: ${({ isDark }) =>
-    isDark ? '#000' : '#efefef'} !important;
+      isDark ? '#000' : '#efefef'} !important;
     border: 1px solid #242424;
     height: 190px;
 

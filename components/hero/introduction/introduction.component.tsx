@@ -1,10 +1,10 @@
-import { Box, Button, Grid, Typography } from "@mui/material";
-import Link from "next/link";
-import React, { useContext } from "react";
-import { Trans, useTranslation } from "react-i18next";
+import { Button, Typography } from '@mui/material';
+import Link from 'next/link';
+import React, { useContext } from 'react';
+import { Trans, useTranslation } from 'react-i18next';
 
-import { ColorModeContext } from "../../../providers/color-mode-provider/color-mode-provider.component";
-import * as SC from "./introduction.style";
+import { ColorModeContext } from '../../../providers/color-mode-provider/color-mode-provider.component';
+import * as SC from './introduction.style';
 
 export const Introduction = () => {
   const { state } = useContext(ColorModeContext);
@@ -22,10 +22,10 @@ export const Introduction = () => {
             />
           </Typography>
           <Typography
-            color={state === "light" ? "black" : "white"}
+            color={state === 'light' ? 'black' : 'white'}
             className="secondary-title"
           >
-            {t("introduction:content.description")}
+            {t('introduction:content.description')}
           </Typography>
 
           <Button
@@ -34,7 +34,7 @@ export const Introduction = () => {
             LinkComponent={Link}
             href="/documentation"
           >
-            {t("introduction:content.startButton")}
+            {t('introduction:content.startButton')}
           </Button>
         </div>
       </div>

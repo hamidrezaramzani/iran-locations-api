@@ -1,13 +1,13 @@
-import { Box, Button, Skeleton } from "@mui/material";
-import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
-import Markdown from "react-markdown";
-import remarkGfm from "remark-gfm";
+import { Box, Button, Skeleton } from '@mui/material';
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
+import Markdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
-import { DocumentationCode } from "../..";
-import { useRouter } from "next/router";
-import * as SC from "./documentation-content.style";
-import { useContext } from "react";
-import { ColorModeContext } from "../../../providers/color-mode-provider/color-mode-provider.component";
+import { DocumentationCode } from '../..';
+import { useRouter } from 'next/router';
+import * as SC from './documentation-content.style';
+import { useContext } from 'react';
+import { ColorModeContext } from '../../../providers/color-mode-provider/color-mode-provider.component';
 
 export const DocumentationContent = ({
   documentationSections,
@@ -25,27 +25,27 @@ export const DocumentationContent = ({
     documentationSections[documentationSections.length - 1].value;
 
   const currentSectionIndex = documentationSections.findIndex(
-    ({ value }) => value === router.query.name
+    ({ value }) => value === router.query.name,
   );
 
   const nextSectionName = documentationSections.filter(
-    ({ isComingSoon }) => !isComingSoon
+    ({ isComingSoon }) => !isComingSoon,
   )[
     currentSectionIndex === documentationSections.length - 1
       ? currentSectionIndex
       : currentSectionIndex + 1
   ].title;
 
-  let prevSectionName = "";
+  let prevSectionName = '';
   if (currentSectionIndex > 0) {
     prevSectionName = documentationSections.filter(
-      ({ isComingSoon }) => !isComingSoon
+      ({ isComingSoon }) => !isComingSoon,
     )[currentSectionIndex - 1].title;
   }
 
   const handleSectionNext = async () => {
     const currentSectionIndex = documentationSections.findIndex(
-      ({ value }) => value === router.query.name
+      ({ value }) => value === router.query.name,
     );
 
     const nextSectionName =
@@ -56,7 +56,7 @@ export const DocumentationContent = ({
 
   const handleSectionPrev = async () => {
     const currentSectionIndex = documentationSections.findIndex(
-      ({ value }) => value === router.query.name
+      ({ value }) => value === router.query.name,
     );
 
     const prevSectionName =
@@ -66,7 +66,7 @@ export const DocumentationContent = ({
   };
 
   return (
-    <SC.DocumentationContent isDark={state === "dark"}>
+    <SC.DocumentationContent isDark={state === 'dark'}>
       {loading && (
         <Box>
           <Skeleton variant="text" height="40px" width="60%" />
@@ -91,7 +91,7 @@ export const DocumentationContent = ({
             {!isLast ? (
               <Button onClick={handleSectionNext}>
                 <MdKeyboardArrowRight fontSize={17} />
-                {nextSectionName}{" "}
+                {nextSectionName}{' '}
               </Button>
             ) : null}
             {!isFirst ? (

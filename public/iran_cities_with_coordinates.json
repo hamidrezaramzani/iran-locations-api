@@ -4,7 +4,7 @@
     "center": "تبریز",
     "latitude": "38.50",
     "longitude": "46.180",
-    "landlinePrefix" : "041",
+    "landlinePrefix": "041",
     "cities": [
       { "name": "تبريز", "latitude": "38.50", "longitude": "46.180", "id": 1 },
       {
@@ -122,7 +122,7 @@
     "center": "ارومیه",
     "latitude": "37.320",
     "longitude": "45.40",
-    "landlinePrefix" : "044",
+    "landlinePrefix": "044",
     "cities": [
       { "name": "اروميه", "latitude": "37.320", "longitude": "45.40", "id": 1 },
       {
@@ -202,7 +202,7 @@
     "center": "اردبیل",
     "latitude": "38.140",
     "longitude": "48.170",
-    "landlinePrefix" : "045",
+    "landlinePrefix": "045",
     "cities": [
       {
         "name": "اردبيل",
@@ -239,7 +239,7 @@
     "center": "اصفهان",
     "latitude": "32.390",
     "longitude": "51.400",
-    "landlinePrefix" : "031",
+    "landlinePrefix": "031",
     "cities": [
       {
         "name": "اصفهان",
@@ -378,7 +378,7 @@
     "center": "ايلام",
     "latitude": "33.380",
     "longitude": "46.250",
-    "landlinePrefix" : "084",
+    "landlinePrefix": "084",
     "cities": [
       { "name": "ايلام", "latitude": "33.380", "longitude": "46.250", "id": 1 },
       { "name": "مهران", "latitude": "33.70", "longitude": "46.100", "id": 2 },
@@ -420,7 +420,7 @@
     "center": "بوشهر",
     "latitude": "28.590",
     "longitude": "50.500",
-    "landlinePrefix" : "077",
+    "landlinePrefix": "077",
     "cities": [
       { "name": "بوشهر", "latitude": "28.590", "longitude": "50.500", "id": 1 },
       { "name": "دير", "latitude": "27.510", "longitude": "51.590", "id": 2 },
@@ -450,7 +450,7 @@
     "center": "تهران",
     "latitude": "35.410",
     "longitude": "51.240",
-    "landlinePrefix" : "021",
+    "landlinePrefix": "021",
     "cities": [
       { "name": "تهران", "latitude": "35.410", "longitude": "51.240", "id": 1 },
       {
@@ -561,7 +561,7 @@
     "center": "شهركرد",
     "latitude": "32.190",
     "longitude": "50.510",
-    "landlinePrefix" : "038",
+    "landlinePrefix": "038",
     "cities": [
       {
         "name": "شهركرد",
@@ -592,7 +592,7 @@
     "center": "بيرجند",
     "latitude": "32.5216",
     "longitude": "59.1315",
-    "landlinePrefix" : "056",
+    "landlinePrefix": "056",
     "cities": [
       { "name": "قائن", "latitude": "33.430", "longitude": "59.60", "id": 1 },
       { "name": "فردوس", "latitude": "34.00", "longitude": "58.90", "id": 2 },
@@ -623,7 +623,7 @@
     "center": "مشهد",
     "latitude": "36.170",
     "longitude": "59.350",
-    "landlinePrefix" : "051",
+    "landlinePrefix": "051",
     "cities": [
       { "name": "مشهد", "latitude": "36.170", "longitude": "59.350", "id": 1 },
       {
@@ -703,7 +703,7 @@
     "center": "بجنورد",
     "latitude": "37.2835",
     "longitude": "57.1954",
-    "landlinePrefix" : "058",
+    "landlinePrefix": "058",
     "cities": [
       {
         "name": "بجنورد",
@@ -743,7 +743,7 @@
     "center": "اهواز",
     "latitude": "31.190",
     "longitude": "48.410",
-    "landlinePrefix" : "061",
+    "landlinePrefix": "061",
     "cities": [
       { "name": "اهواز", "latitude": "31.190", "longitude": "48.410", "id": 1 },
       {
@@ -877,7 +877,7 @@
     "center": "زنجان",
     "latitude": "36.400",
     "longitude": "48.290",
-    "landlinePrefix" : "024",
+    "landlinePrefix": "024",
     "cities": [
       { "name": "زنجان", "latitude": "36.400", "longitude": "48.290", "id": 1 },
       { "name": "ابهر", "latitude": "36.80", "longitude": "49.130", "id": 2 },
@@ -904,7 +904,7 @@
     "center": "سمنان",
     "latitude": "35.340",
     "longitude": "53.230",
-    "landlinePrefix" : "023",
+    "landlinePrefix": "023",
     "cities": [
       { "name": "سمنان", "latitude": "35.340", "longitude": "53.230", "id": 1 },
       { "name": "شاهرود", "latitude": "36.250", "longitude": "55.00", "id": 2 },
@@ -930,7 +930,7 @@
     "center": "زاهدان",
     "latitude": "29.320",
     "longitude": "60.540",
-    "landlinePrefix" : "054",
+    "landlinePrefix": "054",
     "cities": [
       {
         "name": "زاهدان",
@@ -968,7 +968,7 @@
     "center": "شيراز",
     "latitude": "29.360",
     "longitude": "52.310",
-    "landlinePrefix" : "071",
+    "landlinePrefix": "071",
     "cities": [
       { "name": "شيراز", "latitude": "29.360", "longitude": "52.310", "id": 1 },
       { "name": "اقليد", "latitude": "30.530", "longitude": "52.410", "id": 2 },
@@ -1089,7 +1089,7 @@
     "center": "قزوين",
     "latitude": "36.167",
     "longitude": "50.010",
-    "landlinePrefix" : "028",
+    "landlinePrefix": "028",
     "cities": [
       { "name": "قزوين", "latitude": "36.167", "longitude": "50.010", "id": 1 },
       {
@@ -1113,7 +1113,7 @@
     "center": "قم",
     "latitude": "34.380",
     "longitude": "50.530",
-    "landlinePrefix" : "025",
+    "landlinePrefix": "025",
     "cities": [
       { "name": "قم", "latitude": "34.380", "longitude": "50.530", "id": 1 },
       { "name": "قنوات", "latitude": "34.613", "longitude": "51.025", "id": 2 },
@@ -1144,7 +1144,7 @@
     "center": "کرج",
     "latitude": "35.8400",
     "longitude": "50.9391",
-    "landlinePrefix" : "026",
+    "landlinePrefix": "026",
     "cities": [
       { "name": "کرج", "latitude": "35.8400", "longitude": "50.9391", "id": 1 },
       {
@@ -1181,7 +1181,7 @@
     "center": "سنندج",
     "latitude": "35.180",
     "longitude": "47.10",
-    "landlinePrefix" : "087",
+    "landlinePrefix": "087",
     "cities": [
       { "name": "سنندج", "latitude": "35.180", "longitude": "47.10", "id": 1 },
       { "name": "بانه", "latitude": "35.590", "longitude": "45.540", "id": 2 },
@@ -1214,7 +1214,7 @@
     "center": "کرمان",
     "latitude": "30.160",
     "longitude": "57.40",
-    "landlinePrefix" : "034",
+    "landlinePrefix": "034",
     "cities": [
       { "name": "کرمان", "latitude": "30.160", "longitude": "57.40", "id": 1 },
       { "name": "راور", "latitude": "31.150", "longitude": "56.510", "id": 2 },
@@ -1266,7 +1266,7 @@
     "center": "كرمانشاه",
     "latitude": "34.180",
     "longitude": "47.30",
-    "landlinePrefix" : "083",
+    "landlinePrefix": "083",
     "cities": [
       {
         "name": "كرمانشاه",
@@ -1310,7 +1310,7 @@
     "center": "ياسوج",
     "latitude": "30.390",
     "longitude": "51.350",
-    "landlinePrefix" : "074",
+    "landlinePrefix": "074",
     "cities": [
       { "name": "ياسوج", "latitude": "30.390", "longitude": "51.350", "id": 1 },
       {
@@ -1345,7 +1345,7 @@
     "center": "گرگان",
     "latitude": "36.500",
     "longitude": "54.250",
-    "landlinePrefix" : "017",
+    "landlinePrefix": "017",
     "cities": [
       { "name": "گرگان", "latitude": "36.500", "longitude": "54.250", "id": 1 },
       {
@@ -1393,7 +1393,7 @@
     "center": "رشت",
     "latitude": "37.160",
     "longitude": "49.350",
-    "landlinePrefix" : "013",
+    "landlinePrefix": "013",
     "cities": [
       { "name": "رشت", "latitude": "37.160", "longitude": "49.350", "id": 1 },
       { "name": "منجيل", "latitude": "36.440", "longitude": "49.250", "id": 2 },
@@ -1452,7 +1452,7 @@
     "center": "خرم آباد",
     "latitude": "33.290",
     "longitude": "48.210",
-    "landlinePrefix" : "066",
+    "landlinePrefix": "066",
     "cities": [
       {
         "name": "خرم آباد",
@@ -1512,7 +1512,7 @@
     "center": "ساري",
     "latitude": "36.330",
     "longitude": "53.30",
-    "landlinePrefix" : "011",
+    "landlinePrefix": "011",
     "cities": [
       { "name": "ساري", "latitude": "36.330", "longitude": "53.30", "id": 1 },
       { "name": "آمل", "latitude": "36.280", "longitude": "52.220", "id": 2 },
@@ -1572,7 +1572,7 @@
     "center": "اراک",
     "latitude": "34.50",
     "longitude": "49.410",
-    "landlinePrefix" : "086",
+    "landlinePrefix": "086",
     "cities": [
       { "name": "اراک", "latitude": "34.50", "longitude": "49.410", "id": 1 },
       { "name": "آشتيان", "latitude": "34.320", "longitude": "50.00", "id": 2 },
@@ -1595,7 +1595,7 @@
     "center": "بندرعباس",
     "latitude": "56.266",
     "longitude": "27.18",
-    "landlinePrefix" : "076",
+    "landlinePrefix": "076",
     "cities": [
       {
         "name": "بندرعباس",
@@ -1646,7 +1646,7 @@
     "center": "همدان",
     "latitude": "34.470",
     "longitude": "48.300",
-    "landlinePrefix" : "081",
+    "landlinePrefix": "081",
     "cities": [
       { "name": "همدان", "latitude": "34.470", "longitude": "48.300", "id": 1 },
       { "name": "ملاير", "latitude": "34.180", "longitude": "48.490", "id": 2 },
@@ -1672,7 +1672,7 @@
     "center": "يزد",
     "latitude": "31.530",
     "longitude": "54.210",
-    "landlinePrefix" : "035",
+    "landlinePrefix": "035",
     "cities": [
       { "name": "يزد", "latitude": "31.530", "longitude": "54.210", "id": 1 },
       { "name": "تفت", "latitude": "31.450", "longitude": "54.120", "id": 2 },

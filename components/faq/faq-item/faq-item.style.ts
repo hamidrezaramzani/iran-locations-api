@@ -12,8 +12,7 @@ export const FaqItem = styled.div<SCFaqItem>`
     margin-top: 20px !important;
 
     background-color: ${({ isDark }) =>
-    isDark ? '#000' : '#efefef'} !important;
+      isDark ? '#000' : '#efefef'} !important;
     border: 1px solid #242424;
-
   }
 `;

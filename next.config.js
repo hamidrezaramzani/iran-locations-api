@@ -9,9 +9,6 @@ const nextConfig = {
   reactStrictMode: true,
   i18n,
   assetPrefix: isProd ? process.env.WEBSITE_URL : '',
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
 };
 
 module.exports = nextConfig;

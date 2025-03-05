@@ -1,14 +1,14 @@
-import { Paper } from "@mui/material";
-import styled from "styled-components";
-import { SCDocumentationHierarchyProps } from "./documentation-hierarchy.type";
+import { Paper } from '@mui/material';
+import styled from 'styled-components';
+import { SCDocumentationHierarchyProps } from './documentation-hierarchy.type';
 
 export const DocumentationHierarchy = styled(
-  Paper
+  Paper,
 )<SCDocumentationHierarchyProps>`
   width: 25%;
   height: calc(100vh - 100px);
   padding: 20px;
-  background: ${({ isDark }) => (isDark ? "#000" : "#efefef")} !important;
+  background: ${({ isDark }) => (isDark ? '#000' : '#efefef')} !important;
 
   .tree-item-parent {
     margin: 10px 0;

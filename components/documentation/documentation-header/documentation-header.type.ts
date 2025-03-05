@@ -1,9 +1,9 @@
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction } from 'react';
 
 export type SCDocumentationHeaderProps = {
   isDark: boolean;
 };
 
 export type DocumentationHeaderProps = {
-  setDrawerOpen: Dispatch<SetStateAction<boolean>>
+  setDrawerOpen: Dispatch<SetStateAction<boolean>>;
 };

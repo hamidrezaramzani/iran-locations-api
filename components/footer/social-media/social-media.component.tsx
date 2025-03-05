@@ -1,11 +1,11 @@
-import React from "react";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import TelegramIcon from "@mui/icons-material/Telegram";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import { Button, ButtonGroup } from "@mui/material";
-import Image from "next/image";
-import Link from "next/link";
-import * as SC from "./social-media.style";
+import React from 'react';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import TelegramIcon from '@mui/icons-material/Telegram';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import { Button, ButtonGroup } from '@mui/material';
+import Image from 'next/image';
+import Link from 'next/link';
+import * as SC from './social-media.style';
 
 export const SocialMedia = () => (
   <SC.SocialMedia>

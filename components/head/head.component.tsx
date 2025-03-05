@@ -1,4 +1,4 @@
-import NextHead from "next/head";
+import NextHead from 'next/head';
 export const Head = ({ title, description }) => (
   <NextHead>
     <title>{title}</title>

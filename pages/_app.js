@@ -1,10 +1,10 @@
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { appWithTranslation } from 'next-i18next';
+import { PagesTopLoader } from 'nextjs-toploader/pages';
 
-import i18nextConfig from '../next-i18next.config';
+import translationConfig from '../next-i18next.config';
 import { ColorModeProvider, ThemeProvider } from '../providers';
-
 
 import '../styles/globals.css';
 import '@uiw/react-markdown-preview/markdown.css';
@@ -13,6 +13,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <ColorModeProvider>
       <ThemeProvider>
+        <PagesTopLoader color="#7D3C98" />
         <Component {...pageProps} />
       </ThemeProvider>
       <Analytics />
@@ -21,4 +22,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default appWithTranslation(MyApp, i18nextConfig);
+export default appWithTranslation(MyApp, translationConfig);

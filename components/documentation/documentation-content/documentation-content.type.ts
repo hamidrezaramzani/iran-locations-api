@@ -1,3 +1,3 @@
 export type SCDocumentationContentProps = {
-    isDark: boolean;
-}
+  isDark: boolean;
+};

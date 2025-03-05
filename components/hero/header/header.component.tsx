@@ -1,10 +1,10 @@
-import React, { useContext, useState } from "react";
-import DarkModeIcon from "@mui/icons-material/DarkMode";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import HelpIcon from "@mui/icons-material/Help";
-import InfoIcon from "@mui/icons-material/Info";
-import LightModeIcon from "@mui/icons-material/LightMode";
-import MenuIcon from "@mui/icons-material/Menu";
+import React, { useContext, useState } from 'react';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import HelpIcon from '@mui/icons-material/Help';
+import InfoIcon from '@mui/icons-material/Info';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import MenuIcon from '@mui/icons-material/Menu';
 import {
   AppBar,
   Container,
@@ -14,12 +14,12 @@ import {
   IconButton,
   Menu,
   MenuItem,
-} from "@mui/material";
-import Image from "next/image";
-import Link from "next/link";
-import { useTranslation } from "next-i18next";
-import * as SC from "./head.style";
-import { ColorModeContext } from "../../../providers/color-mode-provider/color-mode-provider.component";
+} from '@mui/material';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
+import * as SC from './head.style';
+import { ColorModeContext } from '../../../providers/color-mode-provider';
 
 export const Header = () => {
   const { t } = useTranslation();
@@ -28,7 +28,7 @@ export const Header = () => {
   const { state, setState } = useContext(ColorModeContext);
 
   const handleClickToggleTheme = () => {
-    setState(state === "dark" ? "light" : "dark");
+    setState(state === 'dark' ? 'light' : 'dark');
   };
 
   const handleMenuOpen = (event: any) => {
@@ -40,7 +40,7 @@ export const Header = () => {
   };
 
   return (
-    <SC.Header isDark={state === "dark"}>
+    <SC.Header isDark={state === 'dark'}>
       <Container>
         <AppBar className="header__app-bar" color="transparent">
           <Container maxWidth="xl">
@@ -54,12 +54,12 @@ export const Header = () => {
                 />
               </Link>
               <Box className="desktop-menu">
-                <Link href="/documentation">{t("header:nav.help")}</Link>
+                <Link href="/documentation">{t('header:nav.help')}</Link>
                 <Link href="https://github.com/hamidrezaramzani/iran-locations-api">
-                  {t("header:nav.github")}
+                  {t('header:nav.github')}
                 </Link>
                 <Link href="https://github.com/hamidrezaramzani/hamidrezaramzani">
-                  {t("header:nav.aboutMe")}
+                  {t('header:nav.aboutMe')}
                 </Link>
               </Box>
 
@@ -68,7 +68,7 @@ export const Header = () => {
                   onClick={handleClickToggleTheme}
                   className="desktop-theme"
                 >
-                  {state === "dark" ? <DarkModeIcon /> : <LightModeIcon />}
+                  {state === 'dark' ? <DarkModeIcon /> : <LightModeIcon />}
                 </Button>
                 <Box className="mobile-menu">
                   <IconButton
@@ -88,7 +88,7 @@ export const Header = () => {
                       className="app-bar__menu-icon"
                     >
                       <HelpIcon />
-                      <Link href="/documentation">{t("header:nav.help")}</Link>
+                      <Link href="/documentation">{t('header:nav.help')}</Link>
                     </MenuItem>
                     <MenuItem
                       onClick={handleMenuClose}
@@ -96,7 +96,7 @@ export const Header = () => {
                     >
                       <GitHubIcon />
                       <Link href="https://github.com/hamidrezaramzani/iran-locations-api">
-                        {t("header:nav.github")}
+                        {t('header:nav.github')}
                       </Link>
                     </MenuItem>
                     <MenuItem
@@ -105,7 +105,7 @@ export const Header = () => {
                     >
                       <InfoIcon />
                       <Link href="https://github.com/hamidrezaramzani/hamidrezaramzani">
-                        {t("header:nav.aboutMe")}
+                        {t('header:nav.aboutMe')}
                       </Link>
                     </MenuItem>
                     <MenuItem
@@ -114,10 +114,10 @@ export const Header = () => {
                         handleMenuClose();
                       }}
                     >
-                      {state === "dark" ? <DarkModeIcon /> : <LightModeIcon />}
-                      {state === "dark"
-                        ? t("header:nav.dark")
-                        : t("header:nav.light")}
+                      {state === 'dark' ? <DarkModeIcon /> : <LightModeIcon />}
+                      {state === 'dark'
+                        ? t('header:nav.dark')
+                        : t('header:nav.light')}
                     </MenuItem>
                   </Menu>
                 </Box>
