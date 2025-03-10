@@ -5,6 +5,7 @@ export type States = {
   latitude: string;
   longitude: string;
   landlinePrefix: string;
+  carLicencePlates: string[];
   id: number;
   cities: {
     name: string;
@@ -18,6 +19,7 @@ export type StateQueryParams = {
   id: string;
   state: string;
   landlinePrefix: string;
+  carLicencePlate: string;
 };
 
 const getAllStates = (states: States) =>
@@ -35,6 +37,24 @@ const getStatesByName = (states: States, state: StateQueryParams['state']) =>
     .filter(({ name }) => name.toLowerCase().includes(state.toLowerCase()))
     .map(state => _.omit(state, 'cities'));
 
+
+const getStateByCarLicencePlate = (
+  states: States,
+  carLicencePlate: StateQueryParams['carLicencePlate'],
+) => {
+  const matchedState = states.find(({ carLicencePlates }) =>
+    carLicencePlates.includes(carLicencePlate),
+  );
+
+  if (!matchedState) {
+    const error = new Error('No state found for carLicencePlate');
+    throw error;
+  }
+
+  return matchedState ? _.omit(matchedState, 'cities') : {};
+};
+
+
 const getStatesByLandlinePrefix = (
   states: States,
   landlineCode: StateQueryParams['landlinePrefix'],
@@ -48,7 +68,10 @@ export const getStates = (
   stateId: StateQueryParams['id'],
   stateName: StateQueryParams['state'],
   landlinePrefix: StateQueryParams['landlinePrefix'],
+  carLicencePlate: StateQueryParams['carLicencePlate'],
 ) => {
+
+
   if (stateId) {
     if (isNaN(Number(stateId))) {
       const error = new Error('Invalid id parameter, id must be number');
@@ -69,6 +92,14 @@ export const getStates = (
       throw error;
     }
     return getStatesByLandlinePrefix(states, landlinePrefix);
+  }
+
+  if (carLicencePlate) {
+    if (isNaN(Number(carLicencePlate))) {
+      const error = new Error('Invalid carLicencePlate parameter, carLicencePlate must be number');
+      throw error;
+    }
+    return getStateByCarLicencePlate(states, carLicencePlate);
   }
 
   return getAllStates(states);

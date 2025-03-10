@@ -84,6 +84,7 @@ export const DocumentationContent = ({
                 return <DocumentationCode {...props} />;
               },
             }}
+            className="documentation-content-markdown"
           >
             {content}
           </Markdown>

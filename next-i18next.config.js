@@ -3,7 +3,7 @@ const faq = require('./public/locales/fa/faq.json');
 const footer = require('./public/locales/fa/footer.json');
 const header = require('./public/locales/fa/header.json');
 const introduction = require('./public/locales/fa/introduction.json');
-
+const common = require('./public/locales/fa/common.json');
 module.exports = {
   resources: {
     fa: {
@@ -12,6 +12,7 @@ module.exports = {
       facilities,
       header,
       footer,
+      common,
     },
   },
   debug: process.env.NODE_ENV === 'development',

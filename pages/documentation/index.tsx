@@ -50,6 +50,10 @@ export default function Documentation() {
           value: 'getStateByLandlinePrefix',
         },
         {
+          title: 'دریافت استان با پلاک خودرو',
+          value: 'getCityByLicensePlate',
+        },
+        {
           title: 'دریافت استان با مختصات جغرافیایی',
           value: 'getStateByLatAndLong',
           isComingSoon: true,
@@ -78,12 +82,6 @@ export default function Documentation() {
         {
           title: 'دریافت شهر با مختصات جغرافیایی',
           value: 'getCityByLatAndLong',
-          isComingSoon: true,
-        },
-
-        {
-          title: 'دریافت شهر با پلاک خودرو',
-          value: 'getCityByLicensePlate',
           isComingSoon: true,
         },
       ],

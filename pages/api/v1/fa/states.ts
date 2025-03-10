@@ -9,11 +9,11 @@ export default async function handler(
   res: NextApiResponse,
 ) {
   cors(req, res);
-  const { id, state, landlinePrefix } =
+  const { id, state, landlinePrefix, carLicencePlate } =
     req.query as unknown as StateQueryParams;
 
   try {
-    const matchedStates = getStates(states, id, state, landlinePrefix);
+    const matchedStates = getStates(states, id, state, landlinePrefix, carLicencePlate);
     return res.status(200).json(matchedStates);
   } catch (error) {
     return res.status(400).json({

@@ -5,6 +5,7 @@
     "latitude": "38.50",
     "longitude": "46.180",
     "landlinePrefix": "041",
+    "carLicencePlates": ["15", "25", "35"],
     "cities": [
       { "name": "تبريز", "latitude": "38.50", "longitude": "46.180", "id": 1 },
       {
@@ -123,6 +124,7 @@
     "latitude": "37.320",
     "longitude": "45.40",
     "landlinePrefix": "044",
+    "carLicencePlates": ["17", "27", "37"],
     "cities": [
       { "name": "اروميه", "latitude": "37.320", "longitude": "45.40", "id": 1 },
       {
@@ -203,6 +205,7 @@
     "latitude": "38.140",
     "longitude": "48.170",
     "landlinePrefix": "045",
+    "carLicencePlates": ["91"],
     "cities": [
       {
         "name": "اردبيل",
@@ -240,6 +243,7 @@
     "latitude": "32.390",
     "longitude": "51.400",
     "landlinePrefix": "031",
+    "carLicencePlates": ["13", "23", "43", "53", "67"],
     "cities": [
       {
         "name": "اصفهان",
@@ -379,6 +383,7 @@
     "latitude": "33.380",
     "longitude": "46.250",
     "landlinePrefix": "084",
+    "carLicencePlates": ["98"],
     "cities": [
       { "name": "ايلام", "latitude": "33.380", "longitude": "46.250", "id": 1 },
       { "name": "مهران", "latitude": "33.70", "longitude": "46.100", "id": 2 },
@@ -421,6 +426,7 @@
     "latitude": "28.590",
     "longitude": "50.500",
     "landlinePrefix": "077",
+    "carLicencePlates": ["48", "58"],
     "cities": [
       { "name": "بوشهر", "latitude": "28.590", "longitude": "50.500", "id": 1 },
       { "name": "دير", "latitude": "27.510", "longitude": "51.590", "id": 2 },
@@ -451,6 +457,7 @@
     "latitude": "35.410",
     "longitude": "51.240",
     "landlinePrefix": "021",
+    "carLicencePlates": ["11", "22", "33", "44", "55", "66", "77", "88", "99", "10", "20", "30", "40", "50", "60", "21", "38", "78"],
     "cities": [
       { "name": "تهران", "latitude": "35.410", "longitude": "51.240", "id": 1 },
       {
@@ -562,6 +569,7 @@
     "latitude": "32.190",
     "longitude": "50.510",
     "landlinePrefix": "038",
+    "carLicencePlates": ["71", "81"],
     "cities": [
       {
         "name": "شهركرد",
@@ -593,6 +601,7 @@
     "latitude": "32.5216",
     "longitude": "59.1315",
     "landlinePrefix": "056",
+    "carLicencePlates": ["32", "42", "52"],
     "cities": [
       { "name": "قائن", "latitude": "33.430", "longitude": "59.60", "id": 1 },
       { "name": "فردوس", "latitude": "34.00", "longitude": "58.90", "id": 2 },
@@ -624,6 +633,7 @@
     "latitude": "36.170",
     "longitude": "59.350",
     "landlinePrefix": "051",
+    "carLicencePlates": ["12", "32", "36", "42", "74"],
     "cities": [
       { "name": "مشهد", "latitude": "36.170", "longitude": "59.350", "id": 1 },
       {
@@ -704,6 +714,7 @@
     "latitude": "37.2835",
     "longitude": "57.1954",
     "landlinePrefix": "058",
+    "carLicencePlates": ["26", "32", "42"],
     "cities": [
       {
         "name": "بجنورد",
@@ -744,6 +755,7 @@
     "latitude": "31.190",
     "longitude": "48.410",
     "landlinePrefix": "061",
+    "carLicencePlates": ["14", "24", "34"],
     "cities": [
       { "name": "اهواز", "latitude": "31.190", "longitude": "48.410", "id": 1 },
       {
@@ -878,6 +890,7 @@
     "latitude": "36.400",
     "longitude": "48.290",
     "landlinePrefix": "024",
+    "carLicencePlates": ["87", "97"],
     "cities": [
       { "name": "زنجان", "latitude": "36.400", "longitude": "48.290", "id": 1 },
       { "name": "ابهر", "latitude": "36.80", "longitude": "49.130", "id": 2 },
@@ -905,6 +918,7 @@
     "latitude": "35.340",
     "longitude": "53.230",
     "landlinePrefix": "023",
+    "carLicencePlates": ["86", "96"],
     "cities": [
       { "name": "سمنان", "latitude": "35.340", "longitude": "53.230", "id": 1 },
       { "name": "شاهرود", "latitude": "36.250", "longitude": "55.00", "id": 2 },
@@ -931,6 +945,7 @@
     "latitude": "29.320",
     "longitude": "60.540",
     "landlinePrefix": "054",
+    "carLicencePlates": ["85", "95"],
     "cities": [
       {
         "name": "زاهدان",
@@ -969,6 +984,7 @@
     "latitude": "29.360",
     "longitude": "52.310",
     "landlinePrefix": "071",
+    "carLicencePlates": ["63", "73", "83", "93"],
     "cities": [
       { "name": "شيراز", "latitude": "29.360", "longitude": "52.310", "id": 1 },
       { "name": "اقليد", "latitude": "30.530", "longitude": "52.410", "id": 2 },
@@ -1090,6 +1106,7 @@
     "latitude": "36.167",
     "longitude": "50.010",
     "landlinePrefix": "028",
+    "carLicencePlates": ["79", "89"],
     "cities": [
       { "name": "قزوين", "latitude": "36.167", "longitude": "50.010", "id": 1 },
       {
@@ -1114,6 +1131,7 @@
     "latitude": "34.380",
     "longitude": "50.530",
     "landlinePrefix": "025",
+    "carLicencePlates": ["16"],
     "cities": [
       { "name": "قم", "latitude": "34.380", "longitude": "50.530", "id": 1 },
       { "name": "قنوات", "latitude": "34.613", "longitude": "51.025", "id": 2 },
@@ -1145,6 +1163,7 @@
     "latitude": "35.8400",
     "longitude": "50.9391",
     "landlinePrefix": "026",
+    "carLicencePlates": ["21", "30", "38", "68", "78"],
     "cities": [
       { "name": "کرج", "latitude": "35.8400", "longitude": "50.9391", "id": 1 },
       {
@@ -1182,6 +1201,7 @@
     "latitude": "35.180",
     "longitude": "47.10",
     "landlinePrefix": "087",
+    "carLicencePlates": ["51", "61"],
     "cities": [
       { "name": "سنندج", "latitude": "35.180", "longitude": "47.10", "id": 1 },
       { "name": "بانه", "latitude": "35.590", "longitude": "45.540", "id": 2 },
@@ -1215,6 +1235,7 @@
     "latitude": "30.160",
     "longitude": "57.40",
     "landlinePrefix": "034",
+    "carLicencePlates": ["45", "65", "75"],
     "cities": [
       { "name": "کرمان", "latitude": "30.160", "longitude": "57.40", "id": 1 },
       { "name": "راور", "latitude": "31.150", "longitude": "56.510", "id": 2 },
@@ -1267,6 +1288,7 @@
     "latitude": "34.180",
     "longitude": "47.30",
     "landlinePrefix": "083",
+    "carLicencePlates": ["19", "29"],
     "cities": [
       {
         "name": "كرمانشاه",
@@ -1311,6 +1333,7 @@
     "latitude": "30.390",
     "longitude": "51.350",
     "landlinePrefix": "074",
+    "carLicencePlates": ["49"],
     "cities": [
       { "name": "ياسوج", "latitude": "30.390", "longitude": "51.350", "id": 1 },
       {
@@ -1346,6 +1369,7 @@
     "latitude": "36.500",
     "longitude": "54.250",
     "landlinePrefix": "017",
+    "carLicencePlates": ["59", "69"],
     "cities": [
       { "name": "گرگان", "latitude": "36.500", "longitude": "54.250", "id": 1 },
       {
@@ -1394,6 +1418,7 @@
     "latitude": "37.160",
     "longitude": "49.350",
     "landlinePrefix": "013",
+    "carLicencePlates": ["46", "56", "76"],
     "cities": [
       { "name": "رشت", "latitude": "37.160", "longitude": "49.350", "id": 1 },
       { "name": "منجيل", "latitude": "36.440", "longitude": "49.250", "id": 2 },
@@ -1453,6 +1478,7 @@
     "latitude": "33.290",
     "longitude": "48.210",
     "landlinePrefix": "066",
+    "carLicencePlates": ["31", "41"],
     "cities": [
       {
         "name": "خرم آباد",
@@ -1513,6 +1539,7 @@
     "latitude": "36.330",
     "longitude": "53.30",
     "landlinePrefix": "011",
+    "carLicencePlates": ["62", "72", "82", "92"],
     "cities": [
       { "name": "ساري", "latitude": "36.330", "longitude": "53.30", "id": 1 },
       { "name": "آمل", "latitude": "36.280", "longitude": "52.220", "id": 2 },
@@ -1573,6 +1600,7 @@
     "latitude": "34.50",
     "longitude": "49.410",
     "landlinePrefix": "086",
+    "carLicencePlates": ["47", "57"],
     "cities": [
       { "name": "اراک", "latitude": "34.50", "longitude": "49.410", "id": 1 },
       { "name": "آشتيان", "latitude": "34.320", "longitude": "50.00", "id": 2 },
@@ -1596,6 +1624,7 @@
     "latitude": "56.266",
     "longitude": "27.18",
     "landlinePrefix": "076",
+    "carLicencePlates": ["84", "94"],
     "cities": [
       {
         "name": "بندرعباس",
@@ -1647,6 +1676,7 @@
     "latitude": "34.470",
     "longitude": "48.300",
     "landlinePrefix": "081",
+    "carLicencePlates": ["18", "28"],
     "cities": [
       { "name": "همدان", "latitude": "34.470", "longitude": "48.300", "id": 1 },
       { "name": "ملاير", "latitude": "34.180", "longitude": "48.490", "id": 2 },
@@ -1673,6 +1703,7 @@
     "latitude": "31.530",
     "longitude": "54.210",
     "landlinePrefix": "035",
+    "carLicencePlates": ["54", "64"],
     "cities": [
       { "name": "يزد", "latitude": "31.530", "longitude": "54.210", "id": 1 },
       { "name": "تفت", "latitude": "31.450", "longitude": "54.120", "id": 2 },

@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <ColorModeProvider>
       <ThemeProvider>
-        <PagesTopLoader color="#7D3C98" />
+        <PagesTopLoader showSpinner={false} color="#7D3C98" />
         <Component {...pageProps} />
       </ThemeProvider>
       <Analytics />
