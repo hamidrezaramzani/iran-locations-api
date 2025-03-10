@@ -42,7 +42,7 @@ export default function Documentation() {
           value: 'getStateById',
         },
         {
-          title: 'دریافت استان‌ها با نام',
+          title: 'دریافت استان‌ ها با نام',
           value: 'getStateByName',
         },
         {
@@ -50,7 +50,7 @@ export default function Documentation() {
           value: 'getStateByLandlinePrefix',
         },
         {
-          title: 'دریافت استان با پلاک خودرو',
+          title: 'دریافت استان ها با پلاک خودرو',
           value: 'getCityByLicensePlate',
         },
         {
@@ -64,19 +64,19 @@ export default function Documentation() {
       title: 'مستندات دسترسی به شهرها',
       items: [
         {
-          title: 'دریافت تمامی شهرها',
+          title: 'دریافت تمامی شهر ها',
           value: 'getAllCities',
         },
         {
-          title: 'دریافت شهرها بر اساس نام',
+          title: 'دریافت شهر ها بر اساس نام',
           value: 'getCityByName',
         },
         {
-          title: 'دریافت شهرها بر اساس آیدی استان',
+          title: 'دریافت شهر ها بر اساس آیدی استان',
           value: 'getCitiesByStateId',
         },
         {
-          title: 'دریافت شهرها بر اساس نام استان',
+          title: 'دریافت شهر ها بر اساس نام استان',
           value: 'getCitiesByStateName',
         },
         {

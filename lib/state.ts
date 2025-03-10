@@ -42,8 +42,8 @@ const getStateByCarLicencePlate = (
   states: States,
   carLicencePlate: StateQueryParams['carLicencePlate'],
 ) => {
-  const matchedState = states.find(({ carLicencePlates }) =>
-    carLicencePlates.includes(carLicencePlate),
+  const matchedState = states.filter(({ carLicencePlates }) =>
+    carLicencePlates.includes(carLicencePlate)
   );
 
   if (!matchedState) {
@@ -51,7 +51,7 @@ const getStateByCarLicencePlate = (
     throw error;
   }
 
-  return matchedState ? _.omit(matchedState, 'cities') : {};
+  return matchedState ? matchedState.map(({ cities: _, ...rest }) => rest) : []
 };
 
 
