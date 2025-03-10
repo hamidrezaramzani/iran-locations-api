@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
 html,
 body {
   padding: 0;
@@ -16,26 +15,21 @@ a {
 }
 
 @font-face {
-  font-family: 'iran-yekan';
-  src: url(/fonts/ttf/iranyekanwebmediumfanum.ttf) format('truetype');
+  font-family: 'vazir-regular';
+  src: url(/fonts/webfonts/Vazirmatn-Regular.woff2) format('woff2');
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'iran-yekan-bold';
-  src: url(/fonts/ttf/iranyekanwebblackfanum.ttf) format('truetype');
+  font-family: 'vazir-bold';
+  src: url(/fonts/webfonts/Vazirmatn-Bold.woff2) format('woff2');
   font-display: swap;
 }
 
-.iran-yekan {
-  font-family: 'iran-yekan' !important;
+.vazir-regular {
+  font-family: 'vazir-regular' !important;
 }
 
-.iran-yekan-bold {
-  font-family: 'iran-yekan-bold' !important;
-}
-
-path:hover {
-  fill: #323232 !important;
-  cursor: pointer;
+.vazir-bold {
+  font-family: 'vazir-bold' !important;
 }

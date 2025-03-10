@@ -22,7 +22,7 @@ export const Introduction = styled.div`
 
     .main-title {
       text-align: center;
-      font-family: 'iran-yekan-bold';
+      font-family: 'vazir-bold';
       font-size: 35px;
       padding: 0 8px;
     }
@@ -31,7 +31,7 @@ export const Introduction = styled.div`
       text-align: center;
       padding: 15px 0;
       font-size: 14px;
-      font-family: 'iran-yekan';
+      font-family: 'vazir-regular';
       width: 80%;
     }
   }

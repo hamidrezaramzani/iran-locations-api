@@ -11,7 +11,7 @@ export const SectionTitle = styled.div`
   .title__h4 {
     text-align: center;
     color: ${({ theme }) => theme.palette.primary.main};
-    font-family: iran-yekan-bold;
+    font-family: vazir-bold;
   }
 
   .title__body {

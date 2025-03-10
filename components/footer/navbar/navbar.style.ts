@@ -5,7 +5,7 @@ export const Navbar = styled.div`
   justify-content: center;
   padding: 10px 0;
   font-size: 13px;
-  font-family: 'iran-yekan';
+  font-family: 'vazir-regular';
   color: #888;
   gap: 10px;
 

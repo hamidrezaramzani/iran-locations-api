@@ -26,19 +26,6 @@ export const getMuiTheme = (mode: 'light' | 'dark') =>
       },
     },
     typography: {
-      fontFamily: 'iran-yekan',
-      h1: {
-        fontSize: '2.5rem',
-        fontWeight: 700,
-        color: mode === 'dark' ? '#A66DD4' : '#32127A',
-      },
-      h2: {
-        fontSize: '2rem',
-        fontWeight: 600,
-        color: mode === 'dark' ? '#8895D4' : '#1C39BB',
-      },
-      h3: { fontSize: '1.75rem', fontWeight: 500 },
-      body1: { fontSize: '1rem', lineHeight: 1.6 },
-      button: { textTransform: 'none', fontWeight: 600 },
+      fontFamily: 'vazir-regular',
     },
   });

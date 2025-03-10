@@ -19,6 +19,92 @@ export const DocumentationContent = styled(Paper) <SCDocumentationContentProps>`
   }
 
   .documentation-content-markdown {
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 2rem 0 1.5rem;
+    color: ${({ theme, isDark }) => isDark ? theme.palette.primary.light : '#000000'};
+    border-bottom: 2px solid ${({ theme }) => theme.palette.primary.main}20;
+    padding-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem;
+    color: ${({ theme, isDark }) => isDark ? theme.palette.primary.light : '#000000'};
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1.5rem 0 1rem;
+    color: ${({ theme, isDark }) => isDark ? theme.palette.primary.light : '#000000'};
+  }
+
+  h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 1.25rem 0 0.75rem;
+    color: ${({ theme, isDark }) => isDark ? theme.palette.primary.light : '#000000'};
+  }
+
+  p {
+    margin: 1rem 0;
+    line-height: 1.8;
+  }
+
+  ul, ol {
+    margin: 1rem 0;
+    padding-right: 1.5rem;
+
+    li {
+      margin: 0.5rem 0;
+      padding-right: 0.5rem;
+      
+      &::marker {
+        color: ${({ theme }) => theme.palette.primary.main};
+      }
+    }
+  }
+
+  blockquote {
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    border-right: 4px solid ${({ theme }) => theme.palette.primary.main};
+    background-color: ${({ isDark }) => isDark
+    ? 'rgba(255, 255, 255, 0.05)'
+    : 'rgba(0, 0, 0, 0.03)'};
+    border-radius: 0 4px 4px 0;
+    font-style: italic;
+
+    p {
+      margin: 0;
+    }
+  }
+
+ 
+  a {
+    color: ${({ theme }) => theme.palette.primary.main};
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      text-decoration: underline;
+      color: ${({ theme }) => theme.palette.primary.dark};
+    }
+  }
+
+  hr {
+    margin: 2rem 0;
+    border: none;
+    border-bottom: 1px solid ${({ isDark }) => isDark
+    ? 'rgba(255, 255, 255, 0.1)'
+    : 'rgba(0, 0, 0, 0.1)'};
+  }
+
+
     table {
       border-collapse: separate;
       border-spacing: 0;
