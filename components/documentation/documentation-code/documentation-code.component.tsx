@@ -2,7 +2,10 @@
 import { Alert, Button } from '@mui/material';
 import { FaRegCopy } from 'react-icons/fa';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { duotoneLight, duotoneDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import {
+  duotoneLight,
+  duotoneDark,
+} from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import * as SC from './documentation-code.style';
 import { ColorModeContext } from '../../../providers/color-mode-provider';
 import { useContext } from 'react';
@@ -27,7 +30,10 @@ export const DocumentationCode = (props: any) => {
     }
   };
 
-  const handleCloseSnackbar = (event?: React.SyntheticEvent | Event, reason?: string) => {
+  const handleCloseSnackbar = (
+    event?: React.SyntheticEvent | Event,
+    reason?: string,
+  ) => {
     if (reason === 'clickaway') {
       return;
     }
@@ -49,10 +55,15 @@ export const DocumentationCode = (props: any) => {
       <Button className="copy-button" onClick={handleCodeCopy}>
         <FaRegCopy className="copy-button-icon" />
       </Button>
-      <Snackbar open={openSnackbar} autoHideDuration={2000} onClose={handleCloseSnackbar}>
+      <Snackbar
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+        open={openSnackbar}
+        autoHideDuration={2000}
+        onClose={handleCloseSnackbar}
+      >
         <Alert
           onClose={handleCloseSnackbar}
-          severity="info"
+          severity="success"
           variant="filled"
           icon={false}
         >
