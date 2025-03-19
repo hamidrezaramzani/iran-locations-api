@@ -2,7 +2,7 @@
 import { Alert, Button } from '@mui/material';
 import { FaRegCopy } from 'react-icons/fa';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { gruvboxLight, gruvboxDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { duotoneLight, duotoneDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import * as SC from './documentation-code.style';
 import { ColorModeContext } from '../../../providers/color-mode-provider';
 import { useContext } from 'react';
@@ -41,7 +41,7 @@ export const DocumentationCode = (props: any) => {
         PreTag="div"
         children={code}
         language={match[1]}
-        style={state === 'dark' ? gruvboxDark : gruvboxLight}
+        style={state === 'dark' ? duotoneDark : duotoneLight}
         customStyle={{
           direction: 'ltr',
         }}

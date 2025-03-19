@@ -5,7 +5,6 @@ export { Head } from './head';
 export { Loading } from './loading';
 export { Footer } from './footer';
 export {
-  DocumentationHeader,
   DocumentationCode,
   DocumentationContent,
   DocumentationHierarchy,
