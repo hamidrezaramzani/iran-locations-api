@@ -1,15 +1,15 @@
-import { Box } from '@mui/material';
+import { Box, Button } from '@mui/material';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
 import {
   Header,
   Head,
-  DocumentationHeader,
   DocumentationContent,
   DocumentationHierarchy,
 } from '../../components';
 import { supabase } from '../../lib/supabase';
+import { MdMenu } from 'react-icons/md';
 
 export default function Documentation() {
   const router = useRouter();
@@ -222,6 +222,25 @@ export default function Documentation() {
 
   return (
     <>
+      <Button
+        color="primary"
+        onClick={() => setDrawerOpen((prevOpen: boolean) => !prevOpen)}
+        sx={{
+          position: 'fixed',
+          bottom: 50,
+          right: 20,
+          zIndex: 1000,
+          display: ['flex', 'none'],
+          height: '64px',
+          width: '64px',
+          borderRadius: '100%',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+        variant="contained"
+      >
+        <MdMenu size={24} />
+      </Button>
       <Head
         title="مستندات API اطلاعات استان‌ها و شهرهای ایران"
         description={
@@ -231,8 +250,7 @@ export default function Documentation() {
       <Box width="100%" height="100vh" display="flex" justifyContent="center">
         <Header />
         <Box width={['95%', '80%']}>
-          <Box display="flex" flexDirection="column" mt="50px">
-            <DocumentationHeader setDrawerOpen={setDrawerOpen} />
+          <Box display="flex" flexDirection="column" py="50px">
             <Box display="flex" gap="10px">
               <DocumentationHierarchy
                 items={documentationNav}
