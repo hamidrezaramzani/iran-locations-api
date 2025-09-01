@@ -4,7 +4,6 @@ import { appWithTranslation } from 'next-i18next';
 import { PagesTopLoader } from 'nextjs-toploader/pages';
 import translationConfig from '../next-i18next.config';
 import { ColorModeProvider, ThemeProvider } from '../providers';
-import { Loading } from "../components"
 
 import '../styles/globals.css';
 import '@uiw/react-markdown-preview/markdown.css';
@@ -14,9 +13,7 @@ function MyApp({ Component, pageProps }) {
     <ColorModeProvider>
       <ThemeProvider>
         <PagesTopLoader showSpinner={false} color="#7D3C98" />
-        <Loading>
-          <Component {...pageProps} />
-        </Loading>
+        <Component {...pageProps} />
       </ThemeProvider>
       <Analytics />
       <SpeedInsights />
