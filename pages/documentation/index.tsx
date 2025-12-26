@@ -110,6 +110,10 @@ export default function Documentation() {
           title: 'تماس با من',
           value: 'contactMe',
         },
+        {
+          title: 'قوانین و مقررات',
+          value: 'termsAndConditions',
+        },
       ],
     },
   ];
