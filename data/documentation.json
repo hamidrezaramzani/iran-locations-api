@@ -1,0 +1,89 @@
+{
+  "title": "مستندات API اطلاعات استان‌ها و شهرهای ایران",
+  "version": "1.0.0",
+  "baseUrl": "/api/v1",
+  "sections": {
+    "aboutProject": {
+      "title": "درباره پروژه",
+      "text": "# درباره پروژه\n\n**Iran Locations API** یک وب‌سرویس رایگان و اوپن‌سورس برای دسترسی به اطلاعات استان‌ها و شهرهای ایران است.\n\nاین API داده‌های جغرافیایی را به صورت ساخت‌یافته و در دو زبان **فارسی** و **انگلیسی** در اختیار شما قرار می‌دهد.\n\n## مسیرهای پایه\n\n| زبان | مسیر پایه |\n|------|----------|\n| فارسی | `/api/v1/fa` |\n| انگلیسی | `/api/v1/en` |\n\n## منابع داده\n\n- استان‌ها: `/api/v1/{fa\\|en}/states`\n- شهرها: `/api/v1/{fa\\|en}/cities`\n\n## ویژگی‌های کلیدی\n\n- دسترسی رایگان بدون نیاز به کلید API\n- پشتیبانی از CORS برای درخواست‌های مرورگر\n- فیلتر بر اساس نام، شناسه، پیش‌شماره تلفن و پلاک خودرو\n- داده‌های مختصات جغرافیایی (عرض و طول جغرافیایی)\n"
+    },
+    "goalsAndUses": {
+      "title": "هدف و کاربردها",
+      "text": "# هدف و کاربردها\n\nهدف اصلی این پروژه، فراهم کردن یک API سبک و قابل‌اعتماد برای برنامه‌نویسانی است که به داده‌های جغرافیایی ایران نیاز دارند.\n\n## موارد استفاده رایج\n\n- فرم‌های ثبت‌نام و پروفایل کاربر (انتخاب استان و شهر)\n- سرویس‌های ارسال و لجستیک\n- داشبوردهای مدیریتی و گزارش‌گیری منطقه‌ای\n- اپلیکیشن‌های موبایل و وب که نیاز به لیست مکان‌های ایران دارند\n- اعتبارسنجی و تکمیل خودکار آدرس\n\n## مزایا\n\n- نیازی به نگهداری دستی دیتاست بزرگ استان و شهر نیست\n- خروجی JSON استاندارد و آماده مصرف\n- امکان استفاده هم‌زمان نسخه فارسی و انگلیسی\n"
+    },
+    "getAllStates": {
+      "title": "دریافت تمامی استان‌ها",
+      "endpoint": "/api/v1/fa/states",
+      "method": "GET",
+      "text": "# دریافت تمامی استان‌ها\n\nبا فراخوانی این اندپوینت بدون پارامتر، لیست کامل استان‌های ایران برگردانده می‌شود.\n\n> در این حالت فیلد `cities` از پاسخ حذف می‌شود.\n\n## درخواست\n\n```http\nGET /api/v1/fa/states\n```\n\n```bash\ncurl \"https://YOUR_DOMAIN/api/v1/fa/states\"\n```\n\nنسخه انگلیسی:\n\n```bash\ncurl \"https://YOUR_DOMAIN/api/v1/en/states\"\n```\n\n## پاسخ نمونه\n\n```json\n[\n  {\n    \"name\": \"تهران\",\n    \"center\": \"تهران\",\n    \"latitude\": \"35.410\",\n    \"longitude\": \"51.240\",\n    \"landlinePrefix\": \"021\",\n    \"carLicencePlates\": [\"11\", \"22\", \"33\"],\n    \"id\": 7\n  }\n]\n```\n"
+    },
+    "getStateById": {
+      "title": "دریافت استان با آیدی",
+      "endpoint": "/api/v1/fa/states",
+      "method": "GET",
+      "text": "# دریافت استان با آیدی\n\nبا ارسال پارامتر `id` می‌توانید اطلاعات یک استان خاص را دریافت کنید.\n\n## پارامترها\n\n| نام | نوع | اجباری | توضیحات |\n|-----|-----|--------|--------|\n| `id` | number | بله | شناسه عددی استان |\n\n## درخواست\n\n```http\nGET /api/v1/fa/states?id=7\n```\n\n```bash\ncurl \"https://YOUR_DOMAIN/api/v1/fa/states?id=7\"\n```\n\n## پاسخ نمونه\n\n```json\n{\n  \"name\": \"تهران\",\n  \"center\": \"تهران\",\n  \"latitude\": \"35.410\",\n  \"longitude\": \"51.240\",\n  \"landlinePrefix\": \"021\",\n  \"carLicencePlates\": [\"11\", \"22\", \"33\", \"44\"],\n  \"id\": 7\n}\n```\n\n## خطاها\n\nاگر `id` عددی نباشد:\n\n```json\n{\n  \"message\": \"Invalid id parameter, id must be number\"\n}\n```\n"
+    },
+    "getStateByName": {
+      "title": "دریافت استان‌ها با نام",
+      "endpoint": "/api/v1/fa/states",
+      "method": "GET",
+      "text": "# دریافت استان‌ها با نام\n\nبا پارامتر `state` می‌توانید استان‌هایی را جستجو کنید که نام آن‌ها شامل عبارت واردشده باشد.\n\nجستجو به صورت **case-insensitive** انجام می‌شود.\n\n## پارامترها\n\n| نام | نوع | اجباری | توضیحات |\n|-----|-----|--------|--------|\n| `state` | string | بله | بخشی از نام استان |\n\n## درخواست\n\n```http\nGET /api/v1/fa/states?state=تهران\n```\n\n```bash\ncurl \"https://YOUR_DOMAIN/api/v1/fa/states?state=%D8%AA%D9%87%D8%B1%D8%A7%D9%86\"\n```\n\n## پاسخ نمونه\n\n```json\n[\n  {\n    \"name\": \"تهران\",\n    \"center\": \"تهران\",\n    \"latitude\": \"35.410\",\n    \"longitude\": \"51.240\",\n    \"landlinePrefix\": \"021\",\n    \"carLicencePlates\": [\"11\", \"22\", \"33\"],\n    \"id\": 7\n  }\n]\n```\n"
+    },
+    "getStateByLandlinePrefix": {
+      "title": "دریافت استان با پیش‌شماره",
+      "endpoint": "/api/v1/fa/states",
+      "method": "GET",
+      "text": "# دریافت استان با پیش‌شماره تلفن ثابت\n\nبا پارامتر `landlinePrefix` می‌توانید استان مربوط به یک پیش‌شماره تلفن ثابت را پیدا کنید.\n\n## پارامترها\n\n| نام | نوع | اجباری | توضیحات |\n|-----|-----|--------|--------|\n| `landlinePrefix` | string | بله | پیش‌شماره تلفن؛ باید با `0` شروع شود |\n\n## درخواست\n\n```http\nGET /api/v1/fa/states?landlinePrefix=021\n```\n\n```bash\ncurl \"https://YOUR_DOMAIN/api/v1/fa/states?landlinePrefix=021\"\n```\n\n## پاسخ نمونه\n\n```json\n[\n  {\n    \"name\": \"تهران\",\n    \"center\": \"تهران\",\n    \"latitude\": \"35.410\",\n    \"longitude\": \"51.240\",\n    \"landlinePrefix\": \"021\",\n    \"carLicencePlates\": [\"11\", \"22\", \"33\"],\n    \"id\": 7\n  }\n]\n```\n\n## خطاها\n\nاگر پیش‌شماره با `0` شروع نشود:\n\n```json\n{\n  \"message\": \"Invalid landlinePrefix parameter, landlinePrefix must be started with 0\"\n}\n```\n"
+    },
+    "getCityByLicensePlate": {
+      "title": "دریافت استان با پلاک خودرو",
+      "endpoint": "/api/v1/fa/states",
+      "method": "GET",
+      "text": "# دریافت استان با پلاک خودرو\n\nبا پارامتر `carLicencePlate` می‌توانید استان مربوط به کد پلاک خودرو را دریافت کنید.\n\n## پارامترها\n\n| نام | نوع | اجباری | توضیحات |\n|-----|-----|--------|--------|\n| `carLicencePlate` | string (عدد) | بله | کد عددی پلاک خودرو (مثلاً `11`) |\n\n## درخواست\n\n```http\nGET /api/v1/fa/states?carLicencePlate=11\n```\n\n```bash\ncurl \"https://YOUR_DOMAIN/api/v1/fa/states?carLicencePlate=11\"\n```\n\n## پاسخ نمونه\n\n```json\n[\n  {\n    \"name\": \"تهران\",\n    \"center\": \"تهران\",\n    \"latitude\": \"35.410\",\n    \"longitude\": \"51.240\",\n    \"landlinePrefix\": \"021\",\n    \"carLicencePlates\": [\"11\", \"22\", \"33\"],\n    \"id\": 7\n  }\n]\n```\n\n## خطاها\n\nاگر مقدار عددی نباشد:\n\n```json\n{\n  \"message\": \"Invalid carLicencePlate parameter, carLicencePlate must be number\"\n}\n```\n"
+    },
+    "getAllCities": {
+      "title": "دریافت تمامی شهرها",
+      "endpoint": "/api/v1/fa/cities",
+      "method": "GET",
+      "text": "# دریافت تمامی شهرها\n\nبا فراخوانی این اندپوینت بدون پارامتر، لیست تمام شهرهای ایران برگردانده می‌شود.\n\n## درخواست\n\n```http\nGET /api/v1/fa/cities\n```\n\n```bash\ncurl \"https://YOUR_DOMAIN/api/v1/fa/cities\"\n```\n\nنسخه انگلیسی:\n\n```bash\ncurl \"https://YOUR_DOMAIN/api/v1/en/cities\"\n```\n\n## پاسخ نمونه\n\n```json\n[\n  {\n    \"name\": \"تهران\",\n    \"latitude\": \"35.410\",\n    \"longitude\": \"51.240\"\n  },\n  {\n    \"name\": \"ورامين\",\n    \"latitude\": \"35.200\",\n    \"longitude\": \"51.380\"\n  }\n]\n```\n"
+    },
+    "getCityByName": {
+      "title": "دریافت شهرها بر اساس نام",
+      "endpoint": "/api/v1/fa/cities",
+      "method": "GET",
+      "text": "# دریافت شهرها بر اساس نام\n\nبا پارامتر `city` شهرهایی را پیدا کنید که نام آن‌ها شامل عبارت جستجو باشد.\n\n## پارامترها\n\n| نام | نوع | اجباری | توضیحات |\n|-----|-----|--------|--------|\n| `city` | string | بله | بخشی از نام شهر |\n\n## درخواست\n\n```http\nGET /api/v1/fa/cities?city=تهران\n```\n\n```bash\ncurl \"https://YOUR_DOMAIN/api/v1/fa/cities?city=%D8%AA%D9%87%D8%B1%D8%A7%D9%86\"\n```\n\n## پاسخ نمونه\n\n```json\n[\n  {\n    \"name\": \"تهران\",\n    \"latitude\": \"35.410\",\n    \"longitude\": \"51.240\"\n  }\n]\n```\n"
+    },
+    "getCitiesByStateId": {
+      "title": "دریافت شهرها بر اساس آیدی استان",
+      "endpoint": "/api/v1/fa/cities",
+      "method": "GET",
+      "text": "# دریافت شهرها بر اساس آیدی استان\n\nبا پارامتر `state_id` لیست شهرهای یک استان خاص را دریافت کنید.\n\n## پارامترها\n\n| نام | نوع | اجباری | توضیحات |\n|-----|-----|--------|--------|\n| `state_id` | number | بله | شناسه عددی استان |\n\n## درخواست\n\n```http\nGET /api/v1/fa/cities?state_id=7\n```\n\n```bash\ncurl \"https://YOUR_DOMAIN/api/v1/fa/cities?state_id=7\"\n```\n\n## پاسخ نمونه\n\n```json\n[\n  {\n    \"name\": \"تهران\",\n    \"latitude\": \"35.410\",\n    \"longitude\": \"51.240\",\n    \"id\": 1\n  },\n  {\n    \"name\": \"ورامين\",\n    \"latitude\": \"35.200\",\n    \"longitude\": \"51.380\",\n    \"id\": 2\n  }\n]\n```\n\n## خطاها\n\nاگر `state_id` عددی نباشد:\n\n```json\n{\n  \"message\": \"Invalid id parameter, id must be number\"\n}\n```\n"
+    },
+    "getCitiesByStateName": {
+      "title": "دریافت شهرها بر اساس نام استان",
+      "endpoint": "/api/v1/fa/cities",
+      "method": "GET",
+      "text": "# دریافت شهرها بر اساس نام استان\n\nبا پارامتر `state` شهرهای استان‌هایی که نام آن‌ها شامل عبارت جستجو باشد برگردانده می‌شود.\n\n## پارامترها\n\n| نام | نوع | اجباری | توضیحات |\n|-----|-----|--------|--------|\n| `state` | string | بله | بخشی از نام استان |\n\n## درخواست\n\n```http\nGET /api/v1/fa/cities?state=تهران\n```\n\n```bash\ncurl \"https://YOUR_DOMAIN/api/v1/fa/cities?state=%D8%AA%D9%87%D8%B1%D8%A7%D9%86\"\n```\n\n## پاسخ نمونه\n\n```json\n[\n  {\n    \"cities\": [\n      {\n        \"name\": \"تهران\",\n        \"latitude\": \"35.410\",\n        \"longitude\": \"51.240\",\n        \"id\": 1\n      }\n    ]\n  }\n]\n```\n"
+    },
+    "apiFeatures": {
+      "title": "اطلاعات ارائه شده در API",
+      "text": "# اطلاعات ارائه شده در API\n\n## اطلاعات استان\n\n| فیلد | توضیح |\n|------|--------|\n| `id` | شناسه یکتای استان |\n| `name` | نام استان |\n| `center` | مرکز استان |\n| `latitude` | عرض جغرافیایی |\n| `longitude` | طول جغرافیایی |\n| `landlinePrefix` | پیش‌شماره تلفن ثابت |\n| `carLicencePlates` | آرایه کدهای پلاک خودرو |\n| `cities` | لیست شهرها (فقط در برخی پاسخ‌ها) |\n\n## اطلاعات شهر\n\n| فیلد | توضیح |\n|------|--------|\n| `id` | شناسه شهر (در برخی پاسخ‌ها) |\n| `name` | نام شهر |\n| `latitude` | عرض جغرافیایی |\n| `longitude` | طول جغرافیایی |\n"
+    },
+    "dataTypes": {
+      "title": "انواع داده‌ها",
+      "text": "# انواع داده‌ها\n\n## استان (State)\n\n```ts\ntype State = {\n  id: number;\n  name: string;\n  center: string;\n  latitude: string;\n  longitude: string;\n  landlinePrefix: string;\n  carLicencePlates: string[];\n  cities?: City[];\n};\n```\n\n## شهر (City)\n\n```ts\ntype City = {\n  id?: number;\n  name: string;\n  latitude: string;\n  longitude: string;\n};\n```\n\n## پارامترهای استان\n\n```ts\ntype StateQueryParams = {\n  id?: string;\n  state?: string;\n  landlinePrefix?: string;\n  carLicencePlate?: string;\n};\n```\n\n## پارامترهای شهر\n\n```ts\ntype CitiesQueryParams = {\n  state?: string;\n  state_id?: string;\n  city?: string;\n};\n```\n"
+    },
+    "faq": {
+      "title": "سوالات متداول",
+      "text": "# سوالات متداول\n\n### آیا استفاده از API رایگان است؟\n\nبله، این پروژه رایگان و اوپن‌سورس است و نیازی به API Key ندارد.\n\n### آیا CORS پشتیبانی می‌شود؟\n\nبله، درخواست‌های `GET` از مرورگر با CORS مجاز هستند.\n\n### تفاوت نسخه فارسی و انگلیسی چیست؟\n\nساختار پاسخ یکسان است؛ فقط نام استان‌ها و شهرها به زبان انتخاب‌شده برگردانده می‌شود.\n\n- فارسی: `/api/v1/fa/...`\n- انگلیسی: `/api/v1/en/...`\n\n### اگر نتیجه‌ای پیدا نشود چه اتفاقی می‌افتد؟\n\nبسته به نوع درخواست، آرایه خالی `[]` یا آبجکت خالی `{}` برگردانده می‌شود. در صورت پارامتر نامعتبر، پاسخ `400` با پیام خطا دریافت می‌کنید.\n"
+    },
+    "contactMe": {
+      "title": "تماس با من",
+      "text": "# تماس با من\n\nاگر سوال، پیشنهاد یا گزارشی درباره باگ دارید، از طریق لینک‌های زیر در ارتباط باشید:\n\n- [GitHub](https://github.com/hamidrezaramzani)\n- [LinkedIn](https://linkedin.com/in/hamidrezaramzani)\n- مخزن پروژه: [iran-locations-api](https://github.com/hamidrezaramzani/iran-locations-api)\n\nمشارکت در پروژه از طریق Pull Request و Issue خوشحال‌کننده است.\n"
+    },
+    "termsAndConditions": {
+      "title": "قوانین و مقررات",
+      "text": "# قوانین و مقررات\n\n- استفاده از این API برای اهداف قانونی و سازگار با قوانین جمهوری اسلامی ایران مجاز است.\n- داده‌ها ممکن است در طول زمان به‌روزرسانی شوند؛ برای کاربردهای حساس صحت داده را بررسی کنید.\n- هیچ تضمینی برای uptime صددرصد ارائه نمی‌شود، هرچند تلاش می‌شود سرویس پایدار بماند.\n- استفاده تجاری مجاز است، اما ارجاع به پروژه توصیه می‌شود.\n- مسئولیت نحوه استفاده از داده‌ها بر عهده مصرف‌کننده API است.\n"
+    }
+  }
+}

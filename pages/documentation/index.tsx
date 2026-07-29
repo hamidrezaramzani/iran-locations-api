@@ -8,7 +8,7 @@ import {
   DocumentationContent,
   DocumentationHierarchy,
 } from '../../components';
-import { supabase } from '../../lib/supabase';
+import documentationData from '../../data/documentation.json';
 import { MdMenu } from 'react-icons/md';
 
 export default function Documentation() {
@@ -121,26 +121,13 @@ export default function Documentation() {
   const [content, setContent] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const fetchDocumentationByName = async name => {
-    setLoading(true);
-    const { data, error } = await supabase
-      .from('documentation')
-      .select(
-        `
-        id,
-        text
-      `,
-      )
-      .eq('name', name)
-      .single();
-
-    if (error) {
-      return;
+  const getDocumentationByName = (name: string) => {
+    const section = documentationData.sections[name];
+    if (!section) {
+      return null;
     }
 
-    setLoading(false);
-
-    return data;
+    return { text: section.text };
   };
 
   const documentationSections = documentationNav
@@ -151,36 +138,34 @@ export default function Documentation() {
     if (!router.isReady) return;
 
     if (Object.keys(router.query).length > 0) {
-      const fetch = async () => {
-        const name = router.query.name || 'aboutProject';
-        const isValidName = documentationSections.some(
-          ({ value }: any) => value === name,
+      const name = (router.query.name as string) || 'aboutProject';
+      const isValidName = documentationSections.some(
+        ({ value }: any) => value === name,
+      );
+
+      if (name && isValidName && !content.length) {
+        setLoading(true);
+        const documentationObject = getDocumentationByName(name);
+
+        router.push(
+          {
+            query: {
+              name: name,
+              parent:
+                documentationNav.findIndex(({ items }) =>
+                  items.some(({ value }) => value === name),
+                ) || 0,
+            },
+          },
+          undefined,
+          { shallow: true },
         );
 
-        if (name && isValidName && !content.length) {
-          const documentationObject = await fetchDocumentationByName(name);
-
-          router.push(
-            {
-              query: {
-                name: name,
-                parent:
-                  documentationNav.findIndex(({ items }) =>
-                    items.some(({ value }) => value === name),
-                  ) || 0,
-              },
-            },
-            undefined,
-            { shallow: true },
-          );
-
-          if (documentationObject) {
-            setContent(documentationObject.text);
-          }
+        if (documentationObject) {
+          setContent(documentationObject.text);
         }
-      };
-
-      fetch();
+        setLoading(false);
+      }
     } else {
       router.push(
         {
@@ -210,10 +195,12 @@ export default function Documentation() {
           parent,
         },
       });
-      const documentationObject = await fetchDocumentationByName(name);
+      setLoading(true);
+      const documentationObject = getDocumentationByName(name);
       if (documentationObject) {
         setContent(documentationObject.text);
       }
+      setLoading(false);
     } else if (!isNaN(name) && !isComingSoon) {
       router.push({
         query: {
