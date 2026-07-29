@@ -15,6 +15,7 @@
     "@mui/icons-material": "^5.16.14",
     "@mui/material": "^5.16.14",
     "@mui/styles": "^5.16.14",
+    "@mui/system": "^5.18.0",
     "@mui/x-tree-view": "^7.23.0",
     "@supabase/supabase-js": "^2.47.0",
     "@uiw/react-markdown-preview": "^5.1.3",
